@@ -1,0 +1,17 @@
+<svg width="100%" height="100%" viewBox="0 0 460 168" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+	<g>
+		<rect x="400" y="88" width="20" height="26.65" style="fill:#16c17d;"/>
+		<rect x="400" y="114.675" width="20" height="26.65" style="fill:#13a56b;"/>
+		<rect x="420" y="114.675" width="20" height="26.65" style="fill:#17ce86;"/>
+		<rect x="400" y="141.35" width="20" height="26.65" style="fill:#0f8a59;"/>
+		<rect x="420" y="141.35" width="20" height="26.65" style="fill:#13a56b;"/>
+		<rect x="440" y="141.35" width="20" height="26.65" style="fill:#16c17d;"/>
+		<path d="M60,108l41.334,0l-0,60l20,0l-0,-80l-61.334,0l-0,20Zm260,-20l-20,0l0,80l20,0l0,-80Zm-80,80l0,-15.833l10,-10l10,10l0,15.833l20,0l-0,-24.167l-15.833,-15.833l15.833,-15.833l-0,-24.167l-20,0l0,15.833l-10,10l-10,-10l0,-15.833l-20,0l-0,24.167l15.833,15.833l-15.833,15.833l-0,24.167l20,0Zm160,0l0,-80l-20,0l0,16.667l-40,-0l0,63.333l60,0Zm-260,-20l0,20l60,0l0,-80l-60,0l0,20l40,0l0,10l-25,0l0,20l25,0l0,10l-40,0Zm220,-23.333l20,-0l0,23.333l-20,0l0,-23.333Zm-220,-44.667l20,0l-0,-80l-20,0l-0,80Zm80,-80l0,15.833l-10,10l-10,-10l0,-15.833l-20,0l0,24.167l15.833,15.833l-15.833,15.833l0,24.167l20,0l0,-15.833l10,-10l10,10l0,15.833l20,0l0,-24.167l-15.833,-15.833l15.833,-15.833l0,-24.167l-20,0Zm-160,0l-0,80l20,0l-0,-16.667l40,0l-0,-63.333l-60,0Zm260,20l0,-20l-60,0l-0,80l60,0l0,-20l-40,0l-0,-10l25,-0l0,-20l-25,0l-0,-10l40,-0Zm80,40l-41.334,-0l0,-60l-20,-0l0,80l61.334,-0l0,-20Zm-300,-16.667l-20,0l-0,-23.333l20,-0l-0,23.333Z" style="fill:#095235;fill-rule:nonzero;"/>
+		<rect x="40" y="53.35" width="20" height="26.65" style="fill:#16c17d;"/>
+		<rect x="40" y="26.675" width="20" height="26.65" style="fill:#13a56b;"/>
+		<rect x="20" y="26.675" width="20" height="26.65" style="fill:#17ce86;"/>
+		<rect x="40" y="-0" width="20" height="26.65" style="fill:#0f8a59;"/>
+		<rect x="20" y="-0" width="20" height="26.65" style="fill:#13a56b;"/>
+		<rect x="0" y="-0" width="20" height="26.65" style="fill:#16c17d;"/>
+	</g>
+</svg>
