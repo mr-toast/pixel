@@ -10,7 +10,7 @@ export default function Home() {
 
         <div className="my-12 flex items-center">
           <p className=" text-xl lowercase leading-none sm:text-3xl">&gt; Hand crafted binary</p>
-          <div className="ml-4 h-5 w-2 animate-pulse rx-bg-sage-3 sm:h-7 sm:w-3" />
+          <div className="ml-4 h-5 w-2 animate-pulse rx-bg-sage-6 sm:h-7 sm:w-3" />
         </div>
 
         <a href="mailto:hello@pixelonpixel.com">

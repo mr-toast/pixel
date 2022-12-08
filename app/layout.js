@@ -5,6 +5,7 @@ import { Cutive_Mono } from '@next/font/google'
 const cutiveMono = Cutive_Mono({
   variable: '--font-cutive-mono',
   weight: '400',
+  subset: 'latin',
 })
 
 // const curfel = localFont({

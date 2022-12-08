@@ -676,18 +676,6 @@ svg {
   line-height: 1;
 }
 
-.rx-bg-sage-3 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 244 243 / var(--tw-bg-opacity));
-}
-
-@media (prefers-color-scheme: dark) {
-  .rx-bg-sage-3 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(31 36 33 / var(--tw-bg-opacity));
-  }
-}
-
 .rx-bg-sage-4 {
   --tw-bg-opacity: 1;
   background-color: rgb(236 239 237 / var(--tw-bg-opacity));
@@ -700,6 +688,66 @@ svg {
   }
 }
 
+.rx-bg-sage-5 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(230 233 232 / var(--tw-bg-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .rx-bg-sage-5 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(42 47 44 / var(--tw-bg-opacity));
+  }
+}
+
+.rx-bg-sage-6 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(223 228 226 / var(--tw-bg-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .rx-bg-sage-6 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(48 54 51 / var(--tw-bg-opacity));
+  }
+}
+
+.rx-bg-sage-7 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(215 220 218 / var(--tw-bg-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .rx-bg-sage-7 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(57 63 60 / var(--tw-bg-opacity));
+  }
+}
+
+.rx-bg-sage-8 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(194 201 198 / var(--tw-bg-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .rx-bg-sage-8 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(74 82 78 / var(--tw-bg-opacity));
+  }
+}
+
+.rx-bg-sage-9 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(138 145 142 / var(--tw-bg-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .rx-bg-sage-9 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(102 115 109 / var(--tw-bg-opacity));
+  }
+}
+
 .rx-text-slate-1 {
   --tw-text-opacity: 1;
   color: rgb(251 252 253 / var(--tw-text-opacity));
@@ -709,18 +757,6 @@ svg {
   .rx-text-slate-1 {
     --tw-text-opacity: 1;
     color: rgb(21 23 24 / var(--tw-text-opacity));
-  }
-}
-
-.rx-bg-slate-4 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 238 240 / var(--tw-bg-opacity));
-}
-
-@media (prefers-color-scheme: dark) {
-  .rx-bg-slate-4 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(38 41 43 / var(--tw-bg-opacity));
   }
 }
 
