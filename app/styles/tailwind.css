@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  svg {
+    @apply h-auto;
+  }
+}
+
+@layer components {
+  .icon {
+    @apply h-8 w-8;
+  }
+}

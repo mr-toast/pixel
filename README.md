@@ -31,9 +31,9 @@ serve: "next start"
 
 —————————————————————
 
-- [ ] STAGE 2: Tailwind Conversion
-- [ ] - refactor styles
-- [ ] - add custom fonts
+- [x] STAGE 2: Tailwind Conversion
+- [x] - refactor styles
+- [x] - add custom fonts
 
 ### Phase 2
 

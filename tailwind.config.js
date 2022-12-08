@@ -1,4 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors')
+const tailwindRadix = require('tailwind-radix-colors')
+
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx}', // Note the addition of the `app` directory.
@@ -7,7 +11,18 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    colors: {
+      ...tailwindRadix.colors,
+      black: colors.black,
+      white: colors.white,
+      transparent: colors.transparent,
+      primary: '#00ff99',
+    },
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-cutive-mono)'],
+      },
+    },
   },
-  plugins: [],
+  plugins: [require('prettier-plugin-tailwindcss'), tailwindRadix.plugin()],
 }

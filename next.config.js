@@ -9,14 +9,15 @@ const nextConfig = {
 
   images: {
     domains: ['cdn.shopify.com', 'images.unsplash.com', 'placeimg.com', 'fakeimg.pl', 'images.prismic.io'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
+    deviceSizes: [640, 768, 1024, 1280, 1536, 1920],
   },
 
   svgrOptions: {
     icon: true,
     removeViewbox: false,
     svgProps: {
-      height: 'auto',
+      height: '100%',
+      width: '100%',
     },
   },
 }

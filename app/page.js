@@ -1,31 +1,27 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Logo from '../public/svg/logo.svg'
+import Mailbox from '../public/svg/mailbox.svg'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <Image className={styles.logo} src="/svg/logo.svg" alt="Pixel on Pixel logo" width={460} height={168} />
-        <h1 className={styles.title}>
-          <span className={styles.visuallyHidden}>Pixel on Pixel</span>
-        </h1>
+    <div className="grid h-screen grid-rows-[1fr_auto] gap-y-4">
+      <main className="container mx-auto flex flex-col  items-center justify-center px-4">
+        <Logo className="mb-8 w-full sm:w-2/3 md:w-1/2" />
+        <h1 className="sr-only">Pixel on Pixel</h1>
 
-        <div className={styles.withCursor}>
-          <p className={styles.description}>&gt; Hand crafted binary</p>
-          <div className={styles.cursor}></div>
+        <div className="my-12 flex items-center">
+          <p className=" text-xl lowercase leading-none sm:text-3xl">&gt; Hand crafted binary</p>
+          <div className="ml-4 h-5 w-2 animate-pulse rx-bg-sage-3 sm:h-7 sm:w-3" />
         </div>
 
-        <div className={styles.social}>
-          <a href="mailto:hello@pixelonpixel.com">
-            <div className={styles.mailButton}>
-              <Image src="/svg/mailbox.svg" role="presentation" alt="" width={32} height={32} />
-              <span>say hi!</span>
-            </div>
-          </a>
-        </div>
+        <a href="mailto:hello@pixelonpixel.com">
+          <Mailbox className="icon mx-auto" />
+          <p className="">say hi!</p>
+        </a>
       </main>
 
-      <footer className={styles.footer}>© Copyright {new Date().getFullYear()} | Pixel on Pixel</footer>
+      <footer className="container mx-auto p-4 text-center text-xs">
+        © Copyright {new Date().getFullYear()} | Pixel on Pixel
+      </footer>
     </div>
   )
 }
