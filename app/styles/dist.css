@@ -519,6 +519,8 @@ svg {
 
 .container {
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: 640px) {
@@ -552,8 +554,8 @@ svg {
 }
 
 .icon {
-  height: 2rem;
-  width: 2rem;
+  height: 4rem;
+  width: 4rem;
 }
 
 .sr-only {
@@ -608,6 +610,18 @@ svg {
 
 .w-2 {
   width: 0.5rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
+}
+
+.max-w-lg {
+  max-width: 32rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
 }
 
 @keyframes pulse {
@@ -676,75 +690,15 @@ svg {
   line-height: 1;
 }
 
-.rx-bg-sage-4 {
+.rx-bg-cyan-7 {
   --tw-bg-opacity: 1;
-  background-color: rgb(236 239 237 / var(--tw-bg-opacity));
+  background-color: rgb(132 205 218 / var(--tw-bg-opacity));
 }
 
 @media (prefers-color-scheme: dark) {
-  .rx-bg-sage-4 {
+  .rx-bg-cyan-7 {
     --tw-bg-opacity: 1;
-    background-color: rgb(37 42 39 / var(--tw-bg-opacity));
-  }
-}
-
-.rx-bg-sage-5 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(230 233 232 / var(--tw-bg-opacity));
-}
-
-@media (prefers-color-scheme: dark) {
-  .rx-bg-sage-5 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(42 47 44 / var(--tw-bg-opacity));
-  }
-}
-
-.rx-bg-sage-6 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(223 228 226 / var(--tw-bg-opacity));
-}
-
-@media (prefers-color-scheme: dark) {
-  .rx-bg-sage-6 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(48 54 51 / var(--tw-bg-opacity));
-  }
-}
-
-.rx-bg-sage-7 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(215 220 218 / var(--tw-bg-opacity));
-}
-
-@media (prefers-color-scheme: dark) {
-  .rx-bg-sage-7 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(57 63 60 / var(--tw-bg-opacity));
-  }
-}
-
-.rx-bg-sage-8 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(194 201 198 / var(--tw-bg-opacity));
-}
-
-@media (prefers-color-scheme: dark) {
-  .rx-bg-sage-8 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(74 82 78 / var(--tw-bg-opacity));
-  }
-}
-
-.rx-bg-sage-9 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(138 145 142 / var(--tw-bg-opacity));
-}
-
-@media (prefers-color-scheme: dark) {
-  .rx-bg-sage-9 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(102 115 109 / var(--tw-bg-opacity));
+    background-color: rgb(4 80 99 / var(--tw-bg-opacity));
   }
 }
 
@@ -773,6 +727,10 @@ svg {
     width: 0.75rem;
   }
 
+  .sm\:w-3\/4 {
+    width: 75%;
+  }
+
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -782,5 +740,13 @@ svg {
 @media (min-width: 768px) {
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:w-2\/3 {
+    width: 66.666667%;
+  }
+
+  .md\:w-3\/4 {
+    width: 75%;
   }
 }

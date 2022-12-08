@@ -10,6 +10,6 @@
 
 @layer components {
   .icon {
-    @apply h-8 w-8;
+    @apply h-16 w-16;
   }
 }

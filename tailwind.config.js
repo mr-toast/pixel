@@ -10,6 +10,9 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
+  experimental: {
+    fontLoaders: [{ loader: '@next/font/google', options: { subsets: ['latin'] } }],
+  },
   theme: {
     colors: {
       ...tailwindRadix.colors,
@@ -17,6 +20,9 @@ module.exports = {
       white: colors.white,
       transparent: colors.transparent,
       primary: '#00ff99',
+    },
+    container: {
+      center: true,
     },
     extend: {
       fontFamily: {
