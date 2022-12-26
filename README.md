@@ -1,6 +1,6 @@
 ## Pixel on Pixel
 
-Built with: Nextjs, Tailwind
+Built with: Nextjs, Sanity, Typescript, Tailwind
 
 —————————————————————
 
@@ -9,9 +9,10 @@ Built with: Nextjs, Tailwind
 —————————————————————
 
 ```
-dev: "next dev"
-build: "next build"
-serve: "next start"
+"dev": "concurrently \"tailwindcss -i src/styles/tailwind.css -o app/dist.css -w\" \"next dev\" ",
+"build": "tailwindcss -m -i src/styles/tailwind.css -o app/dist.css && next build",
+"start": "next start",
+"lint": "next lint"
 // sb: "start-storybook --quiet -p 6006 --no-open" -->
 // sb:build: "build-storybook"
 ```
@@ -39,10 +40,11 @@ serve: "next start"
 
 —————————————————————
 
-- [ ] STAGE 3: Setup Storybook
-- [ ] STAGE 4: Core Components
-- [ ] STAGE 5: Page Assembly
-- [ ] STAGE 6: CMS
-- [ ] STAGE 7: Minimum Build
-- [ ] STAGE 8: E2E Test
-- [ ] STAGE 9: Deploy
+- [x] STAGE 3: Typescript Conversion
+- [ ] STAGE 4: Setup Storybook
+- [ ] STAGE 5: Core Components
+- [ ] STAGE 6: Page Assembly
+- [ ] STAGE 7: Sanity CMS
+- [ ] STAGE 8: Minimum Build
+- [ ] STAGE 9: E2E Test
+- [ ] STAGE 10: Deploy

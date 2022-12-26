@@ -3,18 +3,19 @@
 const colors = require('tailwindcss/colors')
 const tailwindRadix = require('tailwind-radix-colors')
 
+
 module.exports = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx}', // Note the addition of the `app` directory.
+		'./app/**/*.{js,ts,jsx,tsx}', // Note the addition of the `app` directory.
     './pages/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
-  ],
-  experimental: {
+	],
+	experimental: {
     fontLoaders: [{ loader: '@next/font/google', options: { subsets: ['latin'] } }],
   },
   theme: {
-    colors: {
+		colors: {
       ...tailwindRadix.colors,
       black: colors.black,
       white: colors.white,

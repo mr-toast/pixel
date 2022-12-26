@@ -1,4 +1,6 @@
 {
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
   "workbench.colorCustomizations": {
 		"commandCenter.border": "#15202b99",
 		"sash.hoverBorder": "#65c89b",

@@ -6,7 +6,6 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-
   images: {
     domains: ['cdn.shopify.com', 'images.unsplash.com', 'placeimg.com', 'fakeimg.pl', 'images.prismic.io'],
     deviceSizes: [640, 768, 1024, 1280, 1536, 1920],
