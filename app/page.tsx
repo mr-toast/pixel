@@ -19,7 +19,7 @@ export default function Home() {
         </a>
       </main>
 
-      <footer className="container mx-auto p-4 text-center text-xs">
+      <footer className="container p-4 text-center text-xs">
         © Copyright {new Date().getFullYear()} | Pixel on Pixel
       </footer>
     </div>
