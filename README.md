@@ -28,6 +28,8 @@ Built with: Nextjs, Sanity, Typescript, Tailwind
 - [x] - add Tailwind
 - [x] STAGE 1: Deploy Placeholder
 
+—————————————————————
+
 ### Phase 1
 
 —————————————————————
@@ -36,15 +38,26 @@ Built with: Nextjs, Sanity, Typescript, Tailwind
 - [x] - refactor styles
 - [x] - add custom fonts
 
+—————————————————————
+
 ### Phase 2
 
 —————————————————————
 
-- [x] STAGE 3: Typescript Conversion
-- [ ] STAGE 4: Setup Storybook
-- [ ] STAGE 5: Core Components
-- [ ] STAGE 6: Page Assembly
-- [ ] STAGE 7: Sanity CMS
-- [ ] STAGE 8: Minimum Build
-- [ ] STAGE 9: E2E Test
-- [ ] STAGE 10: Deploy
+- [x] STAGE 3: Convert to T3 Stack
+- [ ] STAGE 4: Core Components
+- [ ] - threeJs hero
+- [ ] - about
+- [ ] - stack / skills
+- [ ] - examples
+- [ ] - contact form
+
+—————————————————————
+
+### Future
+
+—————————————————————
+
+- [ ] STAGE X: Additional Pages
+- [ ] STAGE X: Sanity CMS
+- [ ] STAGE X: Setup Storybook
