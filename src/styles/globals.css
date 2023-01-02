@@ -7,7 +7,6 @@
     @apply h-auto;
   }
 }
-
 @layer components {
   .icon {
     @apply h-16 w-16;
