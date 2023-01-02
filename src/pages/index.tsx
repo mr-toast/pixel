@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 
   const content = {
     title: 'Pixel on Pixel',
-    blurb: "HI, I'm a Nextjs and Storybook frontend developer. You can contact me here.",
+    blurb: "Hi, I'm a Nextjs and Storybook frontend developer. You can contact me here.",
     mailLabel: 'message',
   }
 
