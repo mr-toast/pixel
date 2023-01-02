@@ -49,7 +49,7 @@ const Home: NextPage = () => {
           <a href="mailto:hello@pixelonpixel.com">
             <div className="group relative mx-auto mb-2 h-16 w-16">
               <Mailbox className="icon absolute stroke-black dark:stroke-mintDark-11" />
-              <MailboxFlag className="icon absolute fill-transparent stroke-black  transition  group-hover:-scale-x-100 group-hover:fill-mint-8 dark:stroke-mintDark-11 dark:stroke-mintDark-11  dark:group-hover:fill-mintDark-8" />
+              <MailboxFlag className="icon absolute fill-transparent stroke-black  transition  group-hover:-scale-x-100 group-hover:fill-mint-8 dark:stroke-mintDark-11  dark:group-hover:fill-mintDark-8" />
             </div>
             <p className="text-center text-xs">{content.mailLabel}</p>
           </a>
