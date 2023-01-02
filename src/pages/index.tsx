@@ -25,7 +25,7 @@ const Home: NextPage = () => {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta name="description" content="I'm a Nextjs, Storybook developer, get in touch here." />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        {/* <link rel="icon" href="/favicon.svg" type="image/svg+xml" /> */}
       </Head>
 
       <div className="grid h-screen grid-rows-[auto_1fr_auto] gap-y-4">
