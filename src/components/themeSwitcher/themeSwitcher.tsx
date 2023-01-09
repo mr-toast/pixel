@@ -29,9 +29,9 @@ const ThemeSwitcher = () => {
     >
       <span className="sr-only">Theme Switcher</span>
       {theme === 'light' ? (
-        <SunIcon className="h-12 w-12" aria-hidden="true" />
-      ) : (
         <MoonIcon className="h-12 w-12" aria-hidden="true" />
+      ) : (
+        <SunIcon className="h-12 w-12" aria-hidden="true" />
       )}
     </button>
   )
