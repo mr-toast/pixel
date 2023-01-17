@@ -9,12 +9,14 @@ Built with: Nextjs, Sanity, Typescript, Tailwind
 —————————————————————
 
 ```
-"dev": "concurrently \"tailwindcss -i src/styles/tailwind.css -o app/dist.css -w\" \"next dev\" ",
-"build": "tailwindcss -m -i src/styles/tailwind.css -o app/dist.css && next build",
-"start": "next start",
-"lint": "next lint"
-// sb: "start-storybook --quiet -p 6006 --no-open" -->
-// sb:build: "build-storybook"
+"scripts": {
+	"build": "next build",
+	"dev": "next dev",
+	"lint": "next lint",
+	"start": "next start"
+	// sb: "start-storybook --quiet -p 6006 --no-open" -->
+	// sb:build: "build-storybook"
+},
 ```
 
 —————————————————————
