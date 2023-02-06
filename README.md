@@ -53,6 +53,7 @@ Built with: Nextjs, Sanity, Typescript, Tailwind
 - [ ] - stack / skills
 - [ ] - examples
 - [ ] - contact form
+- [ ] - 
 
 —————————————————————
 

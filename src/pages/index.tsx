@@ -7,21 +7,22 @@ import Logo from '/public/svg/logo.svg'
 import Mailbox from '/public/svg/mailbox.svg'
 import MailboxFlag from '/public/svg/mailbox-flag.svg'
 
+const content = {
+  seo_title: 'Nextjs and React Native development | Pixel on Pixel',
+  title: 'Pixel on Pixel',
+  blurb: "Hi, I'm a Nextjs and React Native developer. You can contact me here.",
+  mailLabel: 'message',
+}
+
 const Home: NextPage = () => {
   const Cursor = (
     <span className="ml-1 inline-block h-4 w-2 animate-pulse bg-black leading-5 dark:bg-mintDark-11"></span>
   )
 
-  const content = {
-    title: 'Pixel on Pixel',
-    blurb: "Hi, I'm a Nextjs and Storybook frontend developer. You can contact me here.",
-    mailLabel: 'message',
-  }
-
   return (
     <>
       <Head>
-        <title>Nextjs, Frontend Development and Storybook | Pixel on Pixel</title>
+        <title>{content.seo_title}</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta name="description" content="I'm a Nextjs, Storybook developer, get in touch here." />
         <link rel="icon" href="/favicon.ico" />
