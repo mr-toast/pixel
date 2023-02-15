@@ -1,7 +1,7 @@
 import { type NextPage } from 'next'
 import Head from 'next/head'
 import Typist from 'react-typist-component'
-import NavBar from '@components/navbar/navbar'
+import { Navbar } from 'components/navbar'
 
 import Logo from '/public/svg/logo.svg'
 import Mailbox from '/public/svg/mailbox.svg'
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="grid h-screen grid-rows-[auto_1fr_auto] gap-y-4">
-        <NavBar />
+        <Navbar />
         <main className="container flex max-w-lg flex-col items-center justify-center px-4">
           <Logo className="mb-8  fill-mint-10 stroke-black opacity-60 dark:fill-transparent dark:stroke-mintDark-11" />
           <h1 className="sr-only">{content.title}</h1>

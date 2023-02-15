@@ -1,1 +1,1 @@
-export funnction Image() {}
+export function Image() {}
