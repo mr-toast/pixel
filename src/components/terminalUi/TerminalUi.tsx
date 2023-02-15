@@ -1,1 +1,3 @@
-export function TerminalUi() {}
+export function TerminalUi() {
+  console.log('TerminalUi')
+}

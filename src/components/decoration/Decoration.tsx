@@ -1,1 +1,3 @@
-export function Decoration() {}
+export function Decoration() {
+  console.log('Decoration')
+}

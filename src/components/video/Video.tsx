@@ -1,1 +1,3 @@
-export function Video() {}
+export function Video() {
+  console.log('Video')
+}

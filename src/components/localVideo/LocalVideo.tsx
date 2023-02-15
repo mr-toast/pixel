@@ -1,1 +1,3 @@
-export function LocalVideo() {}
+export function LocalVideo() {
+  console.log('LocalVideo')
+}

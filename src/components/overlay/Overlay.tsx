@@ -1,1 +1,3 @@
-export function Overlay() {}
+export function Overlay() {
+  console.log('Overlay')
+}

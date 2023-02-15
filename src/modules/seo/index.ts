@@ -1,1 +1,1 @@
-export * from './Typist'
+export * from './Seo'

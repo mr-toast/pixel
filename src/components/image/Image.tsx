@@ -1,1 +1,3 @@
-export function Image() {}
+export function Image() {
+  console.log('Image')
+}
