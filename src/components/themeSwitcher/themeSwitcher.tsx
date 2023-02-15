@@ -7,7 +7,7 @@ import { useTheme } from 'next-themes'
 // Icons
 import { SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 
-const ThemeSwitcher = () => {
+export function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
 
@@ -36,5 +36,3 @@ const ThemeSwitcher = () => {
     </button>
   )
 }
-
-export default ThemeSwitcher
