@@ -1,4 +1,4 @@
-import { ThemeSwitcher } from 'components/themeSwitcher'
+import { ThemeSwitcher } from '~/components/themeSwitcher'
 
 export function Navbar() {
   return (

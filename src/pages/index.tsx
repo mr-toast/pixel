@@ -1,7 +1,7 @@
 import { type NextPage } from 'next'
 import Head from 'next/head'
 import Typist from 'react-typist-component'
-import { Navbar } from 'components/navbar'
+import { Navbar } from '~/components/navbar'
 
 import Logo from '/public/svg/logo.svg'
 import Mailbox from '/public/svg/mailbox.svg'
@@ -10,13 +10,14 @@ import MailboxFlag from '/public/svg/mailbox-flag.svg'
 const content = {
   seo_title: 'Nextjs and React Native development | Pixel on Pixel',
   title: 'Pixel on Pixel',
-  blurb: "Hi, I'm a Nextjs and React Native developer. You can contact me here.",
+  blurb:
+    "Hi, I'm a Nextjs and React Native developer. You can contact me here.",
   mailLabel: 'message',
 }
 
 const Home: NextPage = () => {
   const Cursor = (
-    <span className="ml-1 inline-block h-4 w-2 animate-pulse bg-black leading-5 dark:bg-mintDark-11"></span>
+    <span className="dark:bg-mintDark-11 ml-1 inline-block h-4 w-2 animate-pulse bg-black leading-5"></span>
   )
 
   return (
@@ -24,7 +25,10 @@ const Home: NextPage = () => {
       <Head>
         <title>{content.seo_title}</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta name="description" content="I'm a Nextjs, Storybook developer, get in touch here." />
+        <meta
+          name="description"
+          content="I'm a Nextjs, Storybook developer, get in touch here."
+        />
         <link rel="icon" href="/favicon.ico" />
         {/* <link rel="icon" href="/favicon.svg" type="image/svg+xml" /> */}
       </Head>
@@ -32,14 +36,20 @@ const Home: NextPage = () => {
       <div className="grid h-screen grid-rows-[auto_1fr_auto] gap-y-4">
         <Navbar />
         <main className="container flex max-w-lg flex-col items-center justify-center px-4">
-          <Logo className="mb-8  fill-mint-10 stroke-black opacity-60 dark:fill-transparent dark:stroke-mintDark-11" />
+          <Logo className="fill-mint-10  dark:stroke-mintDark-11 mb-8 stroke-black opacity-60 dark:fill-transparent" />
           <h1 className="sr-only">{content.title}</h1>
 
           <div className="mx-auto mb-4 flex h-16 w-full gap-2 text-left sm:w-4/5">
             <span className="grow-0">&gt;</span>
             <div className="relative grow">
-              <p className="absolute top-0 left-0" aria-hidden>
-                <Typist startDelay={1000} typingDelay={70} cursor={Cursor} loop finishDelay={5000}>
+              <p className="absolute left-0 top-0" aria-hidden>
+                <Typist
+                  startDelay={1000}
+                  typingDelay={70}
+                  cursor={Cursor}
+                  loop
+                  finishDelay={5000}
+                >
                   {content.blurb}
                 </Typist>
               </p>
@@ -49,8 +59,8 @@ const Home: NextPage = () => {
 
           <a href="mailto:hello@pixelonpixel.com">
             <div className="group relative mx-auto mb-2 h-16 w-16">
-              <Mailbox className="icon absolute stroke-black dark:stroke-mintDark-11" />
-              <MailboxFlag className="icon absolute fill-transparent stroke-black  transition  group-hover:-scale-x-100 group-hover:fill-mint-8 dark:stroke-mintDark-11  dark:group-hover:fill-mintDark-8" />
+              <Mailbox className="icon dark:stroke-mintDark-11 absolute stroke-black" />
+              <MailboxFlag className="icon group-hover:fill-mint-8 dark:stroke-mintDark-11 dark:group-hover:fill-mintDark-8  absolute  fill-transparent stroke-black transition  group-hover:-scale-x-100" />
             </div>
             <p className="text-center text-xs">{content.mailLabel}</p>
           </a>

@@ -3,7 +3,7 @@ import { type AppType } from 'next/dist/shared/lib/utils'
 import { ThemeProvider } from 'next-themes'
 
 import '../styles/globals.css'
-import { Cutive_Mono } from '@next/font/google'
+import { Cutive_Mono } from 'next/font/google'
 
 const cutiveMono = Cutive_Mono({
   variable: '--font-cutive-mono',
