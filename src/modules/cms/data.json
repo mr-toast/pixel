@@ -1,0 +1,369 @@
+{
+  "site_title": "Pixel on Pixel",
+  "seo": {
+    "title": "Nextjs and React Native development | Pixel on Pixel",
+    "description": "I'm a Nextjs, Storybook developer, get in touch here."
+  },
+  "mainNavigation": [
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Work",
+      "href": "#work"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "burgerNavigation": [
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Team",
+      "href": "#team"
+    },
+    {
+      "label": "Work",
+      "href": "#work"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    },
+    {
+      "label": "Privacy",
+      "href": "#privacy"
+    }
+  ],
+  "hero": {
+    "badge": "What's new",
+    "heading": "Deploy to the cloud with confidence",
+    "body": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
+    "button": {
+      "label": "Let's chat",
+      "href": "#"
+    },
+    "image": "/images/dark-project-app-screenshot.png"
+  },
+  "about": {
+    "heading": "About Me",
+    "body": "I'm an Upwork rising talent with hundreds of billed hours.",
+    "blurb": "I'm a Nextjs, Storybook developer, get in touch here."
+  },
+  "team": {
+    "heading": "Meet our team",
+    "body": "We're a dynamic group of individuals who are passionate about what we do.",
+    "people": [
+      {
+        "name": "Brett Jones",
+        "role": "The Dude",
+        "imageUrl": "/images/profile-1.jpg",
+        "upwork": "#",
+        "github": "#",
+        "twitter": "#"
+      },
+      {
+        "name": "Kevin Frilot",
+        "role": "The Other Dude",
+        "imageUrl": "/images/profile-2.jpg",
+        "upwork": "#",
+        "twitter": "#"
+      },
+      {
+        "name": "Jonny Cash",
+        "role": "The Man",
+        "imageUrl": "/images/profile-3.jpg",
+        "upwork": "#",
+        "github": "#"
+      }
+    ]
+  },
+  "featuredWork": {
+    "heading": "Success Stories",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam massa mauris, ultricies eu nisl vel, ultricies aliquet sem.",
+    "items": [
+      {
+        "header": "Site development",
+        "title": "Freshy's Baking Club",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+        "button": {
+          "label": "View project",
+          "href": "#"
+        },
+        "testimonial": {
+          "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
+          "image": "/images/profile-0.jpg",
+          "name": "Nattakran Saisa-ard",
+          "title": "Owner, Freshy's Baking Club"
+        },
+        "image": "/images/dark-project-app-screenshot.png"
+      },
+      {
+        "header": "Component development",
+        "title": "Tropic Labs",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+        "button": {
+          "label": "View project",
+          "href": "#"
+        },
+        "testimonial": {
+          "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
+          "image": "/images/profile-0.jpg",
+          "name": "7&8",
+          "title": "Development Agency"
+        },
+        "image": "/images/dark-project-app-screenshot.png"
+      },
+      {
+        "header": "Component development",
+        "title": "Boss Personal Planner",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+        "button": {
+          "label": "View project",
+          "href": "#"
+        },
+        "testimonial": {
+          "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
+          "image": "/images/profile-0.jpg",
+          "name": "7&8",
+          "title": "Development Agency"
+        },
+        "image": "/images/dark-project-app-screenshot.png"
+      },
+      {
+        "header": "Site development",
+        "title": "Varee International School",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+        "button": {
+          "label": "View project",
+          "href": "#"
+        },
+        "testimonial": {
+          "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
+          "image": "/images/profile-0.jpg",
+          "name": "Ajarn Blah Blah",
+          "title": "Principal VCIS"
+        },
+        "image": "/images/dark-project-app-screenshot.png"
+      }
+    ]
+  },
+  "previousWork": [
+    {
+      "header": "Site development",
+      "title": "Our Jungle Camp",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "button": {
+        "label": "View project",
+        "href": "#"
+      },
+      "testimonial": {
+        "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
+        "image": "/images/profile-0.jpg",
+        "name": "Marius Merrmann",
+        "title": "General Manager"
+      },
+      "image": "/images/dark-project-app-screenshot.png"
+    },
+    {
+      "header": "Site development",
+      "title": "Our Jungle House",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "button": {
+        "label": "View project",
+        "href": "#"
+      },
+      "testimonial": {
+        "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
+        "image": "/images/profile-0.jpg",
+        "name": "Gonthong Lourdesamy",
+        "title": "General Manager"
+      },
+      "image": "/images/dark-project-app-screenshot.png"
+    }
+  ],
+  "testimonials": {
+    "heading": "5-Star Verified Feedback",
+    "body": "A few comments from my Upwork reviews.",
+    "feedback": [
+      {
+        "title": "Shopify Theme Development",
+        "body": "Brett is awesome and a pleasure to do business with. He is a total pro and comes without the hassles of many freelancers out there. I will definitely continue to work with Brett in the future.",
+        "meta": {
+          "name": "Awake Chocolate",
+          "dates": "Apr 4, 2017 - May 29, 2017",
+          "shortDate": "April 2017",
+          "rating": 5,
+          "hrs": 133,
+          "imageUrl": "/images/awake-chocolate.jpg"
+        }
+      },
+      {
+        "title": "Page Speed and PDP Optimization",
+        "body": "Another great project from Brett.",
+        "meta": {
+          "name": "Nature's Baby",
+          "dates": "Aug 1, 2017 - Aug 2, 2017",
+          "shortDate": "August 2017",
+          "rating": 5,
+          "hrs": 8,
+          "imageUrl": "/images/natures-baby.jpg"
+        }
+      },
+      {
+        "title": "Custom Email Templates",
+        "body": "Thanks Brett!",
+        "meta": {
+          "name": "eBoost",
+          "shortDate": "September 2017",
+          "rating": 5,
+          "hrs": 2,
+          "imageUrl": "/images/eboost.jpg"
+        }
+      },
+      {
+        "title": "Product Funnel Pages",
+        "body": "Brett is awesome and we will continue to work with him.",
+        "meta": {
+          "name": "Full Circle",
+          "dates": "Mar 20, 2019 - May 21, 2019",
+          "shortDate": "March 2019",
+          "rating": 4.85,
+          "hrs": 26,
+          "imageUrl": "/images/full-circle.jpg"
+        }
+      },
+      {
+        "title": "Shopify Theme Development",
+        "body": "I very much appreciate Brett's efforts. He is a gem and very much look forward to the next project.",
+        "meta": {
+          "name": "Champainge CDB Chocolate",
+          "dates": "Nov 12, 2017 - Dec 4, 2017",
+          "shortDate": "November 2017",
+          "rating": 5,
+          "hrs": 49,
+          "imageUrl": "/images/champainge-cbd.jpg"
+        }
+      },
+      {
+        "title": "A+ Shopify Develompent",
+        "body": "Solid work and good problem solving. Will be working with Brett again going forward.",
+        "meta": {
+          "name": "Canoe Club",
+          "dates": "Mar 20, 2019 - May 21, 2019",
+          "shortDate": "March 2019",
+          "rating": 5,
+          "hrs": "Fixed Price",
+          "imageUrl": "/images/canoe-club.jpg"
+        }
+      },
+      {
+        "title": "Store and Frontend Development",
+        "body": "Brett is great and we'll continue to use him as an ongoing resource. Thanks to Brett for providing a 'grandfathered' rate to us. Much appreciated.",
+        "meta": {
+          "name": "GoLive Probiotics",
+          "dates": "Sep 13, 2017 - Nov 15, 2017",
+          "shortDate": "September 2017",
+          "rating": 5,
+          "hrs": 139,
+          "imageUrl": "/images/golive-probiotics.jpg"
+        }
+      },
+      {
+        "title": "Shopify Frontend Additions",
+        "body": "Brett's a pro. We definitely plan on continuing to use his services with all Shopify and Wordpress opportunities.",
+        "meta": {
+          "name": "Awake Chocolate",
+          "dates": "Aug 10, 2017 - Aug 24, 2017",
+          "shortDate": "August 2017",
+          "rating": 5,
+          "hrs": 22,
+          "imageUrl": "/images/awake-chocolate.jpg"
+        }
+      }
+    ]
+  },
+  "services": {
+    "heading1": "Boost your productivity.",
+    "heading2": "Start using our app today.",
+    "body": "Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla. Ac euismod vel sit maecenas.",
+    "list": [
+      {
+        "name": "Push to deploy.",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.",
+        "icon": "cloudArrow"
+      },
+      {
+        "name": "SSL certificates.",
+        "description": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+        "icon": "lockClosed"
+      },
+      {
+        "name": "Database backups.",
+        "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.",
+        "icon": "server"
+      }
+    ],
+    "image": "/images/dark-project-app-screenshot.png"
+  },
+  "contact": {
+    "heading": "Let's talk about your project",
+    "body": "We help companies and individuals build out their brand guidelines.",
+    "legal": "By submitting this form, I agree to the",
+    "button": {
+      "label": "Let's talk"
+    },
+    "testimonial": {
+      "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
+      "image": "/images/profile-0.jpg",
+      "name": "Nattakran Saisa-ard",
+      "title": "Owner, Freshy's Baking Club",
+      "logo": ""
+    },
+    "mailLabel": "message"
+  },
+  "footerNavigation": [
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Team",
+      "href": "#team"
+    },
+    {
+      "label": "Work",
+      "href": "#work"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    },
+    {
+      "label": "Privacy",
+      "href": "#privacy"
+    }
+  ],
+  "social": [
+    {
+      "name": "Upwork",
+      "href": "#",
+      "icon": "upwork"
+    },
+    {
+      "name": "GitHub",
+      "href": "#",
+      "icon": "github"
+    },
+    {
+      "name": "Twitter",
+      "href": "#",
+      "icon": "twitter"
+    }
+  ]
+}
