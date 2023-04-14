@@ -1,77 +1,66 @@
-import { type NextPage } from 'next'
 import Head from 'next/head'
-import Typist from 'react-typist-component'
+
 import { Navbar } from '~/components/navbar'
+import { FeatureWithTestimonial } from '~/components/featureWithTestimonial'
+import { Footer } from '~/components/footer'
+import { HeroWithSplit } from '~/components/heroWithSplit'
+import { Testimonials } from '~/components/testimonials'
+import { ContainedContentPanel } from '~/components/containedContentPanel'
+import { HeaderCentered } from '~/components/headerCentered/HeaderCentered'
+import { About } from '~/components/about'
+import { TeamGrid } from '~/components/teamGrid'
 
-import Logo from '/public/svg/logo.svg'
-import Mailbox from '/public/svg/mailbox.svg'
-import MailboxFlag from '/public/svg/mailbox-flag.svg'
+import cmsData from '~/modules/cms/data.json'
 
-const content = {
-  seo_title: 'Nextjs and React Native development | Pixel on Pixel',
-  title: 'Pixel on Pixel',
-  blurb:
-    "Hi, I'm a Nextjs and React Native developer. You can contact me here.",
-  mailLabel: 'message',
+import { ContactWithTestimonial } from '~/components/contactWithTestimonial'
+
+// QUESTION do we really need the return type for a page or is it overkill for the sake of correctness
+// import { type NextPage } from 'next'
+
+type HomeProps = {
+  cms: typeof cmsData
 }
 
-const Home: NextPage = () => {
-  const Cursor = (
-    <span className="dark:bg-mintDark-11 ml-1 inline-block h-4 w-2 animate-pulse bg-black leading-5"></span>
-  )
+export async function getStaticProps() {
+  return {
+    props: {
+      cms: cmsData,
+    },
+  }
+}
 
+export default function Home({ cms }: HomeProps) {
   return (
     <>
       <Head>
-        <title>{content.seo_title}</title>
+        <title>{cms.seo.title}</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta
-          name="description"
-          content="I'm a Nextjs, Storybook developer, get in touch here."
-        />
+        <meta name="description" content={cms.seo.description} />
         <link rel="icon" href="/favicon.ico" />
         {/* <link rel="icon" href="/favicon.svg" type="image/svg+xml" /> */}
       </Head>
 
       <div className="grid h-screen grid-rows-[auto_1fr_auto] gap-y-4">
-        <Navbar />
-        <main className="container flex max-w-lg flex-col items-center justify-center px-4">
-          <Logo className="fill-mint-10  dark:stroke-mintDark-11 mb-8 stroke-black opacity-60 dark:fill-transparent" />
-          <h1 className="sr-only">{content.title}</h1>
+        {/* NOTE the navbar containes the header element */}
+        <Navbar cms={cms} />
 
-          <div className="mx-auto mb-4 flex h-16 w-full gap-2 text-left sm:w-4/5">
-            <span className="grow-0">&gt;</span>
-            <div className="relative grow">
-              <p className="absolute left-0 top-0" aria-hidden>
-                <Typist
-                  startDelay={1000}
-                  typingDelay={70}
-                  cursor={Cursor}
-                  loop
-                  finishDelay={5000}
-                >
-                  {content.blurb}
-                </Typist>
-              </p>
-              <span className="sr-only">{content.blurb}</span>
-            </div>
-          </div>
+        <main className="">
+          <HeroWithSplit cms={cms} />
+          <About cms={cms} />
+          <TeamGrid cms={cms} />
 
-          <a href="mailto:hello@pixelonpixel.com">
-            <div className="group relative mx-auto mb-2 h-16 w-16">
-              <Mailbox className="icon dark:stroke-mintDark-11 absolute stroke-black" />
-              <MailboxFlag className="icon group-hover:fill-mint-8 dark:stroke-mintDark-11 dark:group-hover:fill-mintDark-8  absolute  fill-transparent stroke-black transition  group-hover:-scale-x-100" />
-            </div>
-            <p className="text-center text-xs">{content.mailLabel}</p>
-          </a>
+          <HeaderCentered cms={cms} />
+          {cms.featuredWork.items.map((item) => (
+            <FeatureWithTestimonial item={item} key={item.title} />
+          ))}
+
+          <Testimonials cms={cms} />
+          <ContainedContentPanel cms={cms} />
+          <ContactWithTestimonial cms={cms} />
         </main>
 
-        <footer className="container p-4 text-center text-xs">
-          © Copyright {new Date().getFullYear()} | {content.title}
-        </footer>
+        <Footer cms={cms} />
       </div>
     </>
   )
 }
-
-export default Home
