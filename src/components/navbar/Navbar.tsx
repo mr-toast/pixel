@@ -38,7 +38,12 @@ export function Navbar({ cms }: NavbarProps) {
           </Link>
           <div className="flex gap-2 lg:hidden">
             <ThemeSwitcher />
-            <Button type="button" format="icon" color="" onClick={() => setMobileMenuOpen(true)}>
+            <Button
+              type="button"
+              format="icon"
+              className="border border-black dark:border-emerald-400"
+              onClick={() => setMobileMenuOpen(true)}
+            >
               <span className="sr-only">{constants.OPEN_TEXT}</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </Button>
@@ -61,15 +66,20 @@ export function Navbar({ cms }: NavbarProps) {
                 <span className="sr-only">{cms.site_title}</span>
                 <Logo className="h-8 w-8" />
               </Link>
-              <Button
-                type="button"
-                color="transparent"
-                className="inline-flex h-9 w-9 cursor-default items-center rounded-full border border-black p-2 text-black hover:bg-mint-10 dark:border-mintDark-7 dark:text-mintDark-7 dark:hover:border-mintDark-8 dark:hover:bg-mintDark-3"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <span className="sr-only">{constants.CLOSE_TEXT}</span>
-                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-              </Button>
+              <div className="flex gap-2">
+                <ThemeSwitcher />
+                <Button
+                  type="button"
+                  format="icon"
+                  color="transparent"
+                  // className="inline-flex h-9 w-9 cursor-default items-center rounded-full border border-black p-2 text-black hover:bg-mint-10 dark:border-mintDark-7 dark:text-mintDark-7 dark:hover:border-mintDark-8 dark:hover:bg-mintDark-3"
+                  className="border border-black dark:border-emerald-400"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span className="sr-only">{constants.CLOSE_TEXT}</span>
+                  <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                </Button>
+              </div>
             </div>
             <nav className="mt-6 flow-root">
               <ul className="-my-6 divide-y divide-gray-500/10">
@@ -90,17 +100,18 @@ export function Navbar({ cms }: NavbarProps) {
               {cms.social.map((item) => {
                 const Icon = socialIconsMap[item.icon]
                 return (
-                  <a
+                  <Link
                     key={item.name}
                     href={item.href}
-                    className="inline-flex h-9 w-9 cursor-default items-center rounded-full border border-black p-2 text-black hover:bg-mint-10 dark:border-mintDark-7 dark:text-mintDark-7 dark:hover:border-mintDark-8 dark:hover:bg-mintDark-3"
+                    format="button"
+                    color="transparent"
+                    className="rounded-full p-2.5"
                   >
                     <span className="sr-only">{item.name}</span>
-                    <Icon className="h-6 w-6" aria-hidden="true" />
-                  </a>
+                    <Icon className="h-12 w-12" aria-hidden="true" />
+                  </Link>
                 )
               })}
-              <ThemeSwitcher />
             </div>
             {/* TODO add override styles here */}
           </Dialog.Panel>

@@ -20,7 +20,7 @@ export function ThemeSwitcher() {
   }
 
   return (
-    <Button type="button" format="icon" color="" className="" onClick={switchTheme}>
+    <Button type="button" format="icon" className="border border-black dark:border-emerald-400" onClick={switchTheme}>
       <span className="sr-only">Theme Switcher</span>
       {theme === 'light' ? (
         <MoonIcon className="h-12 w-12" aria-hidden="true" />

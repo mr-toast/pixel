@@ -9,21 +9,30 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 }
 
 const styleMap = {
-  green:
-    'bg-mint-9 border border-black hover:bg-emerald-400 focus-visible:outline-mint-9 dark:border-mintDark-10 dark:hover:bg-mintDark-10',
-  black: 'bg-black text-white hover:bg-white hover:text-black focus-visible:outline-black',
-  white: 'bg-white hover:bg-green-400 focus-visible:outline-white',
-  transparent: 'bg-transparent hover:bg-white focus-visible:outline-transparent',
+  // green:
+  //   'bg-mint-9 border border-black hover:bg-emerald-400 focus-visible:outline-mint-9 dark:border-mintDark-10 dark:hover:bg-mintDark-10',
+  green: 'text-black bg-emerald-600 hover:bg-emerald-500 focus-visible:outline-emerald-600',
+  black: 'text-white hover:text-black bg-black hover:bg-white focus-visible:outline-black',
+  white: 'text-black bg-white hover:bg-slate-300 focus-visible:outline-white',
+  transparent:
+    'bg-transparent hover:bg-black/25 dark:hover:bg-white/25 shadow-none focus-visible:outline-black/25 dark:focus-visible:outline-white/25',
 }
 
-export function buttonStyles({ color = 'black', disabled, format }: ButtonProps) {
+export function buttonStyles({ color = 'transparent', disabled, format }: ButtonProps) {
   return twMerge(
-    'inline-flex gap-x-4 items-center justify-center rounded-md text-black bg-emerald-600 px-3.5 py-2.5 text-center text-sm font-semibold shadow-sm hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 [&>svg]:h-4 [&>svg]:w-4',
-    // styleMap[color],
+    // Generic shape and size
+    'inline-flex gap-x-4 items-center justify-center rounded-md px-3.5 py-2.5 text-center text-sm font-semibold [&>svg]:h-4 [&>svg]:w-4',
+    // Shadow and effects
+    'shadow-sm hover:shadow-none',
+    // Focus ring settings
+    'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
+    // Color variants
+    styleMap[color],
+    // Formats
+    format === 'icon' && 'px-2.5 rounded-full',
     format === 'small' && 'text-xs',
-    format === 'icon' && 'px-2.5 rounded-full'
-    // disabled &&
-    //   'bg-slate-400 border-slate-400 text-slate-800 hover:bg-slate-500 hover:border-slate-500 cursor-not-allowed'
+    // Disabled state
+    disabled && 'bg-slate-400 hover:bg-slate-500 text-slate-800 cursor-not-allowed'
   )
 }
 
@@ -43,7 +52,7 @@ export function buttonStyles({ color = 'black', disabled, format }: ButtonProps)
  * ```
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function (props, forwardedRef) {
-  const { color = 'black', children, className, format = 'normal', ...rest } = props
+  const { color = 'transparent', children, className, format = 'normal', ...rest } = props
 
   const classes = twMerge(buttonStyles({ color, disabled: props.disabled, format }), className)
 

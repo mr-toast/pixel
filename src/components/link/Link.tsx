@@ -36,7 +36,15 @@ const styleMap = {
  * ```
  */
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function (props, forwardedRef) {
-  const { children, className, decoration = 'none', decorationStyle, format = 'link', color = 'black', href } = props
+  const {
+    children,
+    className,
+    decoration = 'none',
+    decorationStyle,
+    format = 'link',
+    color = 'transparent',
+    href,
+  } = props
 
   // If there is no href just return the children
   if (!href || href.length === 0) return <>{children}</>

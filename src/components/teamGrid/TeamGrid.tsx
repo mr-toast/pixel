@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Link } from '~/components/link'
 import GithubIcon from '/public/svg/github.svg'
 import TwitterIcon from '/public/svg/twitter.svg'
 import UpworkIcon from '/public/svg/upwork.svg'
@@ -29,26 +30,26 @@ export function TeamGrid({ cms }) {
               <ul role="list" className="mt-6 flex justify-center gap-x-6">
                 {person.upwork && (
                   <li>
-                    <a href={person.upwork} className="text-gray-400 hover:text-gray-500">
+                    <Link href={person.upwork} className="text-gray-400 hover:text-gray-500">
                       <span className="sr-only">Upwork</span>
                       <UpworkIcon className="h-5 w-5" aria-hidden="true" />
-                    </a>
+                    </Link>
                   </li>
                 )}
                 {person.github && (
                   <li>
-                    <a href={person.github} className="text-gray-400 hover:text-gray-500">
+                    <Link href={person.github} className="text-gray-400 hover:text-gray-500">
                       <span className="sr-only">Github</span>
                       <GithubIcon className="h-5 w-5" aria-hidden="true" />
-                    </a>
+                    </Link>
                   </li>
                 )}
                 {person.twitter && (
                   <li>
-                    <a href={person.twitter} className="text-gray-400 hover:text-gray-500">
+                    <Link href={person.twitter} className="text-gray-400 hover:text-gray-500">
                       <span className="sr-only">Twitter</span>
                       <TwitterIcon className="h-5 w-5" aria-hidden="true" />
-                    </a>
+                    </Link>
                   </li>
                 )}
               </ul>

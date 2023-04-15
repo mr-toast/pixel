@@ -108,7 +108,7 @@ export function ContactWithTestimonial({ cms }) {
               </div>
             </div>
             <div className="mt-10">
-              <Button type="submit" className="w-full">
+              <Button type="submit" className="w-full" color="black">
                 {cms.contact.button.label}
                 <PaperAirplaneIcon className="h-4 w-4" />
               </Button>

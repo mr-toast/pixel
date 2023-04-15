@@ -13,7 +13,7 @@ export function FeatureWithTestimonial({ item }) {
               <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">{title}</p>
               <p className="mt-6 text-lg leading-8 text-gray-700 dark:text-mintDark-10">{description}</p>
               <div className="mt-8">
-                <Link format="button" href={button.href}>
+                <Link format="button" color="black" href={button.href}>
                   {button.label}
                 </Link>
               </div>
