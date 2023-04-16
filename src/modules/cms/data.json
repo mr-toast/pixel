@@ -365,5 +365,12 @@
       "href": "#",
       "icon": "twitter"
     }
-  ]
+  ],
+  "video": {
+    "loopOne": {
+      "id": "817918512",
+      "format": "landscape",
+      "imageUrl": null
+    }
+  }
 }

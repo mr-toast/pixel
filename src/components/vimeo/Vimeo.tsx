@@ -1,20 +1,26 @@
 import { Image } from '~/components/image'
+import { twMerge } from 'tailwind-merge'
 
-// NOTE decide on src format later on then cleanup types
 type VimeoProps = {
   id: string
-  src: string
-  options: any
-  format: string
-  imageUrl: string
+  isBackground: boolean
+  className?: string
+  format?: string
+  imageUrl?: string
 }
 
 export function Vimeo(props: VimeoProps) {
-  const { id, src, options, format, imageUrl } = props
-  const srcUrl = `https://player.vimeo.com/video/${id}${options}`
+  const { className, id, isBackground = false, format, imageUrl } = props
+  const query = `${id}` + (isBackground ? '?background=1' : '')
+  const srcUrl = `https://player.vimeo.com/video/${query}`
+
+  const classes = twMerge(
+    'relative aspect-video bg-slate-700/25 [&>iframe]:absolute [&>iframe]:left-0 [&>iframe]:top-0 [&>iframe]:h-full [&>iframe]:w-full',
+    className
+  )
+
   return (
-    <div className="relative aspect-video bg-gray-700   [&>iframe]:absolute [&>iframe]:left-0 [&>iframe]:top-0 [&>iframe]:h-full [&>iframe]:w-full">
-      <Image src={imageUrl} alt="" role="presentation" className="absolute left-0 top-0 h-full w-full" />
+    <div className={classes}>
       <iframe src={srcUrl} allow="autoplay; fullscreen" allowFullScreen></iframe>
     </div>
   )

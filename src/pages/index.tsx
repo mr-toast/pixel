@@ -9,7 +9,7 @@ import { ContainedContentPanel } from '~/components/containedContentPanel'
 import { HeaderCentered } from '~/components/headerCentered/HeaderCentered'
 import { About } from '~/components/about'
 import { TeamGrid } from '~/components/teamGrid'
-
+import { Vimeo } from '~/components/vimeo'
 import cmsData from '~/modules/cms/data.json'
 
 import { ContactWithTestimonial } from '~/components/contactWithTestimonial'
@@ -47,6 +47,9 @@ export default function Home({ cms }: HomeProps) {
         <main className="">
           <HeroWithSplit cms={cms} />
           <About cms={cms} />
+          <div className="">
+            <Vimeo id={cms.video.loopOne.id} isBackground={true} />
+          </div>
           <TeamGrid cms={cms} />
 
           <HeaderCentered cms={cms} />
