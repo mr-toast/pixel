@@ -19,7 +19,7 @@ export function TeamGrid({ cms }) {
           {cms.team.people.map((person) => (
             <li key={person.name}>
               <Image
-                className="mx-auto aspect-square w-72 rounded-full"
+                className="mx-auto aspect-square w-72 rounded-full mix-blend-hard-light dark:bg-mintDark-10 dark:mix-blend-exclusion"
                 src={person.imageUrl}
                 alt={`${person.name} profile picture`}
                 height="288"
