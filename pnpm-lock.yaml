@@ -22,6 +22,7 @@ specifiers:
   cz-conventional-changelog: ^3.3.0
   eslint: ^8.36.0
   eslint-config-next: ^13.2.4
+  lodash: ^4.17.21
   next: ^13.2.4
   next-themes: ^0.2.1
   postcss: ^8.4.21
@@ -45,6 +46,7 @@ dependencies:
   '@radix-ui/react-select': 1.2.1_puuzjadfv64tjpjwi3qllwuniy
   '@react-types/shared': 3.18.0_react@18.2.0
   ahooks: 3.7.6_react@18.2.0
+  lodash: 4.17.21
   next: 13.3.0_biqbaboplfbrettd7655fr4n2y
   next-themes: 0.2.1_yucv4tfv7v7nrkw2uguegj6e7e
   react: 18.2.0
