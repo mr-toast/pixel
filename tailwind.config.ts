@@ -17,6 +17,10 @@ module.exports = {
       fontFamily: {
         sans: ['--font-cutive-mono', ...fontFamily.sans],
       },
+
+      aspectRatio: {
+        portrait: '1 / 2',
+      },
     },
   },
   plugins: [
