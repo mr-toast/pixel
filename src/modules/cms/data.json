@@ -62,7 +62,7 @@
       {
         "name": "Brett Jones",
         "role": "The Dude",
-        "imageUrl": "/images/profile-1.jpg",
+        "imageUrl": "/images/profile-5.png",
         "upwork": "#",
         "github": "#",
         "twitter": "#"
@@ -70,14 +70,14 @@
       {
         "name": "Kevin Frilot",
         "role": "The Other Dude",
-        "imageUrl": "/images/profile-2.jpg",
+        "imageUrl": "/images/profile-4.png",
         "upwork": "#",
         "twitter": "#"
       },
       {
         "name": "Jonny Cash",
         "role": "The Man",
-        "imageUrl": "/images/profile-3.jpg",
+        "imageUrl": "/images/profile-6.png",
         "upwork": "#",
         "github": "#"
       }
@@ -366,11 +366,24 @@
       "icon": "twitter"
     }
   ],
-  "video": {
-    "loopOne": {
-      "id": "817918512",
+  "video": [
+    {
+      "id": "818280654",
+      "title": "rolling code",
+      "format": "landscape",
+      "imageUrl": null
+    },
+    {
+      "id": "818281313",
+      "title": "layered code",
+      "format": "landscape",
+      "imageUrl": null
+    },
+    {
+      "id": "818267026",
+      "title": "pixel loop",
       "format": "landscape",
       "imageUrl": null
     }
-  }
+  ]
 }
