@@ -41,9 +41,9 @@
     }
   ],
   "hero": {
-    "badge": "What's new",
-    "heading": "Deploy to the cloud with confidence",
-    "body": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
+    "badge": "Hi there, I'm Brett",
+    "heading": "Frontend and React Native App Development",
+    "body": "I'm work on frontend with React, Nextjs and Storybook and am migrating into app development with React Native. I'm an Upwork rising talent with hundreds of billed hours.",
     "button": {
       "label": "Let's chat",
       "href": "#"
@@ -56,13 +56,13 @@
     "blurb": "I'm a Nextjs, Storybook developer, get in touch here."
   },
   "team": {
-    "heading": "Meet our team",
-    "body": "We're a dynamic group of individuals who are passionate about what we do.",
+    "heading": "Collective Minds",
+    "body": "Beatae nulla nemo ratione omnis repellendus aperiam fugiat doloremque alias aut fuga ut fuga corporis.",
     "people": [
       {
         "name": "Brett Jones",
         "role": "The Dude",
-        "imageUrl": "/images/profile-5.png",
+        "imageUrl": "/images/profile-1.jpg",
         "upwork": "#",
         "github": "#",
         "twitter": "#"
@@ -70,14 +70,14 @@
       {
         "name": "Kevin Frilot",
         "role": "The Other Dude",
-        "imageUrl": "/images/profile-4.png",
+        "imageUrl": "/images/profile-2.jpg",
         "upwork": "#",
-        "twitter": "#"
+        "github": "#"
       },
       {
         "name": "Jonny Cash",
         "role": "The Man",
-        "imageUrl": "/images/profile-6.png",
+        "imageUrl": "/images/profile-3.jpg",
         "upwork": "#",
         "github": "#"
       }
@@ -91,13 +91,15 @@
         "header": "Site development",
         "title": "Freshy's Baking Club",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+        "stackOLD": ["javascript", "cms", "storybook"],
+        "stack": ["react", "javascript", "cms", "storybook"],
         "button": {
           "label": "View project",
           "href": "#"
         },
         "testimonial": {
           "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
-          "image": "/images/profile-0.jpg",
+          "image": "/images/freshy.jpg",
           "name": "Nattakran Saisa-ard",
           "title": "Owner, Freshy's Baking Club"
         },
@@ -107,15 +109,16 @@
         "header": "Component development",
         "title": "Tropic Labs",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+        "stack": ["shopify", "react", "typescript", "cms", "storybook"],
         "button": {
           "label": "View project",
           "href": "#"
         },
         "testimonial": {
           "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
-          "image": "/images/profile-0.jpg",
-          "name": "7&8",
-          "title": "Development Agency"
+          "image": "/images/morgan-ioffe.jpg",
+          "name": "Morgan Ioffe",
+          "title": "Founder, Tropic Labs"
         },
         "image": "/images/dark-project-app-screenshot.png"
       },
@@ -123,6 +126,7 @@
         "header": "Component development",
         "title": "Boss Personal Planner",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+        "stack": ["shopify", "react", "javascript", "cms", "gatsby", "materialUi", "storybook"],
         "button": {
           "label": "View project",
           "href": "#"
@@ -139,6 +143,7 @@
         "header": "Site development",
         "title": "Varee International School",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+        "stack": ["wordpress", "cms"],
         "button": {
           "label": "View project",
           "href": "#"
@@ -158,10 +163,8 @@
       "header": "Site development",
       "title": "Our Jungle Camp",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-      "button": {
-        "label": "View project",
-        "href": "#"
-      },
+      "stack": ["wordpress", "cms"],
+
       "testimonial": {
         "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
         "image": "/images/profile-0.jpg",
@@ -174,10 +177,7 @@
       "header": "Site development",
       "title": "Our Jungle House",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-      "button": {
-        "label": "View project",
-        "href": "#"
-      },
+      "stack": ["wordpress", "cms"],
       "testimonial": {
         "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
         "image": "/images/profile-0.jpg",
@@ -289,41 +289,41 @@
     ]
   },
   "services": {
-    "heading1": "Boost your productivity.",
-    "heading2": "Start using our app today.",
+    "heading1": "Experience you can count on.",
+    "heading2": "Individual or colaborative work.",
     "body": "Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla. Ac euismod vel sit maecenas.",
     "list": [
       {
-        "name": "Push to deploy.",
+        "name": "Eos Eligendi Qui",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.",
-        "icon": "cloudArrow"
+        "icon": "commandLine"
       },
       {
-        "name": "SSL certificates.",
+        "name": "Debitis Aut Et.",
         "description": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
-        "icon": "lockClosed"
+        "icon": "commandLine"
       },
       {
-        "name": "Database backups.",
+        "name": "Quis Autem Deleniti",
         "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.",
-        "icon": "server"
+        "icon": "commandLine"
       }
     ],
     "image": "/images/dark-project-app-screenshot.png"
   },
   "contact": {
     "heading": "Let's talk about your project",
-    "body": "We help companies and individuals build out their brand guidelines.",
+    "body": "Sit quo labore tenetur laboriosam dignissimos vel omnis perferendis sunt dignissimos excepturi corrupti quia velit consequatur.",
     "legal": "By submitting this form, I agree to the",
     "button": {
       "label": "Let's talk"
     },
     "testimonial": {
-      "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
-      "image": "/images/profile-0.jpg",
+      "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras.",
+      "image": "/images/freshy.jpg",
       "name": "Nattakran Saisa-ard",
       "title": "Owner, Freshy's Baking Club",
-      "logo": ""
+      "logo": "/images/freshys-logo.png"
     },
     "mailLabel": "message"
   },
