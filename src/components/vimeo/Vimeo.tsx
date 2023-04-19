@@ -10,17 +10,18 @@ type VimeoProps = {
 }
 
 export function Vimeo(props: VimeoProps) {
-  const { className, id, isBackground = false, format, imageUrl } = props
+  const { className, id, isBackground = false, imageUrl } = props
   const query = `${id}` + (isBackground ? '?background=1' : '')
   const srcUrl = `https://player.vimeo.com/video/${query}`
 
   const classes = twMerge(
-    'relative aspect-video bg-slate-700/25 [&>iframe]:absolute [&>iframe]:left-0 [&>iframe]:top-0 [&>iframe]:h-full [&>iframe]:w-full',
+    'relative aspect-video [&>iframe]:absolute [&>iframe]:inset-0 [&>iframe]:h-full [&>iframe]:w-full [&>iframe]:object-cover',
     className
   )
 
   return (
     <div className={classes}>
+      {imageUrl && <Image src={imageUrl} alt="" role="presentation" />}
       <iframe src={srcUrl} allow="autoplay; fullscreen" allowFullScreen></iframe>
     </div>
   )

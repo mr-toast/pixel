@@ -1,18 +1,16 @@
 import Head from 'next/head'
-
-import { Navbar } from '~/components/navbar'
-import { FeatureWithTestimonial } from '~/components/featureWithTestimonial'
-import { Footer } from '~/components/footer'
+import { Navbar, NavbarWrapper } from '~/components/navbar'
+import { About } from '~/components/about'
 import { HeroWithSplit } from '~/components/heroWithSplit'
+import { HeaderCentered } from '~/components/headerCentered/HeaderCentered'
+import { TeamGrid } from '~/components/teamGrid'
+import { FeatureWithTestimonial } from '~/components/featureWithTestimonial'
 import { Testimonials } from '~/components/testimonials'
 import { ContainedContentPanel } from '~/components/containedContentPanel'
-import { HeaderCentered } from '~/components/headerCentered/HeaderCentered'
-import { About } from '~/components/about'
-import { TeamGrid } from '~/components/teamGrid'
-import { Vimeo } from '~/components/vimeo'
-import cmsData from '~/modules/cms/data.json'
-
 import { ContactWithTestimonial } from '~/components/contactWithTestimonial'
+import { Footer } from '~/components/footer'
+
+import cmsData from '~/modules/cms/data.json'
 
 // QUESTION do we really need the return type for a page or is it overkill for the sake of correctness
 // import { type NextPage } from 'next'
@@ -40,30 +38,31 @@ export default function Home({ cms }: HomeProps) {
         {/* <link rel="icon" href="/favicon.svg" type="image/svg+xml" /> */}
       </Head>
 
-      <div className="grid h-screen grid-rows-[auto_1fr_auto] gap-y-4">
-        {/* NOTE the navbar containes the header element */}
-        <Navbar cms={cms} />
+      <header>
+        <NavbarWrapper>
+          <Navbar cms={cms} />
+        </NavbarWrapper>
+      </header>
 
-        <main className="">
-          <HeroWithSplit cms={cms} />
-          <About cms={cms} />
-          <div className="">
-            <Vimeo id={cms.video.loopOne.id} isBackground={true} />
-          </div>
-          <TeamGrid cms={cms} />
+      <main>
+        <About cms={cms} />
+        <HeroWithSplit cms={cms} />
 
-          <HeaderCentered cms={cms} />
-          {cms.featuredWork.items.map((item) => (
-            <FeatureWithTestimonial item={item} key={item.title} />
-          ))}
+        <TeamGrid cms={cms} />
 
-          <Testimonials cms={cms} />
-          <ContainedContentPanel cms={cms} />
-          <ContactWithTestimonial cms={cms} />
-        </main>
+        <HeaderCentered cms={cms} />
+        {cms.featuredWork.items.map((item) => (
+          <FeatureWithTestimonial item={item} key={item.title} />
+        ))}
 
+        <Testimonials cms={cms} />
+        <ContainedContentPanel cms={cms} />
+        <ContactWithTestimonial cms={cms} />
+      </main>
+
+      <footer>
         <Footer cms={cms} />
-      </div>
+      </footer>
     </>
   )
 }

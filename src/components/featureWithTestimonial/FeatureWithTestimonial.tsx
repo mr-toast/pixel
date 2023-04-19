@@ -1,5 +1,30 @@
 import { Image } from '~/components/image'
 import { Link } from '~/components/link'
+import CmsIcon from '/public/svg/cms.svg'
+import DockerIcon from '/public/svg/docker.svg'
+import GatsbyIcon from '/public/svg/gatsby.svg'
+import JavascriptIcon from '/public/svg/javascript.svg'
+import MateriakUiIcon from '/public/svg/material-ui.svg'
+import ReactIcon from '/public/svg/react.svg'
+import ShopifyIcon from '/public/svg/shopify.svg'
+import StorybookIcon from '/public/svg/storybook.svg'
+import TailwindIcon from '/public/svg/tailwind.svg'
+import TypescriptIcon from '/public/svg/typescript.svg'
+import WordpressIcon from '/public/svg/wordpress.svg'
+
+const stackIconsMap = {
+  cms: CmsIcon,
+  docker: DockerIcon,
+  gatsby: GatsbyIcon,
+  javascript: JavascriptIcon,
+  materialUi: MateriakUiIcon,
+  react: ReactIcon,
+  shopify: ShopifyIcon,
+  storybook: StorybookIcon,
+  tailwind: TailwindIcon,
+  typescript: TypescriptIcon,
+  wordpress: WordpressIcon,
+}
 
 export function FeatureWithTestimonial({ item }) {
   const { header, title, description, button, testimonial, image } = item
@@ -12,6 +37,14 @@ export function FeatureWithTestimonial({ item }) {
               <h2 className="text-base font-semibold leading-7">{header}</h2>
               <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">{title}</p>
               <p className="mt-6 text-lg leading-8 text-gray-700 dark:text-mintDark-10">{description}</p>
+
+              <div className="mt-8 flex flex-wrap gap-4">
+                {item?.stack.map((item) => {
+                  const Icon = stackIconsMap[item]
+                  return <Icon key={item} className="h-12 w-12" aria-hidden="true" />
+                })}
+              </div>
+
               <div className="mt-8">
                 <Link format="button" color="black" href={button.href}>
                   {button.label}

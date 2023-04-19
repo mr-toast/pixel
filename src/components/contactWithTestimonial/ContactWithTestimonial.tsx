@@ -1,7 +1,6 @@
 import { Button } from '~/components/button'
 import { Image } from '~/components/image'
 import { Link } from '~/components/link'
-import { Input } from '~/components/input'
 import Mailbox from '/public/svg/mailbox.svg'
 import MailboxFlag from '/public/svg/mailbox-flag.svg'
 import { PaperAirplaneIcon } from '@heroicons/react/24/outline'
@@ -123,13 +122,13 @@ export function ContactWithTestimonial({ cms }) {
           </form>
           <div className="lg:mt-6 lg:w-80 lg:flex-none">
             <Image
-              className="h-12 w-auto"
-              src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg"
+              className="w-48 mix-blend-luminosity"
+              src={cms.contact.testimonial.logo}
               alt=""
-              width={196}
-              height={48}
+              width={1000}
+              height={160}
             />
-            <figure className="mt-10">
+            <figure className="mt-8">
               <blockquote className="text-lg font-semibold leading-8 ">
                 <p>"{cms.contact.testimonial.quote}"</p>
               </blockquote>

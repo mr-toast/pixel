@@ -1,7 +1,8 @@
 import { Image } from '~/components/image'
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import { CommandLineIcon, CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 
 const iconsMap = {
+  commandLine: CommandLineIcon,
   cloudArrow: CloudArrowUpIcon,
   lockClosed: LockClosedIcon,
   server: ServerIcon,
