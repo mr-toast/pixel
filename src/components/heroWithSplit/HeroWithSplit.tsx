@@ -1,13 +1,14 @@
 import { Image } from '~/components/image'
 import { Link } from '~/components/link'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { Typist } from '~/components/typist'
 
 export function HeroWithSplit({ cms }) {
   return (
     <div className="relative isolate overflow-hidden">
       {/* NOTE background artwork */}
       <svg
-        className="absolute inset-0 -z-10 h-full w-full stroke-black/25 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] dark:stroke-emerald-800/25"
+        className="absolute inset-0 -z-10 h-full w-full stroke-zinc-950/25 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] dark:stroke-zinc-800/25"
         aria-hidden="true"
       >
         <defs>
@@ -22,7 +23,7 @@ export function HeroWithSplit({ cms }) {
             <path d="M.5 200V.5H200" fill="none" />
           </pattern>
         </defs>
-        <svg x="50%" y={-1} className="overflow-visible fill-black/25 dark:fill-emerald-800/25">
+        <svg x="50%" y={-1} className="overflow-visible fill-zinc-950/25 dark:fill-zinc-800/25">
           <path
             d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
             strokeWidth={0}
@@ -46,23 +47,38 @@ export function HeroWithSplit({ cms }) {
 
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-          <div className="mt-24 sm:mt-32 lg:mt-16">
+          {/* <div className="mt-24 sm:mt-32 lg:mt-16">
             <p className="inline-flex space-x-6">
-              <span className="rounded-full bg-emerald-300 px-3 py-1 text-sm font-semibold leading-6 text-slate-700 ring-1 ring-inset ring-slate-700  dark:bg-emerald-500/10 dark:text-emerald-400 dark:ring-emerald-500/20">
+              <span className="rounded-full bg-zinc-300 px-3 py-1 text-sm font-semibold leading-6 text-zinc-700 ring-1 ring-inset ring-zinc-700  dark:bg-zinc-500/10 dark:text-zinc-400 dark:ring-zinc-500/20">
                 {cms.hero.badge}
               </span>
             </p>
+           
+          </div> */}
+          <div className="mt-24 sm:mt-32 lg:mt-16">
+            <Typist withPrompt>{cms.hero.badge}</Typist>
           </div>
-          <h1 className="mt-10 text-4xl font-bold tracking-tight sm:text-6xl">{cms.hero.heading}</h1>
-          <p className="mt-6 text-lg  leading-8 text-slate-700 dark:text-mintDark-11">{cms.hero.body}</p>
-          <div className="mt-10 flex items-center gap-x-3">
+
+          <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-6xl">{cms.hero.heading}</h1>
+          <p className="mt-6 text-lg  leading-8 text-zinc-700 dark:text-zinc-50">{cms.hero.body}</p>
+          {/* <div className="mt-10 flex items-center gap-x-3">
             <Link href={cms.hero.button.href} className="text-sm font-semibold leading-6">
               {cms.hero.button.label}{' '}
             </Link>
             <div className="-rotate-90">
               <ChevronDownIcon className="h-5 w-5 animate-bounce" aria-hidden="true" />
             </div>
-          </div>
+          </div> */}
+
+          <Link
+            href={'#'}
+            className="mt-6 inline-flex gap-3 rounded-full bg-zinc-300 px-3 py-1 text-sm font-semibold leading-6 text-zinc-700 ring-1 ring-inset ring-zinc-700 dark:bg-zinc-500/10 dark:text-zinc-400 dark:ring-zinc-500/20"
+          >
+            {cms.hero.button.label}
+            <div className="-rotate-90">
+              <ChevronDownIcon className="h-5 w-5 animate-bounce" aria-hidden="true" />
+            </div>
+          </Link>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
@@ -71,7 +87,7 @@ export function HeroWithSplit({ cms }) {
               alt=""
               width={2432}
               height={1442}
-              className="rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 [&>img]:w-[76rem]"
+              className="rounded-md bg-zinc-50/5 shadow-2xl ring-1 ring-zinc-50/10 [&>img]:w-[76rem]"
             />
           </div>
         </div>

@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Navbar, NavbarWrapper } from '~/components/navbar'
-import { About } from '~/components/about'
+import { VideoHero } from '~/components/videoHero'
 import { HeroWithSplit } from '~/components/heroWithSplit'
 import { HeaderCentered } from '~/components/headerCentered/HeaderCentered'
 import { TeamGrid } from '~/components/teamGrid'
@@ -16,7 +16,7 @@ import cmsData from '~/modules/cms/data.json'
 // import { type NextPage } from 'next'
 
 type HomeProps = {
-  cms: typeof cmsData
+  cms: SiteData
 }
 
 export async function getStaticProps() {
@@ -45,17 +45,17 @@ export default function Home({ cms }: HomeProps) {
       </header>
 
       <main>
-        <About cms={cms} />
+        <VideoHero cms={cms} />
         <HeroWithSplit cms={cms} />
 
-        <TeamGrid cms={cms} />
-
         <HeaderCentered cms={cms} />
-        {cms.featuredWork.items.map((item) => (
-          <FeatureWithTestimonial item={item} key={item.title} />
-        ))}
+        {cms.featuredWork.items.map((item) => {
+          console.log('item', item)
+          return <FeatureWithTestimonial cms={item} key={item.title} />
+        })}
 
         <Testimonials cms={cms} />
+        <TeamGrid cms={cms} />
         <ContainedContentPanel cms={cms} />
         <ContactWithTestimonial cms={cms} />
       </main>

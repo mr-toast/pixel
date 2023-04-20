@@ -5,13 +5,18 @@ import Mailbox from '/public/svg/mailbox.svg'
 import MailboxFlag from '/public/svg/mailbox-flag.svg'
 import { PaperAirplaneIcon } from '@heroicons/react/24/outline'
 
-export function ContactWithTestimonial({ cms }) {
+type ContactWithTestimonialProps = {
+  cms: Pick<SiteData, 'contact'>
+}
+
+export function ContactWithTestimonial(props: ContactWithTestimonialProps) {
+  const { cms } = props
   return (
     <div className="relative isolate  px-6 py-24 sm:py-32 lg:px-8">
       {/* NOTE background artwork */}
       <svg
-        // className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-        className="absolute inset-0 -z-10 h-full w-full stroke-black/25 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] dark:stroke-emerald-800/25"
+        className="absolute inset-0 -z-10 h-full w-full stroke-zinc-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+        // className="absolute inset-0 -z-10 h-full w-full stroke-zinc-950/25 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] dark:stroke-zinc-800/25"
         aria-hidden="true"
       >
         <defs>
@@ -27,7 +32,7 @@ export function ContactWithTestimonial({ cms }) {
           </pattern>
         </defs>
         {/* <svg x="50%" y={-64} className="overflow-visible fill-gray-50"> */}
-        <svg x="50%" y={-64} className="overflow-visible fill-black/25 dark:fill-emerald-800/25">
+        <svg x="50%" y={-64} className="overflow-visible fill-zinc-950/25 dark:fill-zinc-800/25">
           <path
             d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M299.5 800h201v201h-201Z"
             strokeWidth={0}
@@ -39,12 +44,12 @@ export function ContactWithTestimonial({ cms }) {
       <div className="mx-auto max-w-xl lg:max-w-4xl">
         {/* TODO add state change to mailbox flag when mail sent */}
         <div className="group relative mb-2 h-16 w-16">
-          <Mailbox className="icon absolute stroke-black dark:stroke-mintDark-11" />
-          <MailboxFlag className="icon absolute fill-transparent stroke-black  transition  group-hover:-scale-x-100 group-hover:fill-mint-8 dark:stroke-mintDark-11  dark:group-hover:fill-mintDark-8" />
+          <Mailbox className="icon absolute stroke-zinc-950 dark:stroke-zinc-50" />
+          <MailboxFlag className="icon absolute fill-transparent stroke-zinc-950  transition  group-hover:-scale-x-100 group-hover:fill-zinc-700 dark:stroke-zinc-50  dark:group-hover:fill-zinc-300" />
         </div>
 
         <h2 className="text-4xl font-bold tracking-tight">{cms.contact.heading}</h2>
-        <p className="mt-2 text-lg leading-8 text-gray-700 dark:text-mintDark-9">{cms.contact.body}</p>
+        <p className="mt-2 text-lg leading-8 text-zinc-700 dark:text-zinc-300">{cms.contact.body}</p>
         <div className="mt-16 flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
           <form action="#" method="POST" className="lg:flex-auto">
             <div className="mb-6">
@@ -57,7 +62,7 @@ export function ContactWithTestimonial({ cms }) {
                   name="name"
                   id="name"
                   autoComplete="name"
-                  className="block w-full rounded-md border-0 bg-emerald-200 px-3.5  py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-emerald-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 dark:bg-mintDark-9 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 bg-zinc-200 px-3.5  py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-zinc-300 placeholder:text-gray-400  focus:ring-2 focus:ring-inset focus:ring-zinc-600 dark:bg-zinc-900 dark:ring-zinc-500 dark:focus:ring-zinc-500 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -72,7 +77,7 @@ export function ContactWithTestimonial({ cms }) {
                     name="email"
                     id="email"
                     autoComplete="email"
-                    className="block w-full rounded-md border-0 bg-emerald-200 px-3.5  py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-emerald-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 dark:bg-mintDark-9 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 bg-zinc-200 px-3.5  py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-zinc-300 placeholder:text-gray-400  focus:ring-2 focus:ring-inset focus:ring-zinc-600 dark:bg-zinc-900 dark:ring-zinc-500 dark:focus:ring-zinc-500 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -86,7 +91,7 @@ export function ContactWithTestimonial({ cms }) {
                     id="budget"
                     name="budget"
                     type="text"
-                    className="block w-full rounded-md border-0 bg-emerald-200 px-3.5  py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-emerald-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 dark:bg-mintDark-9 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 bg-zinc-200 px-3.5  py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-zinc-300 placeholder:text-gray-400  focus:ring-2 focus:ring-inset focus:ring-zinc-600 dark:bg-zinc-900 dark:ring-zinc-500 dark:focus:ring-zinc-500 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -100,7 +105,7 @@ export function ContactWithTestimonial({ cms }) {
                     id="message"
                     name="message"
                     rows={4}
-                    className="block w-full rounded-md border-0 bg-emerald-200 px-3.5  py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-emerald-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 dark:bg-mintDark-9 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 bg-zinc-200 px-3.5  py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-zinc-300 placeholder:text-gray-400  focus:ring-2 focus:ring-inset focus:ring-zinc-600 dark:bg-zinc-900 dark:ring-zinc-500 dark:focus:ring-zinc-500 sm:text-sm sm:leading-6"
                     defaultValue={''}
                   />
                 </div>
@@ -114,7 +119,7 @@ export function ContactWithTestimonial({ cms }) {
             </div>
             <p className="mt-4 text-sm leading-6">
               {cms.contact.legal}{' '}
-              <Link href="#" className="font-semibold text-gray-700 dark:text-mintDark-10">
+              <Link href="#" className="font-semibold text-gray-700 dark:text-zinc-900">
                 privacy&nbsp;policy
               </Link>
               .
@@ -136,13 +141,13 @@ export function ContactWithTestimonial({ cms }) {
                 <Image
                   src={cms.contact.testimonial.image}
                   alt=""
-                  className="h-12 w-12 flex-none rounded-full bg-gray-50"
+                  className="h-12 w-12 flex-none rounded-full bg-zinc-50"
                   width={48}
                   height={48}
                 />
                 <div>
-                  <div className="text-base font-semibold dark:text-mintDark-10">{cms.contact.testimonial.name}</div>
-                  <div className="text-sm leading-6 ">{cms.contact.testimonial.title}</div>
+                  <div className="text-base font-semibold dark:text-zinc-950">{cms.contact.testimonial.name}</div>
+                  <div className="text-sm leading-6">{cms.contact.testimonial.title}</div>
                 </div>
               </figcaption>
             </figure>

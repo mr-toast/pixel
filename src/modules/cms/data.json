@@ -91,7 +91,6 @@
         "header": "Site development",
         "title": "Freshy's Baking Club",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-        "stackOLD": ["javascript", "cms", "storybook"],
         "stack": ["react", "javascript", "cms", "storybook"],
         "button": {
           "label": "View project",
@@ -290,7 +289,7 @@
   },
   "services": {
     "heading1": "Experience you can count on.",
-    "heading2": "Individual or colaborative work.",
+    "heading2": "Independent or colaborative work.",
     "body": "Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla. Ac euismod vel sit maecenas.",
     "list": [
       {

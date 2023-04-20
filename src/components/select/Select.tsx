@@ -42,7 +42,7 @@ export const Select = forwardRef<
           </SelectPrimitive.Icon>
         </SelectPrimitive.Trigger>
         <SelectPrimitive.Portal>
-          <SelectPrimitive.Content className="animate-in fade-in-80 relative z-50 min-w-[8rem] overflow-hidden rounded-md border border-slate-100 bg-white text-slate-700 shadow-md">
+          <SelectPrimitive.Content className="animate-in fade-in-80 relative z-50 min-w-[8rem] overflow-hidden rounded-md border border-slate-100 bg-zinc-50 text-slate-700 shadow-md">
             <SelectPrimitive.ScrollUpButton>
               <ChevronUpIcon />
             </SelectPrimitive.ScrollUpButton>

@@ -10,7 +10,7 @@ export function TeamGrid({ cms }) {
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{cms.team.heading}</h2>
-          <p className="mt-4 text-lg leading-8 text-slate-700 dark:text-mintDark-10">{cms.team.body}</p>
+          <p className="mt-4 text-lg leading-8 text-slate-700 dark:text-zinc-50">{cms.team.body}</p>
         </div>
         <ul
           role="list"
@@ -19,18 +19,18 @@ export function TeamGrid({ cms }) {
           {cms.team.people.map((person) => (
             <li key={person.name}>
               <Image
-                className="mx-auto aspect-square w-72 rounded-full mix-blend-hard-light dark:bg-mintDark-10 dark:mix-blend-exclusion"
+                className="mx-auto aspect-square w-72 rounded-full bg-zinc-950  dark:bg-zinc-50 "
                 src={person.imageUrl}
                 alt={`${person.name} profile picture`}
                 height="288"
                 width="288"
               />
               <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight">{person.name}</h3>
-              <p className="text-sm leading-6 dark:text-mintDark-10">{person.role}</p>
+              <p className="text-sm leading-6 dark:text-zinc-500">{person.role}</p>
               <ul role="list" className="mt-6 flex justify-center gap-x-6">
                 {person.upwork && (
                   <li>
-                    <Link href={person.upwork} className="text-gray-400 hover:text-gray-500">
+                    <Link href={person.upwork} className="text-zinc-400 hover:text-zinc-500">
                       <span className="sr-only">Upwork</span>
                       <UpworkIcon className="h-5 w-5" aria-hidden="true" />
                     </Link>
@@ -38,7 +38,7 @@ export function TeamGrid({ cms }) {
                 )}
                 {person.github && (
                   <li>
-                    <Link href={person.github} className="text-gray-400 hover:text-gray-500">
+                    <Link href={person.github} className="text-zinc-400 hover:text-zinc-500">
                       <span className="sr-only">Github</span>
                       <GithubIcon className="h-5 w-5" aria-hidden="true" />
                     </Link>
@@ -46,7 +46,7 @@ export function TeamGrid({ cms }) {
                 )}
                 {person.twitter && (
                   <li>
-                    <Link href={person.twitter} className="text-gray-400 hover:text-gray-500">
+                    <Link href={person.twitter} className="text-zinc-400 hover:text-zinc-500">
                       <span className="sr-only">Twitter</span>
                       <TwitterIcon className="h-5 w-5" aria-hidden="true" />
                     </Link>

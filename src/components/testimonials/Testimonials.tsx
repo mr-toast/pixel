@@ -1,6 +1,11 @@
-import Image from 'next/image'
+import { Image } from '~/components/image'
 
-export function Testimonials({ cms }) {
+type TestimonialsProps = {
+  cms: unknown
+}
+
+export function Testimonials(props: TestimonialsProps) {
+  const { cms } = props
   return (
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -12,22 +17,22 @@ export function Testimonials({ cms }) {
           <div className="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-3">
             {cms.testimonials.feedback.map((testimonial, index) => (
               <div key={index} className="pt-8 sm:inline-block sm:w-full sm:px-4">
-                <figure className="rounded-2xl bg-gray-50 p-8 text-sm leading-6 dark:bg-mint-9">
-                  <div className="text-lg font-semibold text-gray-900">{testimonial.title}</div>
-                  <blockquote className="text-gray-900">
+                <figure className="rounded-2xl bg-zinc-200 p-8 text-sm leading-6 dark:bg-zinc-400">
+                  <div className="text-lg font-semibold text-zinc-950 dark:text-zinc-50">{testimonial.title}</div>
+                  <blockquote className="text-zinc-900 dark:text-zinc-200">
                     <p>{`"${testimonial.body}"`}</p>
                   </blockquote>
                   <figcaption className="mt-6 flex items-center gap-x-4">
                     <Image
-                      className="h-16 w-16 bg-gray-50 mix-blend-multiply"
+                      className="h-16 w-16 bg-zinc-50 mix-blend-multiply"
                       src={testimonial.meta.imageUrl}
                       alt=""
-                      width="64"
-                      height="64"
+                      width={64}
+                      height={64}
                     />
                     <div>
-                      <div className="font-semibold text-gray-900">{testimonial.meta.name}</div>
-                      <div className="text-gray-600">{testimonial.meta.shortDate}</div>
+                      <div className="font-semibold text-zinc-600">{testimonial.meta.name}</div>
+                      <div className="text-zinc-500">{testimonial.meta.shortDate}</div>
                     </div>
                   </figcaption>
                 </figure>

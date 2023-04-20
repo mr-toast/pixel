@@ -51,7 +51,7 @@ export function Navbar(props: NavbarProps) {
           <Button
             type="button"
             format="icon"
-            className="border border-black dark:border-emerald-400"
+            className="border border-zinc-950 dark:border-zinc-50"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">{constants.OPEN_TEXT}</span>
@@ -81,7 +81,7 @@ const MobileMenuDialog = ({ cms }) => {
   return (
     <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
       <div className="fixed inset-0 z-20" />
-      <Dialog.Panel className="fixed inset-y-0 right-0 z-30 w-full overflow-y-auto bg-mint-9  px-6 py-4 dark:bg-sageDark-1 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+      <Dialog.Panel className="fixed inset-y-0 right-0 z-30 w-full overflow-y-auto bg-zinc-50  px-6 py-4 dark:bg-zinc-950 sm:max-w-sm sm:ring-1 sm:ring-zinc-900/10">
         <div className="flex items-center justify-between">
           <Link href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">{cms.site_title}</span>
@@ -93,7 +93,7 @@ const MobileMenuDialog = ({ cms }) => {
               type="button"
               format="icon"
               color="transparent"
-              className="border border-black dark:border-emerald-400"
+              className="border border-zinc-950 dark:border-zinc-50"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">{constants.CLOSE_TEXT}</span>
@@ -102,13 +102,13 @@ const MobileMenuDialog = ({ cms }) => {
           </div>
         </div>
         <nav className="mt-6 flow-root">
-          <ul className="-my-6 divide-y divide-gray-500/10">
+          <ul className="-my-6 divide-y divide-zinc-500/10">
             <li className="space-y-2 py-6">
               {cms.burgerNavigation.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-mint-8 dark:hover:bg-gray-700"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-zinc-500"
                 >
                   {item.label}
                 </Link>

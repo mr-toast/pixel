@@ -3,18 +3,23 @@ import GithubIcon from '/public/svg/github.svg'
 import TwitterIcon from '/public/svg/twitter.svg'
 import UpworkIcon from '/public/svg/upwork.svg'
 
+type FooterProps = {
+	cms: Pick<SiteData, 'footerNavigation' | 'social'>
+}
+
 const socialIconsMap = {
   github: GithubIcon,
   twitter: TwitterIcon,
   upwork: UpworkIcon,
 }
 
-export function Footer({ cms }) {
+export function Footer(props: FooterProps) {
+	const { cms} = props
   return (
     <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
       <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4" aria-label="Footer">
         {cms.footerNavigation.map((item) => (
-          <Link key={item.label} href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+          <Link key={item.label} href={item.href} className="text-sm leading-6 text-zinc-600 hover:text-zinc-900">
             {item.label}
           </Link>
         ))}
@@ -24,14 +29,14 @@ export function Footer({ cms }) {
         {cms.social.map((item) => {
           const Icon = socialIconsMap[item.icon]
           return (
-            <Link key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+            <Link key={item.name} href={item.href} className="text-zinc-400 hover:text-zinc-500">
               <span className="sr-only">{item.name}</span>
               <Icon className="h-6 w-6" aria-hidden="true" />
             </Link>
           )
         })}
       </div>
-      <p className="mt-10 text-center text-xs leading-5 text-gray-500">
+      <p className="mt-10 text-center text-xs leading-5 text-zinc-500">
         &copy; Copyright {new Date().getFullYear()} | {cms.site_title}
       </p>
     </div>

@@ -6,7 +6,7 @@ import { buttonStyles } from '../button'
 type LinkProps = {
   children: React.ReactNode
   className?: string
-  color?: 'green' | 'black' | 'white' | 'transparent'
+  color?: 'black' | 'white' | 'transparent'
   decoration?: 'none' | 'always' | 'hoverOnly'
   decorationStyle?: 'solid' | 'fancy'
   href?: string

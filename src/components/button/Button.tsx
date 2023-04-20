@@ -2,20 +2,17 @@ import { forwardRef, ButtonHTMLAttributes } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  color?: 'green' | 'black' | 'white' | 'transparent'
+  color?: 'black' | 'white' | 'transparent'
   format?: 'small' | 'normal' | 'icon'
   className?: string
   onClick?: () => void
 }
 
 const styleMap = {
-  // green:
-  //   'bg-mint-9 border border-black hover:bg-emerald-400 focus-visible:outline-mint-9 dark:border-mintDark-10 dark:hover:bg-mintDark-10',
-  green: 'text-black bg-emerald-600 hover:bg-emerald-500 focus-visible:outline-emerald-600',
-  black: 'text-white hover:text-black bg-black hover:bg-white focus-visible:outline-black',
-  white: 'text-black bg-white hover:bg-slate-300 focus-visible:outline-white',
+  black: 'text-zinc-50 hover:text-zinc-50 bg-zinc-800 hover:bg-zinc-700 focus-visible:outline-zinc-800',
+  white: 'text-zinc-950 bg-zinc-200 hover:bg-zinc-800 focus-visible:outline-zinc-200',
   transparent:
-    'bg-transparent hover:bg-black/25 dark:hover:bg-white/25 shadow-none focus-visible:outline-black/25 dark:focus-visible:outline-white/25',
+    'bg-transparent hover:bg-zinc-950/25 dark:hover:bg-zinc-50/25 shadow-none focus-visible:outline-zinc-950/25 dark:focus-visible:outline-zinc-50/25',
 }
 
 export function buttonStyles({ color = 'transparent', disabled, format }: ButtonProps) {
@@ -32,7 +29,7 @@ export function buttonStyles({ color = 'transparent', disabled, format }: Button
     format === 'icon' && 'px-2.5 rounded-full',
     format === 'small' && 'text-xs',
     // Disabled state
-    disabled && 'bg-slate-400 hover:bg-slate-500 text-slate-800 cursor-not-allowed'
+    disabled && 'bg-zinc-400 hover:bg-zinc-500 text-zinc-800 cursor-not-allowed'
   )
 }
 
