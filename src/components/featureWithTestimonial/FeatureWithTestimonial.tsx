@@ -32,7 +32,6 @@ const stackIconsMap = {
 }
 
 export function FeatureWithTestimonial(props: FeatureWithTestimonialProps) {
-  console.log(props)
   const { cms } = props
 
   const { header, title, description, stack, button, testimonial, image } = cms
