@@ -1,8 +1,10 @@
 import { create } from 'zustand'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import Logo from '/public/svg/icon.svg'
+import MonogramDark from '/public/svg/monogram-dark.svg'
+import MonogramLight from '/public/svg/monogram-light.svg'
 import { ThemeSwitcher } from '~/components/themeSwitcher'
+import { useTheme } from 'next-themes'
 import { Link } from '~/components/link'
 import { Button } from '~/components/button'
 import GithubIcon from '/public/svg/github.svg'
@@ -36,15 +38,20 @@ const socialIconsMap = {
 
 export function Navbar(props: NavbarProps) {
   const { cms } = props
-  const mobileMenuOpen = useMobileMenuStore((state) => state.mobileMenuOpen)
   const setMobileMenuOpen = useMobileMenuStore((state) => state.setMobileMenuOpen)
+  const { theme } = useTheme()
 
   return (
     <>
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8" aria-label="Global">
         <Link href="#" className="-m-1.5 p-1.5">
           <span className="sr-only">{cms.site_title}</span>
-          <Logo className="h-8 w-8" />
+
+          {theme === 'light' ? (
+            <MonogramDark className="h-8 w-8" aria-hidden="true" />
+          ) : (
+            <MonogramLight className="h-8 w-8" aria-hidden="true" />
+          )}
         </Link>
         <div className="flex gap-3 lg:hidden">
           <ThemeSwitcher />
@@ -77,6 +84,7 @@ export function Navbar(props: NavbarProps) {
 const MobileMenuDialog = ({ cms }) => {
   const mobileMenuOpen = useMobileMenuStore((state) => state.mobileMenuOpen)
   const setMobileMenuOpen = useMobileMenuStore((state) => state.setMobileMenuOpen)
+  const { theme } = useTheme()
 
   return (
     <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -85,7 +93,11 @@ const MobileMenuDialog = ({ cms }) => {
         <div className="flex items-center justify-between">
           <Link href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">{cms.site_title}</span>
-            <Logo className="h-8 w-8" />
+            {theme === 'light' ? (
+              <MonogramDark className="h-8 w-8" aria-hidden="true" />
+            ) : (
+              <MonogramLight className="h-8 w-8" aria-hidden="true" />
+            )}
           </Link>
           <div className="flex gap-3">
             <ThemeSwitcher />
@@ -109,6 +121,7 @@ const MobileMenuDialog = ({ cms }) => {
                   key={item.label}
                   href={item.href}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-zinc-500"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
