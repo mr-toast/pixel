@@ -26,7 +26,7 @@ export function VideoHero(props: VideoHeroProps) {
         <Vimeo
           id={cms.video[0].id}
           isBackground={true}
-          className="absolute left-0 top-0 -z-10 h-full w-auto bg-zinc-50 opacity-30 dark:bg-zinc-950 dark:opacity-60 xl:h-auto xl:w-full [&>iframe]:mix-blend-luminosity dark:[&>iframe]:mix-blend-lighten dark:[&>iframe]:grayscale"
+          className="absolute left-0 top-0 -z-10 h-full w-auto bg-zinc-50 opacity-30 dark:bg-zinc-950 dark:opacity-60 xl:h-auto xl:w-full [&>iframe]:mix-blend-difference [&>iframe]:grayscale dark:[&>iframe]:mix-blend-lighten"
         />
       )}
     </div>
