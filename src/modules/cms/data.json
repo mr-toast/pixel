@@ -24,20 +24,16 @@
       "href": "#about"
     },
     {
-      "label": "Team",
-      "href": "#team"
-    },
-    {
       "label": "Work",
       "href": "#work"
     },
     {
-      "label": "Contact",
-      "href": "#contact"
+      "label": "Testimonials",
+      "href": "#testimonials"
     },
     {
-      "label": "Privacy",
-      "href": "#privacy"
+      "label": "Contact",
+      "href": "#contact"
     }
   ],
   "hero": {
@@ -63,8 +59,8 @@
         "name": "Brett Jones",
         "role": "The Dude",
         "imageUrl": "/images/profile-1.jpg",
-        "upwork": "#",
-        "github": "#",
+        "upwork": "https://www.upwork.com/freelancers/~0159247498107bb8bb",
+        "github": "https://github.com/mr-toast",
         "twitter": "#"
       },
       {
@@ -332,31 +328,27 @@
       "href": "#about"
     },
     {
-      "label": "Team",
-      "href": "#team"
-    },
-    {
       "label": "Work",
       "href": "#work"
     },
     {
-      "label": "Contact",
-      "href": "#contact"
+      "label": "Testimonials",
+      "href": "#testimonials"
     },
     {
-      "label": "Privacy",
-      "href": "#privacy"
+      "label": "Contact",
+      "href": "#contact"
     }
   ],
   "social": [
     {
       "name": "Upwork",
-      "href": "#",
+      "href": "https://www.upwork.com/freelancers/~0159247498107bb8bb",
       "icon": "upwork"
     },
     {
       "name": "GitHub",
-      "href": "#",
+      "href": "https://github.com/mr-toast",
       "icon": "github"
     },
     {
