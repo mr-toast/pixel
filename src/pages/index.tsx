@@ -46,18 +46,17 @@ export default function Home({ cms }: HomeProps) {
 
       <main>
         <VideoHero cms={cms} />
-        <HeroWithSplit cms={cms} />
+        <HeroWithSplit cms={cms} id="about" />
 
-        <HeaderCentered cms={cms} />
+        <HeaderCentered cms={cms} id="work" />
         {cms.featuredWork.items.map((item) => {
-          console.log('item', item)
           return <FeatureWithTestimonial cms={item} key={item.title} />
         })}
 
-        <Testimonials cms={cms} />
+        <Testimonials cms={cms} id="testimonials" />
         <TeamGrid cms={cms} />
         <ContainedContentPanel cms={cms} />
-        <ContactWithTestimonial cms={cms} />
+        <ContactWithTestimonial cms={cms} id="contact" />
       </main>
 
       <footer>

@@ -6,13 +6,14 @@ import MailboxFlag from '/public/svg/mailbox-flag.svg'
 import { PaperAirplaneIcon } from '@heroicons/react/24/outline'
 
 type ContactWithTestimonialProps = {
+  id: string
   cms: Pick<SiteData, 'contact'>
 }
 
 export function ContactWithTestimonial(props: ContactWithTestimonialProps) {
-  const { cms } = props
+  const { cms, id } = props
   return (
-    <div className="relative isolate  px-6 py-24 sm:py-32 lg:px-8">
+    <div id={id} className="relative isolate  px-6 py-24 sm:py-32 lg:px-8">
       {/* NOTE background artwork */}
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-zinc-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -117,13 +118,13 @@ export function ContactWithTestimonial(props: ContactWithTestimonialProps) {
                 <PaperAirplaneIcon className="h-4 w-4" />
               </Button>
             </div>
-            <p className="mt-4 text-sm leading-6">
+            {/* <p className="mt-4 text-sm leading-6">
               {cms.contact.legal}{' '}
               <Link href="#" className="font-semibold text-gray-700 dark:text-zinc-900">
                 privacy&nbsp;policy
               </Link>
               .
-            </p>
+            </p> */}
           </form>
           <div className="lg:mt-6 lg:w-80 lg:flex-none">
             <Image

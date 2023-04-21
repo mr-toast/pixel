@@ -1,11 +1,18 @@
+import { forwardRef } from 'react'
 import { Image } from '~/components/image'
 import { Link } from '~/components/link'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Typist } from '~/components/typist'
 
-export function HeroWithSplit({ cms }) {
+type HeroWithSplitProps = {
+  id: string
+  cms: Pick<SiteData, 'hero'>
+}
+
+export const HeroWithSplit = forwardRef<HTMLDivElement, HeroWithSplitProps>((props, ref) => {
+  const { cms, id } = props
   return (
-    <div className="relative isolate overflow-hidden">
+    <div id={id} className="relative isolate overflow-hidden" ref={ref}>
       {/* NOTE background artwork */}
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-zinc-950/25 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] dark:stroke-zinc-800/25"
@@ -47,28 +54,12 @@ export function HeroWithSplit({ cms }) {
 
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-          {/* <div className="mt-24 sm:mt-32 lg:mt-16">
-            <p className="inline-flex space-x-6">
-              <span className="rounded-full bg-zinc-300 px-3 py-1 text-sm font-semibold leading-6 text-zinc-700 ring-1 ring-inset ring-zinc-700  dark:bg-zinc-500/10 dark:text-zinc-400 dark:ring-zinc-500/20">
-                {cms.hero.badge}
-              </span>
-            </p>
-           
-          </div> */}
-          <div className="mt-24 sm:mt-32 lg:mt-16">
+          <div className="sm:mt-32 lg:mt-16">
             <Typist withPrompt>{cms.hero.badge}</Typist>
           </div>
 
           <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-6xl">{cms.hero.heading}</h1>
           <p className="mt-6 text-lg  leading-8 text-zinc-700 dark:text-zinc-50">{cms.hero.body}</p>
-          {/* <div className="mt-10 flex items-center gap-x-3">
-            <Link href={cms.hero.button.href} className="text-sm font-semibold leading-6">
-              {cms.hero.button.label}{' '}
-            </Link>
-            <div className="-rotate-90">
-              <ChevronDownIcon className="h-5 w-5 animate-bounce" aria-hidden="true" />
-            </div>
-          </div> */}
 
           <Link
             href={'#'}
@@ -94,4 +85,4 @@ export function HeroWithSplit({ cms }) {
       </div>
     </div>
   )
-}
+})

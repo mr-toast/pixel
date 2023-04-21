@@ -4,7 +4,7 @@ import TwitterIcon from '/public/svg/twitter.svg'
 import UpworkIcon from '/public/svg/upwork.svg'
 
 type FooterProps = {
-	cms: Pick<SiteData, 'footerNavigation' | 'social'>
+  cms: Pick<SiteData, 'footerNavigation' | 'social'>
 }
 
 const socialIconsMap = {
@@ -14,10 +14,10 @@ const socialIconsMap = {
 }
 
 export function Footer(props: FooterProps) {
-	const { cms} = props
+  const { cms } = props
   return (
     <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
-      <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4" aria-label="Footer">
+      <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4" aria-label="Footer">
         {cms.footerNavigation.map((item) => (
           <Link key={item.label} href={item.href} className="text-sm leading-6 text-zinc-600 hover:text-zinc-900">
             {item.label}

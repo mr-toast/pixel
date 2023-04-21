@@ -2,12 +2,13 @@ import { Image } from '~/components/image'
 
 type TestimonialsProps = {
   cms: unknown
+  id: string
 }
 
 export function Testimonials(props: TestimonialsProps) {
-  const { cms } = props
+  const { cms, id } = props
   return (
-    <div className="py-24 sm:py-32">
+    <div id={id} className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-xl text-center">
           <h2 className="text-lg font-semibold leading-8 tracking-tight">{cms.testimonials.heading}</h2>
