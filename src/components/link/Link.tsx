@@ -14,6 +14,7 @@ type LinkProps = {
   target?: string
   format?: 'button' | 'link'
   disabled?: boolean
+  onClick?: () => void
 }
 
 const styleMap = {
@@ -44,6 +45,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function (props, fo
     format = 'link',
     color = 'transparent',
     href,
+    onClick,
   } = props
 
   // If there is no href just return the children
@@ -64,7 +66,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function (props, fo
   return (
     <>
       {linkType === 'internal' ? (
-        <NextLink ref={forwardedRef} href={href} className={classes} passHref>
+        <NextLink ref={forwardedRef} href={href} className={classes} onClick={onClick} passHref>
           {children}
         </NextLink>
       ) : (
