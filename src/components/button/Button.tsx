@@ -48,7 +48,7 @@ export function buttonStyles({ color = 'transparent', disabled, format }: Button
  * <Button><Svg />Click Me</Button>
  * ```
  */
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function (props, forwardedRef) {
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function ButtonComponent(props, forwardedRef) {
   const { color = 'transparent', children, className, format = 'normal', ...rest } = props
 
   const classes = twMerge(buttonStyles({ color, disabled: props.disabled, format }), className)
@@ -59,3 +59,4 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function (props
     </button>
   )
 })
+Button.displayName = 'Button'
