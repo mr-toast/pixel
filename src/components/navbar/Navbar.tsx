@@ -1,18 +1,20 @@
 import { create } from 'zustand'
+import { useTheme } from 'next-themes'
 import { Dialog } from '@headlessui/react'
+
+import { ThemeSwitcher } from '~/components/themeSwitcher'
+import { Link } from '~/components/link'
+import { Button } from '~/components/button'
+
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import MonogramDark from '/public/svg/monogram-dark.svg'
 import MonogramLight from '/public/svg/monogram-light.svg'
-import { ThemeSwitcher } from '~/components/themeSwitcher'
-import { useTheme } from 'next-themes'
-import { Link } from '~/components/link'
-import { Button } from '~/components/button'
 import GithubIcon from '/public/svg/github.svg'
 import TwitterIcon from '/public/svg/twitter.svg'
 import UpworkIcon from '/public/svg/upwork.svg'
 
 type NavbarProps = {
-  cms: any
+  cms: SiteData
 }
 
 type MobileMenuStore = {
@@ -81,7 +83,7 @@ export function Navbar(props: NavbarProps) {
   )
 }
 
-const MobileMenuDialog = ({ cms }) => {
+const MobileMenuDialog = ({ cms }: NavbarProps) => {
   const mobileMenuOpen = useMobileMenuStore((state) => state.mobileMenuOpen)
   const setMobileMenuOpen = useMobileMenuStore((state) => state.setMobileMenuOpen)
   const { theme } = useTheme()

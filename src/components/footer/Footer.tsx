@@ -4,7 +4,7 @@ import TwitterIcon from '/public/svg/twitter.svg'
 import UpworkIcon from '/public/svg/upwork.svg'
 
 type FooterProps = {
-  cms: Pick<SiteData, 'footerNavigation' | 'social'>
+  cms: SiteData
 }
 
 const socialIconsMap = {

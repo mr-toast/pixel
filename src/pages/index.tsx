@@ -3,14 +3,14 @@ import { Navbar, NavbarWrapper } from '~/components/navbar'
 import { VideoHero } from '~/components/videoHero'
 import { HeroWithSplit } from '~/components/heroWithSplit'
 import { HeaderCentered } from '~/components/headerCentered/HeaderCentered'
-import { TeamGrid } from '~/components/teamGrid'
 import { FeatureWithTestimonial } from '~/components/featureWithTestimonial'
 import { Testimonials } from '~/components/testimonials'
 import { ContainedContentPanel } from '~/components/containedContentPanel'
+// import { TeamGrid } from '~/components/teamGrid'
 import { ContactWithTestimonial } from '~/components/contactWithTestimonial'
 import { Footer } from '~/components/footer'
 
-import cmsData from '~/modules/cms/data.json'
+import siteData from '~/modules/cms/data.json'
 
 // QUESTION do we really need the return type for a page or is it overkill for the sake of correctness
 // import { type NextPage } from 'next'
@@ -22,7 +22,7 @@ type HomeProps = {
 export async function getStaticProps() {
   return {
     props: {
-      cms: cmsData,
+      cms: siteData,
     },
   }
 }
@@ -47,15 +47,22 @@ export default function Home({ cms }: HomeProps) {
       <main>
         <VideoHero cms={cms} />
         <HeroWithSplit cms={cms} id="about" />
+        <HeaderCentered cms={cms.featuredWorkHeader} id="work" />
 
-        <HeaderCentered cms={cms} id="work" />
-        {cms.featuredWork.items.map((item) => {
-          return <FeatureWithTestimonial cms={item} key={item.title} />
+        {cms.featuredWork.map((item) => {
+          return <FeatureWithTestimonial featuredWork={item} key={item.title} />
         })}
 
+        {/* previousWork */}
+        {/* TODO add previous work component here later */}
+
         <Testimonials cms={cms} id="testimonials" />
-        <TeamGrid cms={cms} />
+
+        {/* NOTE probably not going to use this component */}
+        {/* <TeamGrid cms={cms} /> */}
+
         <ContainedContentPanel cms={cms} />
+
         <ContactWithTestimonial cms={cms} id="contact" />
       </main>
 

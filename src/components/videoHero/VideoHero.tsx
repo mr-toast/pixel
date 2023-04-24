@@ -3,7 +3,7 @@ import { twMerge } from 'tailwind-merge'
 import Logo from '/public/svg/logo.svg'
 
 type VideoHeroProps = {
-  cms: Pick<SiteData, 'about' | 'site_title' | 'video'>
+  cms: SiteData
 }
 
 const classes = twMerge(
@@ -22,9 +22,9 @@ export function VideoHero(props: VideoHeroProps) {
         <Logo className="mb-8 w-full fill-zinc-50 stroke-zinc-950 dark:fill-zinc-950 dark:stroke-zinc-50" />
         <h1 className="sr-only">{cms.site_title}</h1>
       </div>
-      {cms.video[0]?.id && (
+      {cms.hero.vimeo.id && (
         <Vimeo
-          id={cms.video[0].id}
+          id={cms.hero.vimeo.id}
           isBackground={true}
           className="absolute left-0 top-0 -z-10 h-full w-auto bg-zinc-50 opacity-30 dark:bg-zinc-950 dark:opacity-60 xl:h-auto xl:w-full [&>iframe]:mix-blend-difference [&>iframe]:grayscale dark:[&>iframe]:mix-blend-lighten"
         />

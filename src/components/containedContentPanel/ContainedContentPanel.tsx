@@ -2,15 +2,17 @@ import { Image } from '~/components/image'
 import { CommandLineIcon, CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 
 type ContainedContentPanelProps = {
-  cms: Pick<SiteData, 'services'>
+  cms: SiteData
 }
 
+// make sure you update the icons in types.d.ts as well
 const iconsMap = {
   commandLine: CommandLineIcon,
-  cloudArrow: CloudArrowUpIcon,
-  lockClosed: LockClosedIcon,
-  server: ServerIcon,
 }
+
+// function getIconComponent(icon: string) {
+//   return iconsMap[icon as keyof typeof iconsMap]
+// }
 
 export function ContainedContentPanel(props: ContainedContentPanelProps) {
   const { cms } = props
@@ -28,7 +30,7 @@ export function ContainedContentPanel(props: ContainedContentPanelProps) {
               <p className="mt-6 text-lg leading-8 text-zinc-50 dark:text-zinc-700 ">{cms.services.body}</p>
             </div>
             <Image
-              src={cms.services.image}
+              src={cms.services.imageUrl}
               alt=""
               className="relative -z-20 min-w-full max-w-xl rounded-xl shadow-xl ring-1 ring-zinc-50/10 lg:row-span-4 lg:w-[64rem] lg:max-w-none"
               width={2432}

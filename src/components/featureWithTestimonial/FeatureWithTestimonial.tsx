@@ -14,7 +14,7 @@ import TypescriptIcon from '/public/svg/typescript.svg'
 import WordpressIcon from '/public/svg/wordpress.svg'
 
 type FeatureWithTestimonialProps = {
-  cms: unknown
+  featuredWork: FeaturedWork
 }
 
 const stackIconsMap = {
@@ -31,12 +31,11 @@ const stackIconsMap = {
   wordpress: WordpressIcon,
 }
 
-export function FeatureWithTestimonial(props: FeatureWithTestimonialProps) {
-  const { cms } = props
+export function FeatureWithTestimonial({ featuredWork }: FeatureWithTestimonialProps) {
+  const { header, title, description, stack, button, testimonial, imageUrl } = featuredWork
 
-  const { header, title, description, stack, button, testimonial, image } = cms
   return (
-    <div className="overflow-hidden  py-24 sm:py-32">
+    <div className="overflow-hidden py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
           <div className="lg:pr-4 lg:pt-4">
@@ -66,7 +65,7 @@ export function FeatureWithTestimonial(props: FeatureWithTestimonialProps) {
                 </blockquote>
                 <figcaption className="mt-6 flex gap-x-4 text-sm leading-6">
                   <Image
-                    src={testimonial.image}
+                    src={testimonial.avatarUrl}
                     alt=""
                     className="h-6 w-6 flex-none rounded-full"
                     width={48}
@@ -81,7 +80,7 @@ export function FeatureWithTestimonial(props: FeatureWithTestimonialProps) {
             </div>
           </div>
           <Image
-            src={image}
+            src={imageUrl}
             alt=""
             className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-zinc-400/10 sm:w-[57rem] md:-ml-4 lg:ml-0"
             width={2432}

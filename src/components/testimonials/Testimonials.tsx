@@ -1,7 +1,7 @@
 import { Image } from '~/components/image'
 
 type TestimonialsProps = {
-  cms: unknown
+  cms: SiteData
   id: string
 }
 
@@ -11,12 +11,12 @@ export function Testimonials(props: TestimonialsProps) {
     <div id={id} className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-xl text-center">
-          <h2 className="text-lg font-semibold leading-8 tracking-tight">{cms.testimonials.heading}</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight  sm:text-4xl">{cms.testimonials.body}</p>
+          <h2 className="text-lg font-semibold leading-8 tracking-tight">{cms.feedbackHeader.heading}</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight  sm:text-4xl">{cms.feedbackHeader.body}</p>
         </div>
         <div className="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
           <div className="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-3">
-            {cms.testimonials.feedback.map((testimonial, index) => (
+            {cms.feedback.map((testimonial, index) => (
               <div key={index} className="pt-8 sm:inline-block sm:w-full sm:px-4">
                 <figure className="rounded-2xl bg-zinc-200 p-8 text-sm leading-6 dark:bg-zinc-400">
                   <div className="text-lg font-semibold text-zinc-950 dark:text-zinc-50">{testimonial.title}</div>

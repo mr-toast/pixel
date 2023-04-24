@@ -3,10 +3,11 @@ import { Image } from '~/components/image'
 import { Link } from '~/components/link'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Typist } from '~/components/typist'
+// import backgroundTexture from '/public/images/background-texture-3.jpg'
 
 type HeroWithSplitProps = {
   id: string
-  cms: Pick<SiteData, 'hero'>
+  cms: SiteData
 }
 
 export const HeroWithSplit = forwardRef<HTMLDivElement, HeroWithSplitProps>((props, ref) => {
@@ -14,7 +15,15 @@ export const HeroWithSplit = forwardRef<HTMLDivElement, HeroWithSplitProps>((pro
   return (
     <div id={id} className="relative isolate overflow-hidden" ref={ref}>
       {/* NOTE background artwork */}
-      <svg
+      {/* <Image
+        src={backgroundTexture.src}
+        alt=""
+        role="presentation"
+        className="dark: optacity-25 absolute inset-0 -z-10 h-full w-full -scale-100 object-cover object-center opacity-30 grayscale dark:invert"
+        height={864}
+        width={1376}
+      /> */}
+      {/* <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-zinc-950/25 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] dark:stroke-zinc-800/25"
         aria-hidden="true"
       >
@@ -50,22 +59,22 @@ export const HeroWithSplit = forwardRef<HTMLDivElement, HeroWithSplitProps>((pro
               'polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)',
           }}
         />
-      </div>
+      </div> */}
 
-      <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
+      <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:pb-40 lg:pt-20">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
           <div className="sm:mt-32 lg:mt-16">
-            <Typist withPrompt>{cms.hero.badge}</Typist>
+            <Typist withPrompt>{cms.introduction.badge}</Typist>
           </div>
 
-          <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-6xl">{cms.hero.heading}</h1>
-          <p className="mt-6 text-lg  leading-8 text-zinc-700 dark:text-zinc-50">{cms.hero.body}</p>
+          <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-6xl">{cms.introduction.heading}</h1>
+          <p className="mt-6 text-lg  leading-8 text-zinc-700 dark:text-zinc-50">{cms.introduction.body}</p>
 
           <Link
             href={'#'}
             className="mt-6 inline-flex gap-3 rounded-full bg-zinc-300 px-3 py-1 text-sm font-semibold leading-6 text-zinc-700 ring-1 ring-inset ring-zinc-700 dark:bg-zinc-500/10 dark:text-zinc-400 dark:ring-zinc-500/20"
           >
-            {cms.hero.button.label}
+            {cms.introduction.button.label}
             <div className="-rotate-90">
               <ChevronDownIcon className="h-5 w-5 animate-bounce" aria-hidden="true" />
             </div>
@@ -74,7 +83,7 @@ export const HeroWithSplit = forwardRef<HTMLDivElement, HeroWithSplitProps>((pro
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
             <Image
-              src={cms.hero.image}
+              src={cms.introduction.imageUrl}
               alt=""
               width={2432}
               height={1442}

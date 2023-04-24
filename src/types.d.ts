@@ -1,6 +1,42 @@
+// types.d.ts
+
 type NavigationItem = {
   label: string
   href: string
+}
+
+type HeaderCentered = {
+  heading: string
+  body: string
+}
+
+type SocialIcons = 'github' | 'twitter' | 'upwork'
+
+type StackIcons =
+  | 'docker'
+  | 'gatsby'
+  | 'javascript'
+  | 'materialUi'
+  | 'react'
+  | 'shopify'
+  | 'storybook'
+  | 'tailwind'
+  | 'typescript'
+  | 'wordpress'
+
+type ServicesIcons = 'commandLine'
+
+type SocialItem = {
+  name: string
+  href: string
+  icon: SocialIcons
+}
+
+type VimeoVideo = {
+  id: string
+  title: string
+  format: string
+  imageUrl: string
 }
 
 type Button = {
@@ -9,10 +45,29 @@ type Button = {
 }
 
 type Testimonial = {
-  quote: string
-  image: string
   name: string
   title: string
+  quote: string
+  avatarUrl: string
+  imageUrl: string
+}
+
+type FeaturedWork = {
+  header: string
+  title: string
+  description: string
+  stack: StackIcons[]
+  button: Button
+  testimonial: Testimonial
+  imageUrl: string
+}
+
+type PreviousWork = {
+  header: string
+  title: string
+  description: string
+  stack: string[]
+  imageUrl: string
 }
 
 type FeedbackMeta = {
@@ -20,7 +75,7 @@ type FeedbackMeta = {
   dates?: string
   shortDate: string
   rating: number
-  hrs: number | string
+  hrs: string | number
   imageUrl: string
 }
 
@@ -30,55 +85,19 @@ type Feedback = {
   meta: FeedbackMeta
 }
 
-type Service = {
+type ServiceListItem = {
   name: string
   description: string
-  icon: string
+  icon: ServicesIcons
 }
 
-type Person = {
+type TeamMember = {
   name: string
   role: string
   imageUrl: string
   upwork?: string
   github?: string
   twitter?: string
-}
-
-type WorkItem = {
-  header: string
-  title: string
-  description: string
-  stack: string[]
-  button: Button
-  testimonial: Testimonial
-  image: string
-}
-
-type Testimonial = {
-  quote: string
-  image: string
-  name: string
-  title: string
-  logo: string
-}
-
-type FooterNavigation = {
-  label: string
-  href: string
-}
-
-type Social = {
-  name: string
-  href: string
-  icon: string
-}
-
-type Video = {
-  id: string
-  title: string
-  format: string
-  imageUrl: string | null
 }
 
 type SiteData = {
@@ -89,52 +108,40 @@ type SiteData = {
   }
   mainNavigation: NavigationItem[]
   burgerNavigation: NavigationItem[]
+  footerNavigation: NavigationItem[]
+  social: SocialItem[]
   hero: {
+    vimeo: VimeoVideo
+  }
+  introduction: {
     badge: string
     heading: string
     body: string
     button: Button
-    image: string
+    imageUrl: string
   }
-  about: {
-    heading: string
-    body: string
-    blurb: string
-  }
-  team: {
-    heading: string
-    body: string
-    people: Person[]
-  }
-  featuredWork: {
-    heading: string
-    body: string
-    items: WorkItem[]
-  }
-  previousWork: WorkItem[]
-  testimonials: {
-    heading: string
-    body: string
-    feedback: Feedback[]
-  }
+  featuredWorkHeader: HeaderCentered
+  featuredWork: FeaturedWork[]
+  previousWork: PreviousWork[]
+  feedbackHeader: HeaderCentered
+  feedback: Feedback[]
   services: {
     heading1: string
     heading2: string
     body: string
-    list: Service[]
-    image: string
+    list: ServiceListItem[]
+    imageUrl: string
+  }
+  team: {
+    heading: string
+    body: string
+    people: TeamMember[]
   }
   contact: {
     heading: string
     body: string
     legal: string
-    button: {
-      label: string
-    }
+    button: Button
     testimonial: Testimonial
-    mailLabel: string
   }
-  footerNavigation: FooterNavigation[]
-  social: Social[]
-  video: Video[]
 }

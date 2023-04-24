@@ -4,7 +4,11 @@ import GithubIcon from '/public/svg/github.svg'
 import TwitterIcon from '/public/svg/twitter.svg'
 import UpworkIcon from '/public/svg/upwork.svg'
 
-export function TeamGrid({ cms }) {
+type TeamGridProps = {
+  cms: SiteData
+}
+
+export function TeamGrid({ cms }: TeamGridProps) {
   return (
     <div className="py-32">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">

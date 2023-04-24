@@ -6,8 +6,8 @@ import MailboxFlag from '/public/svg/mailbox-flag.svg'
 import { PaperAirplaneIcon } from '@heroicons/react/24/outline'
 
 type ContactWithTestimonialProps = {
+  cms: SiteData
   id: string
-  cms: Pick<SiteData, 'contact'>
 }
 
 export function ContactWithTestimonial(props: ContactWithTestimonialProps) {
@@ -129,7 +129,7 @@ export function ContactWithTestimonial(props: ContactWithTestimonialProps) {
           <div className="lg:mt-6 lg:w-80 lg:flex-none">
             <Image
               className="w-48 mix-blend-luminosity"
-              src={cms.contact.testimonial.logo}
+              src={cms.contact.testimonial.imageUrl}
               alt=""
               width={1000}
               height={160}
@@ -140,7 +140,7 @@ export function ContactWithTestimonial(props: ContactWithTestimonialProps) {
               </blockquote>
               <figcaption className="mt-10 flex gap-x-6">
                 <Image
-                  src={cms.contact.testimonial.image}
+                  src={cms.contact.testimonial.avatarUrl}
                   alt=""
                   className="h-12 w-12 flex-none rounded-full bg-zinc-50"
                   width={48}
