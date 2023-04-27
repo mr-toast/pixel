@@ -30,12 +30,12 @@ export function VideoHero(props: VideoHeroProps) {
   return (
     <div className={classes}>
       <div className="w-full sm:w-4/5 md:w-1/2">
-        <Logo className="mb-8 w-full fill-zinc-50 stroke-zinc-950 dark:fill-zinc-950 dark:stroke-zinc-50" />
+        <Logo className="mb-8 w-full fill-zinc-50 stroke-zinc-950 opacity-80 dark:fill-zinc-950 dark:stroke-zinc-50" />
         <h1 className="sr-only">{cms.site_title}</h1>
       </div>
-      {/* {cms.hero.vimeo.id && (
+      {cms.hero.vimeo.id && (
         <Vimeo id={cms.hero.vimeo.id} imageUrl={cms.hero.vimeo.imageUrl} isBackground={true} className={vimeoClasses} />
-      )} */}
+      )}
     </div>
   )
 }
