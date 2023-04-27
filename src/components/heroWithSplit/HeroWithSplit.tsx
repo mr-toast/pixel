@@ -70,7 +70,7 @@ export const HeroWithSplit = forwardRef<HTMLDivElement, HeroWithSplitProps>((pro
           <p className="mt-6 text-lg  leading-8 text-zinc-700 dark:text-zinc-50">{cms.introduction.body}</p>
 
           <Link
-            href={'#'}
+            href={cms.introduction.button.href}
             className="mt-6 inline-flex gap-3 rounded-full bg-zinc-300 px-3 py-1 text-sm font-semibold leading-6 text-zinc-700 ring-1 ring-inset ring-zinc-700 dark:bg-zinc-500/10 dark:text-zinc-400 dark:ring-zinc-500/20"
           >
             {cms.introduction.button.label}
