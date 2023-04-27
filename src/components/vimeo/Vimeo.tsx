@@ -1,4 +1,6 @@
-import { Image } from '~/components/image'
+// TODO add state or timeout and fix poster issue
+
+// import { Image } from '~/components/image'
 import { twMerge } from 'tailwind-merge'
 
 type VimeoProps = {
@@ -21,8 +23,11 @@ export function Vimeo(props: VimeoProps) {
 
   return (
     <div className={classes}>
-      {imageUrl && <Image src={imageUrl} alt="" role="presentation" />}
-      <iframe src={srcUrl} allow="autoplay; fullscreen" allowFullScreen></iframe>
+      {/* show image until iframe is ready  */}
+      {/* {imageUrl && <Image src={imageUrl} alt="" className="" width={1440} height={850} role="presentation" />} */}
+      {/* check fro iframe to be ready */}
+      {/* <iframe title="Video Hero" src={srcUrl} loading="lazy" allow="autoplay; fullscreen" allowFullScreen></iframe> */}
+      <iframe title="Video Hero" src={srcUrl} loading="lazy" allow="autoplay; fullscreen" allowFullScreen></iframe>
     </div>
   )
 }
