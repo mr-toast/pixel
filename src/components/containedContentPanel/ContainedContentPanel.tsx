@@ -1,5 +1,5 @@
 import { Image } from '~/components/image'
-import { CommandLineIcon, CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import { CommandLineIcon } from '@heroicons/react/20/solid'
 
 type ContainedContentPanelProps = {
   cms: SiteData

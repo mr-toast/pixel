@@ -1,4 +1,3 @@
-// TODO convert to zustand
 import { useState, forwardRef } from 'react'
 import { default as NextImage } from 'next/image'
 import { twMerge } from 'tailwind-merge'
@@ -16,6 +15,7 @@ interface ImageProps {
   role?: string
   isVignette?: boolean
   sizes?: Sizes
+  priority?: boolean
 }
 
 const generateSizesQuery = (sizes: Sizes) => {
@@ -25,7 +25,9 @@ const generateSizesQuery = (sizes: Sizes) => {
     : sizes
         .map(([minQuery, width, unit]) => {
           const u = unit || 'vw'
-          return minQuery ? `(min-width: ${minQuery}${u}) ${width}${u}` : `100vw`
+          const minQueryString = minQuery ? `${minQuery}${u}` : ''
+          const widthString = width ? `${width}${u}` : ''
+          return minQueryString ? `(min-width: ${minQueryString}) ${widthString}` : `100vw`
         })
         .join(', ')
 }
@@ -54,3 +56,4 @@ export const Image = forwardRef<HTMLDivElement, ImageProps>(function (props, for
     </div>
   )
 })
+Image.displayName = 'Image'

@@ -1,7 +1,10 @@
 import { create } from 'zustand'
-import { ReactNode, useEffect, useRef, useLayoutEffect, RefObject } from 'react'
-import { twMerge } from 'tailwind-merge'
+import { useEffect, useRef } from 'react'
 import { useResponsive } from 'ahooks'
+import { twMerge } from 'tailwind-merge'
+
+import type { ReactNode } from 'react'
+
 type NavbarWrapperProps = {
   children: ReactNode
   backgroundColor?: string

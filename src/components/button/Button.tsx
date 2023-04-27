@@ -1,5 +1,7 @@
-import { forwardRef, ButtonHTMLAttributes } from 'react'
+import { forwardRef } from 'react'
 import { twMerge } from 'tailwind-merge'
+
+import type { ButtonHTMLAttributes } from 'react'
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   color?: 'black' | 'white' | 'transparent'

@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
-import { DOMAttributes } from 'react'
-import { FocusableElement } from '@react-types/shared'
+import type { DOMAttributes } from 'react'
+import type { FocusableElement } from '@react-types/shared'
 
 type FieldFeedbackProps = {
   description?: string
@@ -27,3 +27,4 @@ export const FieldFeedback = forwardRef<HTMLDivElement, FieldFeedbackProps>(func
     </div>
   )
 })
+FieldFeedback.displayName = 'FieldFeedback'

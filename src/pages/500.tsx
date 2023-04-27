@@ -1,10 +1,15 @@
+import { Image } from '~/components/image'
+import { Link } from '~/components/link'
+
 export default function Custom500() {
   return (
     <>
       <main className="relative isolate h-screen">
-        <img
-          src="https://images.unsplash.com/photo-1545972154-9bb223aac798?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3050&q=80&exp=8&con=-15&sat=-75"
+        <Image
+          src="/images/video-hero-poster.png"
           alt=""
+          width={1440}
+          height={850}
           className="absolute inset-0 -z-10 h-full w-full object-cover object-top"
         />
         <div className="mx-auto max-w-7xl px-6 py-32 text-center sm:py-40 lg:px-8">
@@ -13,12 +18,12 @@ export default function Custom500() {
             500 - Server-side error occurred
           </h1>
           <p className="mt-4 text-base text-zinc-50/70 sm:mt-6">
-            It's bad, I mean really bad, there's fire and tears and stuff.
+            It&apos;s bad, I mean really bad, there&apos;s fire and tears and stuff.
           </p>
           <div className="mt-10 flex justify-center">
-            <a href="/" className="text-sm font-semibold leading-7 text-zinc-50">
+            <Link href="/" className="text-sm font-semibold leading-7 text-zinc-50">
               <span aria-hidden="true">&larr;</span> Start over
-            </a>
+            </Link>
           </div>
         </div>
       </main>

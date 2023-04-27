@@ -19,22 +19,28 @@ export const Select = forwardRef<
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger> & SelectProps
 >((props, forwardedRef) => {
   const { className, children, placeholder, ...rest } = props
-  let { labelProps, fieldProps, descriptionProps, errorMessageProps } = useField(rest)
-  let { visuallyHiddenProps } = useVisuallyHidden()
-  const [value, setValue] = useControllableValue(rest)
+  // QUESTION kev what is this doing? the linter is complaining about it so I switched the `let` to `const`
+  // let { labelProps, fieldProps, descriptionProps, errorMessageProps } = useField(rest)
+  // let { visuallyHiddenProps } = useVisuallyHidden()
+
+  const { labelProps, fieldProps, descriptionProps, errorMessageProps } = useField(rest)
+  const { visuallyHiddenProps } = useVisuallyHidden()
+  const [value, setValue] = useControllableValue<string | undefined>(rest)
 
   return (
     <div
       className={formHelpers.formStyles({
         tag: 'button',
         hasError: typeof props.errorMessage !== 'undefined',
-        classes: `${className} [&_button]:inline-flex [&_button]:items-center [&_button]:justify-between [&_button]:gap-2 [&_button]:rounded-full`,
+        classes: `${
+          className || ''
+        } [&_button]:inline-flex [&_button]:items-center [&_button]:justify-between [&_button]:gap-2 [&_button]:rounded-full`,
       })}
     >
       <label {...labelProps} {...visuallyHiddenProps}>
         {props.label}
       </label>
-      <SelectPrimitive.Root value={value} onValueChange={setValue}>
+      <SelectPrimitive.Root value={value || ''} onValueChange={setValue}>
         <SelectPrimitive.Trigger ref={forwardedRef} {...fieldProps}>
           <SelectPrimitive.Value placeholder={placeholder} />
           <SelectPrimitive.Icon>
@@ -62,6 +68,7 @@ export const Select = forwardRef<
     </div>
   )
 })
+Select.displayName = 'Select'
 
 export const SelectOption = forwardRef<
   React.ElementRef<typeof SelectPrimitive.Item>,
@@ -82,5 +89,6 @@ export const SelectOption = forwardRef<
     </SelectPrimitive.Item>
   )
 })
+SelectOption.displayName = 'SelectOption'
 
 export const SelectItemText = SelectPrimitive.ItemText

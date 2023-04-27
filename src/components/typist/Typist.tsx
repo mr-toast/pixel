@@ -1,3 +1,5 @@
+// TODO replace IntersectionObserver with ahooks
+
 import { useState, useRef, useEffect } from 'react'
 import ReactTypist from 'react-typist-component'
 
@@ -24,13 +26,14 @@ export function Typist(props: TypistProps) {
       { threshold: 0.2 } // Adjust the threshold if necessary
     )
 
-    if (ref.current) {
-      observer.observe(ref.current)
+    const currentRef = ref.current
+    if (currentRef) {
+      observer.observe(currentRef)
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current)
+      if (currentRef) {
+        observer.unobserve(currentRef)
       }
     }
   }, [])

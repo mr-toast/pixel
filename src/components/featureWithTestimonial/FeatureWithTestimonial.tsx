@@ -5,7 +5,7 @@ import CmsIcon from '/public/svg/cms.svg'
 import DockerIcon from '/public/svg/docker.svg'
 import GatsbyIcon from '/public/svg/gatsby.svg'
 import JavascriptIcon from '/public/svg/javascript.svg'
-import MateriakUiIcon from '/public/svg/material-ui.svg'
+import MaterialUiIcon from '/public/svg/material-ui.svg'
 import ReactIcon from '/public/svg/react.svg'
 import ShopifyIcon from '/public/svg/shopify.svg'
 import StorybookIcon from '/public/svg/storybook.svg'
@@ -17,12 +17,16 @@ type FeatureWithTestimonialProps = {
   featuredWork: FeaturedWork
 }
 
-const stackIconsMap = {
+type StackIconsMapType = {
+  [key in StackIcons]: SvgComponent
+}
+
+const stackIconsMap: StackIconsMapType = {
   cms: CmsIcon,
   docker: DockerIcon,
   gatsby: GatsbyIcon,
   javascript: JavascriptIcon,
-  materialUi: MateriakUiIcon,
+  materialUi: MaterialUiIcon,
   react: ReactIcon,
   shopify: ShopifyIcon,
   storybook: StorybookIcon,
@@ -48,7 +52,7 @@ export function FeatureWithTestimonial({ featuredWork }: FeatureWithTestimonialP
               <p className="mt-6 text-lg leading-8 text-zinc-700 dark:text-zinc-300">{description}</p>
 
               <div className="mt-8 flex flex-wrap gap-4">
-                {stack?.map((item) => {
+                {stack?.map((item: StackIcons) => {
                   const Icon = stackIconsMap[item]
                   return <Icon key={item} className="h-12 w-12" aria-hidden="true" />
                 })}
@@ -61,7 +65,7 @@ export function FeatureWithTestimonial({ featuredWork }: FeatureWithTestimonialP
               </div>
               <figure className="mt-16 border-l border-zinc-700 pl-8 text-zinc-700 dark:border-zinc-100 dark:text-zinc-300">
                 <blockquote className="text-base leading-7">
-                  <p>"{testimonial.quote}"</p>
+                  <p>&ldquo;{testimonial.quote}&rdquo;</p>
                 </blockquote>
                 <figcaption className="mt-6 flex gap-x-4 text-sm leading-6">
                   <Image

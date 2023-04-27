@@ -1,3 +1,3 @@
 export function Decoration() {
-  console.log('Decoration')
+  return null
 }
