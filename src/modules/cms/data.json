@@ -76,7 +76,7 @@
       "id": "820444781",
       "title": "terminal loop",
       "format": "landscape",
-      "imageUrl": "/public/images/video-hero-poster.png"
+      "imageUrl": "/images/background-texture-1.jpg"
     }
   },
   "introduction": {
@@ -334,17 +334,9 @@
   "contact": {
     "heading": "Let's talk about your project",
     "body": "Sit quo labore tenetur laboriosam dignissimos vel omnis perferendis sunt dignissimos excepturi corrupti quia velit consequatur.",
-    "legal": "By submitting this form, I agree to the",
-    "button": {
-      "label": "Let's talk"
-    },
-    "testimonial": {
-      "name": "Nattakran Saisa-ard",
-      "title": "Owner, Freshy's Baking Club",
-      "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras.",
-      "avatarUrl": "/images/freshy.jpg",
-      "imageUrl": "/images/freshys-logo.png"
-    }
+    "email": "hello@pixelonpixel.com",
+    "location": "Chiang Mai, Thailand",
+    "timezone": "UTC +7"
   },
   "videos": [
     {

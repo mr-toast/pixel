@@ -5,7 +5,7 @@ type NavigationItem = {
   href: string
 }
 
-type HeaderCentered = {
+type LargeHeader = {
   heading: string
   body: string
 }
@@ -13,6 +13,7 @@ type HeaderCentered = {
 type SocialIcons = 'github' | 'twitter' | 'upwork'
 
 type StackIcons =
+  | 'cms'
   | 'docker'
   | 'gatsby'
   | 'javascript'
@@ -120,10 +121,10 @@ type SiteData = {
     button: Button
     imageUrl: string
   }
-  featuredWorkHeader: HeaderCentered
+  featuredWorkHeader: LargeHeader
   featuredWork: FeaturedWork[]
   previousWork: PreviousWork[]
-  feedbackHeader: HeaderCentered
+  feedbackHeader: LargeHeader
   feedback: Feedback[]
   services: {
     heading1: string
@@ -140,8 +141,22 @@ type SiteData = {
   contact: {
     heading: string
     body: string
-    legal: string
-    button: Button
-    testimonial: Testimonial
+    email: string
+    location: string
+    timezone: string
   }
+}
+
+type SvgComponent = React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+
+declare module '*.svg' {
+  const ReactComponent: SvgComponent
+  export { ReactComponent }
+
+  export default ReactComponent
+}
+
+declare module '*.svg?url' {
+  const content: string
+  export default content
 }
