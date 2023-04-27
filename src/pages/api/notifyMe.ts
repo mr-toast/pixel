@@ -29,8 +29,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     let info = await transporter.sendMail({
       from: sender,
       to: [process.env.EMAIL_RECIPIENT],
+      replyTo: data.email,
       subject: `Site Message: ${data.subject}`,
-      text: `${data.name} wrote, - ${data.message}`,
+      text: `${data.name} @ ${data.email} wrote, - ${data.message}`,
       html: emailBody,
     })
 
