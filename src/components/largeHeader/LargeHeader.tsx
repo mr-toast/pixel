@@ -1,9 +1,9 @@
-type HeaderCenteredProps = {
-  cms: HeaderCentered
+type LargeHeaderProps = {
+  cms: LargeHeader
   id: string
 }
 
-export function HeaderCentered(props: HeaderCenteredProps) {
+export function LargeHeader(props: LargeHeaderProps) {
   const { cms, id } = props
   return (
     <div id={id} className=" px-6 py-8 lg:px-8">
