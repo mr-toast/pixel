@@ -19,9 +19,7 @@ export function Testimonials(props: TestimonialsProps) {
             {cms.feedback.map((testimonial, index) => (
               <div key={index} className="pt-8 sm:inline-block sm:w-full sm:px-4">
                 <figure className="rounded-2xl bg-zinc-200 p-8 text-sm leading-6 dark:bg-zinc-500">
-                  {/* <div className="text-lg font-semibold text-zinc-950 dark:text-zinc-50">{testimonial.title}</div> */}
                   <div className="text-lg font-semibold">{testimonial.title}</div>
-                  {/* <blockquote className="text-zinc-900 dark:text-zinc-200"> */}
                   <blockquote className="">
                     <p>{`"${testimonial.body}"`}</p>
                   </blockquote>
@@ -34,9 +32,7 @@ export function Testimonials(props: TestimonialsProps) {
                       height={64}
                     />
                     <div>
-                      {/* <div className="font-semibold text-zinc-600 dark:text-zinc-200">{testimonial.meta.name}</div> */}
                       <div className="font-semibold">{testimonial.meta.name}</div>
-                      {/* <div className="text-zinc-600 dark:text-zinc-200">{testimonial.meta.shortDate}</div> */}
                       <div className="">{testimonial.meta.shortDate}</div>
                     </div>
                   </figcaption>
