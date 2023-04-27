@@ -1,10 +1,11 @@
-import { forwardRef, InputHTMLAttributes } from 'react'
-import { useField } from 'react-aria'
+import { forwardRef } from 'react'
+import { useField, useVisuallyHidden } from 'react-aria'
 import { useControllableValue } from 'ahooks'
-import { useVisuallyHidden } from 'react-aria'
 import { FieldFeedback } from '~/components/fieldFeedback'
 import { formHelpers } from '~/utils'
-import { twMerge } from 'tailwind-merge'
+// import { twMerge } from 'tailwind-merge'
+
+import type { InputHTMLAttributes } from 'react'
 
 export type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   className?: string
@@ -42,9 +43,14 @@ export type InputProps = InputHTMLAttributes<HTMLInputElement> & {
  */
 export const Input = forwardRef<HTMLInputElement, InputProps>(function (props, forwardedRef) {
   const { className, type = 'text', ...rest } = props
-  let { labelProps, fieldProps, descriptionProps, errorMessageProps } = useField(rest)
-  let { visuallyHiddenProps } = useVisuallyHidden()
-  const [value, setValue] = useControllableValue(rest)
+
+  // QUESTION kev what is this doing? the linter is complaining about it so I switched the `let` to `const`
+  // let { labelProps, fieldProps, descriptionProps, errorMessageProps } = useField(rest)
+  // let { visuallyHiddenProps } = useVisuallyHidden()
+  const { labelProps, fieldProps, descriptionProps, errorMessageProps } = useField(rest)
+  const { visuallyHiddenProps } = useVisuallyHidden()
+
+  const [value, setValue] = useControllableValue<string | number | undefined>(rest)
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const enteredName = (event.target as HTMLInputElement).value
@@ -62,7 +68,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function (props, f
       <label {...labelProps} {...visuallyHiddenProps}>
         {props.label}
       </label>
-      <input ref={forwardedRef} type={type} value={value} onChange={handleChange} {...fieldProps} {...rest} />
+      <input ref={forwardedRef} type={type} value={value || ''} onChange={handleChange} {...fieldProps} {...rest} />
       <FieldFeedback
         description={props.description}
         descriptionProps={descriptionProps}
@@ -72,3 +78,4 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function (props, f
     </div>
   )
 })
+Input.displayName = 'Input'
