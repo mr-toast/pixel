@@ -19,7 +19,11 @@ export function Footer(props: FooterProps) {
     <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
       <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4" aria-label="Footer">
         {cms.footerNavigation.map((item) => (
-          <Link key={item.label} href={item.href} className="text-sm leading-6 text-zinc-600 hover:text-zinc-900">
+          <Link
+            key={item.label}
+            href={item.href}
+            className="text-sm leading-6 text-zinc-500 hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-zinc-300"
+          >
             {item.label}
           </Link>
         ))}
@@ -36,7 +40,7 @@ export function Footer(props: FooterProps) {
           )
         })}
       </div>
-      <p className="mt-10 text-center text-xs leading-5 text-zinc-500">
+      <p className="mt-10 text-center text-xs leading-5 text-zinc-500 dark:text-zinc-400">
         &copy; Copyright {new Date().getFullYear()} | {cms.site_title}
       </p>
     </div>
