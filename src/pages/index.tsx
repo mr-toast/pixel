@@ -2,12 +2,12 @@ import Head from 'next/head'
 import { Navbar, NavbarWrapper } from '~/components/navbar'
 import { VideoHero } from '~/components/videoHero'
 import { HeroWithSplit } from '~/components/heroWithSplit'
-import { HeaderCentered } from '~/components/headerCentered/HeaderCentered'
+import { LargeHeader } from '~/components/largeHeader'
 import { FeatureWithTestimonial } from '~/components/featureWithTestimonial'
 import { Testimonials } from '~/components/testimonials'
 import { ContainedContentPanel } from '~/components/containedContentPanel'
 // import { TeamGrid } from '~/components/teamGrid'
-import { ContactWithTestimonial } from '~/components/contactWithTestimonial'
+import { ContactWithSplit } from '~/components/contactWithSplit'
 import { Footer } from '~/components/footer'
 
 import siteData from '~/modules/cms/data.json'
@@ -19,6 +19,8 @@ type HomeProps = {
   cms: SiteData
 }
 
+// NOTE we're telling typscript to shut the f*ck up in next.config.mjs
+// This is correct as per the Nextjs docs https://nextjs.org/docs/basic-features/data-fetching/get-static-props
 export async function getStaticProps() {
   return {
     props: {
@@ -47,7 +49,7 @@ export default function Home({ cms }: HomeProps) {
       <main>
         <VideoHero cms={cms} />
         <HeroWithSplit cms={cms} id="about" />
-        <HeaderCentered cms={cms.featuredWorkHeader} id="work" />
+        <LargeHeader cms={cms.featuredWorkHeader} id="work" />
 
         {cms.featuredWork.map((item) => {
           return <FeatureWithTestimonial featuredWork={item} key={item.title} />
@@ -63,7 +65,7 @@ export default function Home({ cms }: HomeProps) {
 
         <ContainedContentPanel cms={cms} />
 
-        <ContactWithTestimonial cms={cms} id="contact" />
+        <ContactWithSplit cms={cms} id="contact" />
       </main>
 
       <footer>
