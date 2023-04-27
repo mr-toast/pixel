@@ -10,8 +10,8 @@
       "href": "#about"
     },
     {
-      "label": "Work",
-      "href": "#work"
+      "label": "Testimonials",
+      "href": "#testimonials"
     },
     {
       "label": "Contact",
@@ -22,10 +22,6 @@
     {
       "label": "About",
       "href": "#about"
-    },
-    {
-      "label": "Work",
-      "href": "#work"
     },
     {
       "label": "Testimonials",
@@ -40,10 +36,6 @@
     {
       "label": "About",
       "href": "#about"
-    },
-    {
-      "label": "Work",
-      "href": "#work"
     },
     {
       "label": "Testimonials",
@@ -64,11 +56,6 @@
       "name": "GitHub",
       "href": "https://github.com/mr-toast",
       "icon": "github"
-    },
-    {
-      "name": "Twitter",
-      "href": "#",
-      "icon": "twitter"
     }
   ],
   "hero": {
@@ -82,12 +69,12 @@
   "introduction": {
     "badge": "Hi there, I'm Brett",
     "heading": "Frontend and React Native App Development",
-    "body": "I'm work on frontend with React, Nextjs and Storybook and am migrating into app development with React Native. I'm an Upwork rising talent with hundreds of billed hours.",
+    "body": "I'm work on frontend with React, Nextjs, Storybook and am migrating into app development with React Native. I'm an Upwork rising talent with hundreds of billed hours.",
     "button": {
       "label": "Let's chat",
-      "href": "#"
+      "href": "#contact"
     },
-    "imageUrl": "/images/dark-project-app-screenshot.png"
+    "imageUrl": "/images/dark-intro-screen-1.png"
   },
   "featuredWorkHeader": {
     "heading": "Success Stories",
@@ -333,7 +320,7 @@
   },
   "contact": {
     "heading": "Let's talk about your project",
-    "body": "Sit quo labore tenetur laboriosam dignissimos vel omnis perferendis sunt dignissimos excepturi corrupti quia velit consequatur.",
+    "body": "I'm excited to discuss your ideas and bring your digital vision to fruition. Feel free to reach out.",
     "email": "hello@pixelonpixel.com",
     "location": "Chiang Mai, Thailand",
     "timezone": "UTC +7"
