@@ -1,4 +1,4 @@
-// TODO add state or timeout and fix poster issue
+// TODO finish poster logic and presentstion for slow connections
 
 // import { Image } from '~/components/image'
 import { twMerge } from 'tailwind-merge'

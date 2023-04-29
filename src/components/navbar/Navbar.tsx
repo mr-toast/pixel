@@ -1,3 +1,7 @@
+// TODO add scroll observer and effects as you scroll through section
+// TODO add css glow/flicker effect to logo
+// TODO extend logo by adding site name to monogram
+
 import { create } from 'zustand'
 import { useTheme } from 'next-themes'
 import { Dialog } from '@headlessui/react'

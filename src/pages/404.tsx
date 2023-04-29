@@ -1,3 +1,5 @@
+// TODO improve presentation and add artwork
+
 // import { Image } from '~/components/image/'
 import { Link } from '~/components/link'
 export default function Custom404() {

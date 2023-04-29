@@ -1,3 +1,5 @@
+// QUESTION TODO can 500 pages be embelished? If so bring it inline with the 404 page
+
 // import { Image } from '~/components/image'
 import { Link } from '~/components/link'
 

@@ -1,3 +1,5 @@
+// TODO improve logo and add light flickering animation
+
 import { Vimeo } from '~/components/vimeo'
 import { twMerge } from 'tailwind-merge'
 import Logo from '/public/svg/logo.svg'

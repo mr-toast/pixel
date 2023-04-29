@@ -14,8 +14,6 @@ Built with: Nextjs, Sanity, Typescript, Tailwind
 	"dev": "next dev",
 	"lint": "next lint",
 	"start": "next start"
-	// sb: "start-storybook --quiet -p 6006 --no-open" -->
-	// sb:build: "build-storybook"
 },
 ```
 
@@ -48,12 +46,26 @@ Built with: Nextjs, Sanity, Typescript, Tailwind
 
 - [x] STAGE 3: Convert to T3 Stack
 - [ ] STAGE 4: Core Components
-- [ ] - threeJs hero
-- [ ] - about
-- [ ] - stack / skills
-- [ ] - examples
-- [ ] - contact form
-- [ ] - 
+- [x] - video hero
+- [x] - about
+- [ ] - success stories
+- [ ] - older projects
+- [x] - testimonials
+- [ ] - services/stack
+- [x] - contact form
+- [ ] - cleanup & performance
+- [ ] - git rebase and public
+
+—————————————————————
+
+### Phase 3
+
+—————————————————————
+
+- [ ] STAGE 5: Flair 
+- [ ] - animation state 
+- [ ] - transitions and effects
+- [ ] - colour 
 
 —————————————————————
 

@@ -1,3 +1,5 @@
+// TODO improve error reporting and form submission/clear timing 
+
 import { forwardRef, useState } from 'react'
 import type { InputHTMLAttributes } from 'react'
 import { useForm } from 'react-hook-form'

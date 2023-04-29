@@ -1,3 +1,5 @@
+// TODO move form state into zustand ans add mailbox animation
+
 import { ContactForm } from './ContactForm'
 import Mailbox from '/public/svg/mailbox.svg'
 import MailboxFlag from '/public/svg/mailbox-flag.svg'
