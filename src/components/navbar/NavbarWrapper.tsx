@@ -1,3 +1,5 @@
+// TODO improve scroll direcrion nehaviour and animation timing
+
 import { create } from 'zustand'
 import { useEffect, useRef } from 'react'
 import { useResponsive } from 'ahooks'
