@@ -30,17 +30,13 @@ export function Vimeo(props: VimeoVideo) {
       setIsLoaded(true)
     })
 
-    player.on('pause', function () {
-      console.log('paused')
-    })
+    // player.on('pause', function () {})
 
     const onIntersection: IntersectionObserverCallback = (entries) => {
       const [entry] = entries
       if (entry?.isIntersecting) {
-        console.log('Player is visible')
         player.play()
       } else {
-        console.log('Player has scrolled off the screen')
         player.pause()
       }
     }
