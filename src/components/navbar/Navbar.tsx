@@ -1,6 +1,4 @@
 // TODO add scroll observer and effects as you scroll through section
-// TODO add css glow/flicker effect to logo
-// TODO extend logo by adding site name to monogram
 
 import { create } from 'zustand'
 import { useTheme } from 'next-themes'
@@ -9,10 +7,9 @@ import { Dialog } from '@headlessui/react'
 import { ThemeSwitcher } from '~/components/themeSwitcher'
 import { Link } from '~/components/link'
 import { Button } from '~/components/button'
+import { Logo } from '~/components/logo'
 
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import MonogramDark from '/public/svg/monogram-dark.svg'
-import MonogramLight from '/public/svg/monogram-light.svg'
 import GithubIcon from '/public/svg/github.svg'
 import TwitterIcon from '/public/svg/twitter.svg'
 import UpworkIcon from '/public/svg/upwork.svg'
@@ -50,14 +47,17 @@ export function Navbar(props: NavbarProps) {
   return (
     <>
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8" aria-label="Global">
-        <Link href="#" className="-m-1.5 p-1.5">
+        <Link href="#" className="flex items-center gap-4">
           <span className="sr-only">{cms.site_title}</span>
+          <Logo className="h-8 w-8" />
 
-          {theme === 'light' ? (
-            <MonogramDark className="h-8 w-8" aria-hidden="true" key={theme} />
-          ) : (
-            <MonogramLight className="h-8 w-8" aria-hidden="true" key={theme} />
-          )}
+          {/* <h1 className="flex items-center justify-center gap-2 bg-zinc-50  text-3xl text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
+            <span className="relative animate-flickerPX">P</span>
+            <span className="animate-flickerI">I</span>
+            <span className="relative animate-flickerPX">X</span>
+            <span className="animate-flickerE">E</span>
+            <span className="animate-flickerL">L</span>
+          </h1> */}
         </Link>
         <div className="flex gap-3 lg:hidden">
           <ThemeSwitcher />
@@ -97,13 +97,9 @@ const MobileMenuDialog = ({ cms }: NavbarProps) => {
       <div className="fixed inset-0 z-20" />
       <Dialog.Panel className="fixed inset-y-0 right-0 z-30 w-full overflow-y-auto bg-zinc-50  px-6 py-4 dark:bg-zinc-950 sm:max-w-sm sm:ring-1 sm:ring-zinc-900/10">
         <div className="flex items-center justify-between">
-          <Link href="#" className="-m-1.5 p-1.5">
+          <Link href="#" className="">
             <span className="sr-only">{cms.site_title}</span>
-            {theme === 'light' ? (
-              <MonogramDark className="h-8 w-8" aria-hidden="true" />
-            ) : (
-              <MonogramLight className="h-8 w-8" aria-hidden="true" />
-            )}
+            <Logo className="h-8 w-8" />
           </Link>
           <div className="flex gap-3">
             <ThemeSwitcher />
@@ -126,7 +122,7 @@ const MobileMenuDialog = ({ cms }: NavbarProps) => {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-zinc-500"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-zinc-50 hover:text-zinc-950"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
