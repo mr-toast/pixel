@@ -8,8 +8,8 @@ export function Vimeo(props: VimeoVideo) {
   const playerRef = useRef(null)
   const { className, videoId, isBackground = false, imageUrl } = props
 
-  const width = 1920
-  const height = 1080
+  const width = 1280
+  const height = 720
 
   useEffect(() => {
     if (!playerRef.current) return
@@ -24,10 +24,12 @@ export function Vimeo(props: VimeoVideo) {
 
     player.on('loaded', function () {
       player.play()
+      // console.log('loaded')
     })
 
     player.on('playing', function () {
       setIsLoaded(true)
+      // console.log('playing')
     })
 
     // player.on('pause', function () {})

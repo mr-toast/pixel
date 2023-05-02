@@ -1,4 +1,4 @@
-// TODO improve logo and add light flickering animation
+// TODO improve logo and add light flickering animations
 
 import { Vimeo } from '~/components/vimeo'
 import { twMerge } from 'tailwind-merge'
@@ -18,7 +18,7 @@ const classes = twMerge(
 
 const vimeoClasses = twMerge(
   // positioning
-  'absolute left-0 top-0 -z-10 h-full w-auto xl:h-auto xl:w-full',
+  'absolute left-0 top-0 -z-10 h-full w-auto xl:h-auto xl:left-auto xl:max-w-7xl',
   // filters
   'bg-zinc-50 dark:bg-zinc-950 [&>*]:mix-blend-difference [&>*]:grayscale dark:[&>*]:mix-blend-lighten'
 )
@@ -31,6 +31,7 @@ export function VideoHero(props: VideoHeroProps) {
         <Logo className="mb-8 w-full fill-zinc-50 stroke-zinc-950 opacity-80 dark:fill-zinc-950 dark:stroke-zinc-50" />
         <h1 className="sr-only">{cms.site_title}</h1>
       </div>
+
       {cms.hero.vimeo.videoId && (
         <Vimeo
           videoId={cms.hero.vimeo.videoId}
