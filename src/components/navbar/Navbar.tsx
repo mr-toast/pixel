@@ -54,9 +54,9 @@ export function Navbar(props: NavbarProps) {
           <span className="sr-only">{cms.site_title}</span>
 
           {theme === 'light' ? (
-            <MonogramDark className="h-8 w-8" aria-hidden="true" />
+            <MonogramDark className="h-8 w-8" aria-hidden="true" key={theme} />
           ) : (
-            <MonogramLight className="h-8 w-8" aria-hidden="true" />
+            <MonogramLight className="h-8 w-8" aria-hidden="true" key={theme} />
           )}
         </Link>
         <div className="flex gap-3 lg:hidden">
