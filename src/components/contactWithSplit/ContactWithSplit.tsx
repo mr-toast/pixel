@@ -4,17 +4,25 @@ import { ContactForm } from './ContactForm'
 import Mailbox from '/public/svg/mailbox.svg'
 import MailboxFlag from '/public/svg/mailbox-flag.svg'
 import { MapPinIcon, EnvelopeIcon, ClockIcon } from '@heroicons/react/24/outline'
+import { twMerge } from 'tailwind-merge'
 
 type ContactWithSplitProps = {
   cms: SiteData
   id: string
 }
 
+const classes = twMerge(
+  'relative isolate bg-zinc-50 dark:bg-zinc-950',
+  // :before gradient mask
+  'before:absolute before:inset-x-0 before:top-0 before:z-10 before:block before:h-[128px] before:bg-gradient-to-b before:from-zinc-50 before:to-transparent dark:before:from-zinc-950',
+  // :after gradient mask
+  'after:absolute after:inset-x-0 after:bottom-0 after:z-10 after:block after:h-[128px] after:bg-gradient-to-t after:from-zinc-50 after:to-transparent dark:after:from-zinc-950'
+)
 export function ContactWithSplit(props: ContactWithSplitProps) {
   const { cms, id } = props
 
   return (
-    <div id={id} className="relative isolate bg-zinc-50 dark:bg-zinc-950">
+    <div id={id} className={classes}>
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">

@@ -3,6 +3,7 @@ import { Image } from '~/components/image'
 import { Link } from '~/components/link'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Typist } from '~/components/typist'
+import { twMerge } from 'tailwind-merge'
 // import backgroundTexture from '/public/images/background-texture-3.jpg'
 
 type HeroWithSplitProps = {
@@ -10,10 +11,16 @@ type HeroWithSplitProps = {
   cms: SiteData
 }
 
+const classes = twMerge(
+  'relative isolate overflow-hidden',
+  // :before gradient mask
+  'before:absolute before:inset-x-0 before:top-0 before:z-10 before:block before:h-[128px] before:bg-gradient-to-b before:from-zinc-50 before:to-transparent dark:before:from-zinc-950'
+)
+
 export const HeroWithSplit = forwardRef<HTMLDivElement, HeroWithSplitProps>((props, ref) => {
   const { cms, id } = props
   return (
-    <div id={id} className="relative isolate overflow-hidden" ref={ref}>
+    <div id={id} className={classes} ref={ref}>
       {/* NOTE background artwork */}
       {/* <Image
         src={backgroundTexture.src}
