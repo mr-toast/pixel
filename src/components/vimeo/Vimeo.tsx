@@ -1,33 +1,73 @@
-// TODO finish poster logic and presentstion for slow connections
-
-// import { Image } from '~/components/image'
+import { useEffect, useRef, useState } from 'react'
+import VimeoPlayer from '@vimeo/player'
+import { Image } from '~/components/image'
 import { twMerge } from 'tailwind-merge'
 
-type VimeoProps = {
-  id: string
-  isBackground: boolean
-  className?: string
-  format?: string
-  imageUrl?: string
-}
+export function Vimeo(props: VimeoVideo) {
+  const [isLoaded, setIsLoaded] = useState(false)
+  const playerRef = useRef(null)
+  const { className, videoId, isBackground = false, imageUrl } = props
 
-export function Vimeo(props: VimeoProps) {
-  const { className, id, isBackground = false, imageUrl } = props
-  const query = `${id}` + (isBackground ? '?background=1' : '')
-  const srcUrl = `https://player.vimeo.com/video/${query}`
+  const width = 1920
+  const height = 1080
+
+  useEffect(() => {
+    if (!playerRef.current) return
+    const player = new VimeoPlayer(playerRef.current, {
+      id: videoId,
+      width,
+      height,
+      muted: true,
+      loop: true,
+      autoplay: true,
+    })
+
+    player.on('loaded', function () {
+      player.play()
+    })
+
+    player.on('playing', function () {
+      setIsLoaded(true)
+    })
+
+    player.on('pause', function () {
+      console.log('paused')
+    })
+
+    const onIntersection: IntersectionObserverCallback = (entries) => {
+      const [entry] = entries
+      if (entry?.isIntersecting) {
+        console.log('Player is visible')
+        player.play()
+      } else {
+        console.log('Player has scrolled off the screen')
+        player.pause()
+      }
+    }
+
+    const observerOptions = {
+      root: null,
+      threshold: 0,
+    }
+
+    const observer = new IntersectionObserver(onIntersection, observerOptions)
+    observer.observe(playerRef.current)
+
+    return () => {
+      observer.disconnect()
+      player.destroy()
+    }
+  }, [videoId, width, height])
 
   const classes = twMerge(
-    'relative aspect-video [&>iframe]:absolute [&>iframe]:inset-0 [&>iframe]:h-full [&>iframe]:w-full [&>iframe]:object-cover',
+    'relative aspect-video [&>iframe]:absolute [&>iframe]:inset-0 [&>iframe]:h-full [&>iframe]:w-full [&>iframe]:object-cover [&>iframe]:transition-opacity',
+    isLoaded ? '[&>iframe]:opacity-100' : '[&>iframe]:opacity-0',
     className
   )
 
   return (
-    <div className={classes}>
-      {/* show image until iframe is ready  */}
-      {/* {imageUrl && <Image src={imageUrl} alt="" className="" width={1440} height={850} role="presentation" />} */}
-      {/* check fro iframe to be ready */}
-      {/* <iframe title="Video Hero" src={srcUrl} loading="lazy" allow="autoplay; fullscreen" allowFullScreen></iframe> */}
-      <iframe title="Video Hero" src={srcUrl} loading="lazy" allow="autoplay; fullscreen" allowFullScreen></iframe>
+    <div className={classes} ref={playerRef}>
+      {!isLoaded && <Image src={imageUrl} alt="" width={width} height={height} priority />}
     </div>
   )
 }

@@ -19,12 +19,8 @@ const classes = twMerge(
 const vimeoClasses = twMerge(
   // positioning
   'absolute left-0 top-0 -z-10 h-full w-auto xl:h-auto xl:w-full',
-  // color and opacity
-  // 'bg-zinc-50 opacity-30  dark:opacity-60',
-  'bg-zinc-50 dark:bg-zinc-950',
-  // iframe
-  '[&>iframe]:mix-blend-difference [&>iframe]:grayscale dark:[&>iframe]:mix-blend-lighten'
-  // ' dark:[&>iframe]:mix-blend-lighten'
+  // filters
+  'bg-zinc-50 dark:bg-zinc-950 [&>*]:mix-blend-difference [&>*]:grayscale dark:[&>*]:mix-blend-lighten'
 )
 
 export function VideoHero(props: VideoHeroProps) {
@@ -35,8 +31,13 @@ export function VideoHero(props: VideoHeroProps) {
         <Logo className="mb-8 w-full fill-zinc-50 stroke-zinc-950 opacity-80 dark:fill-zinc-950 dark:stroke-zinc-50" />
         <h1 className="sr-only">{cms.site_title}</h1>
       </div>
-      {cms.hero.vimeo.id && (
-        <Vimeo id={cms.hero.vimeo.id} imageUrl={cms.hero.vimeo.imageUrl} isBackground={true} className={vimeoClasses} />
+      {cms.hero.vimeo.videoId && (
+        <Vimeo
+          videoId={cms.hero.vimeo.videoId}
+          imageUrl={cms.hero.vimeo.imageUrl}
+          isBackground={true}
+          className={vimeoClasses}
+        />
       )}
     </div>
   )

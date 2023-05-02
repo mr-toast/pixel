@@ -60,10 +60,10 @@
   ],
   "hero": {
     "vimeo": {
-      "id": "820444781",
+      "videoId": 822886426,
       "title": "terminal loop",
       "format": "landscape",
-      "imageUrl": "/images/background-texture-1.jpg"
+      "imageUrl": "/images/video-hero-poster.png"
     }
   },
   "introduction": {
@@ -324,31 +324,5 @@
     "email": "hello@pixelonpixel.com",
     "location": "Chiang Mai, Thailand",
     "timezone": "UTC +7"
-  },
-  "videos": [
-    {
-      "id": "820444781",
-      "title": "terminal loop",
-      "format": "landscape",
-      "imageUrl": null
-    },
-    {
-      "id": "818280654",
-      "title": "rolling code",
-      "format": "landscape",
-      "imageUrl": null
-    },
-    {
-      "id": "818281313",
-      "title": "layered code",
-      "format": "landscape",
-      "imageUrl": null
-    },
-    {
-      "id": "818267026",
-      "title": "pixel loop",
-      "format": "landscape",
-      "imageUrl": null
-    }
-  ]
+  }
 }

@@ -34,10 +34,10 @@ type SocialItem = {
 }
 
 type VimeoVideo = {
-  id: string
-  title: string
-  format: string
+  className: string
   imageUrl: string
+  isBackground: boolean
+  videoId: number
 }
 
 type Button = {
