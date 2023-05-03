@@ -5,7 +5,8 @@ import { twMerge } from 'tailwind-merge'
 
 export function Vimeo(props: VimeoVideo) {
   const [isLoaded, setIsLoaded] = useState(false)
-  const playerRef = useRef(null)
+  const [player, setPlayer] = useState<VimeoPlayer | null>(null)
+  const playerRef = useRef<HTMLDivElement | null>(null)
   const { className, videoId, isBackground = false, imageUrl } = props
 
   const width = 1280
@@ -13,26 +14,45 @@ export function Vimeo(props: VimeoVideo) {
 
   useEffect(() => {
     if (!playerRef.current) return
-    const player = new VimeoPlayer(playerRef.current, {
-      id: videoId,
-      width,
-      height,
-      muted: true,
-      loop: true,
-      autoplay: true,
-    })
 
-    player.on('loaded', function () {
-      player.play()
-      // console.log('loaded')
-    })
+    const createPlayer = async () => {
+      try {
+        const newPlayer = new VimeoPlayer(playerRef.current as HTMLElement, {
+          id: videoId,
+          width,
+          height,
+          muted: true,
+          loop: true,
+          autoplay: true,
+        })
 
-    player.on('playing', function () {
-      setIsLoaded(true)
-      // console.log('playing')
-    })
+        newPlayer.on('loaded', function () {
+          newPlayer.play()
+          // console.log('loaded')
+        })
 
-    // player.on('pause', function () {})
+        newPlayer.on('playing', function () {
+          setIsLoaded(true)
+          // console.log('playing')
+        })
+
+        setPlayer(newPlayer)
+      } catch (error) {
+        console.error('Error creating VimeoPlayer', error)
+        return
+      }
+    }
+
+    createPlayer()
+
+    return () => {
+      player?.destroy()
+      // console.log('destroyed')
+    }
+  }, [videoId, width, height])
+
+  useEffect(() => {
+    if (!player || !isLoaded) return
 
     const onIntersection: IntersectionObserverCallback = (entries) => {
       const [entry] = entries
@@ -43,19 +63,20 @@ export function Vimeo(props: VimeoVideo) {
       }
     }
 
-    const observerOptions = {
+    const observerOptions: IntersectionObserverInit = {
       root: null,
       threshold: 0,
     }
 
     const observer = new IntersectionObserver(onIntersection, observerOptions)
-    observer.observe(playerRef.current)
+    if (playerRef.current) {
+      observer.observe(playerRef.current)
+    }
 
     return () => {
       observer.disconnect()
-      player.destroy()
     }
-  }, [videoId, width, height])
+  }, [player, isLoaded])
 
   const classes = twMerge(
     'relative aspect-video [&>iframe]:absolute [&>iframe]:inset-0 [&>iframe]:h-full [&>iframe]:w-full [&>iframe]:object-cover [&>iframe]:transition-opacity',
