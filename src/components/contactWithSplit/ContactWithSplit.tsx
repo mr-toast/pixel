@@ -16,15 +16,22 @@ const classes = twMerge(
   // :before gradient mask
   'before:absolute before:inset-x-0 before:top-0 before:z-10 before:block before:h-[128px] before:bg-gradient-to-b before:from-zinc-50 before:to-transparent dark:before:from-zinc-950',
   // :after gradient mask
-  'after:absolute after:inset-x-0 after:bottom-0 after:z-10 after:block after:h-[128px] after:bg-gradient-to-t after:from-zinc-50 after:to-transparent dark:after:from-zinc-950'
+  'lg:after:absolute lg:after:inset-x-0 lg:after:bottom-0 lg:after:z-10 lg:after:block lg:after:h-[128px] lg:after:bg-gradient-to-t lg:after:from-zinc-50 lg:after:to-transparent dark:lg:after:from-zinc-950'
 )
+
+const innerClasses = twMerge(
+  'relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48',
+  // :after gradient mask
+  'after:absolute after:inset-x-0 after:bottom-0 after:z-10 after:block after:h-[128px] after:bg-gradient-to-t after:from-zinc-50 after:to-transparent dark:after:from-zinc-950 lg:after:content-none'
+)
+
 export function ContactWithSplit(props: ContactWithSplitProps) {
   const { cms, id } = props
 
   return (
     <div id={id} className={classes}>
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-        <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
+        <div className={innerClasses}>
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             {/* NOTE background artwork */}
             <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden lg:w-1/2">

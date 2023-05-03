@@ -14,7 +14,7 @@ type HeroWithSplitProps = {
 const classes = twMerge(
   'relative isolate overflow-hidden',
   // :before gradient mask
-  'before:absolute before:inset-x-0 before:top-0 before:z-10 before:block before:h-[128px] before:bg-gradient-to-b before:from-zinc-50 before:to-transparent dark:before:from-zinc-950'
+  'before:absolute before:inset-x-0 before:top-0 before:z-10 before:block before:h-12 before:bg-gradient-to-b before:from-zinc-50 before:to-transparent dark:before:from-zinc-950'
 )
 
 export const HeroWithSplit = forwardRef<HTMLDivElement, HeroWithSplitProps>((props, ref) => {
