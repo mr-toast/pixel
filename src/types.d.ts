@@ -13,13 +13,14 @@ type LargeHeader = {
 type SocialIcons = 'github' | 'twitter' | 'upwork'
 
 type StackIcons =
+  | 'algolia'
   | 'cms'
   | 'docker'
   | 'gatsby'
   | 'javascript'
-  | 'materialUi'
   | 'react'
   | 'shopify'
+  | 'sketch'
   | 'storybook'
   | 'tailwind'
   | 'typescript'

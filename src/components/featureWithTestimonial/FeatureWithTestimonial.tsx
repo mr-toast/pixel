@@ -1,13 +1,14 @@
 import { Image } from '~/components/image'
 import { Link } from '~/components/link'
 import { Typist } from '~/components/typist'
+import AlgoliaIcon from '/public/svg/algolia.svg'
 import CmsIcon from '/public/svg/cms.svg'
 import DockerIcon from '/public/svg/docker.svg'
 import GatsbyIcon from '/public/svg/gatsby.svg'
 import JavascriptIcon from '/public/svg/javascript.svg'
-import MaterialUiIcon from '/public/svg/material-ui.svg'
 import ReactIcon from '/public/svg/react.svg'
 import ShopifyIcon from '/public/svg/shopify.svg'
+import SketchIcon from '/public/svg/sketch.svg'
 import StorybookIcon from '/public/svg/storybook.svg'
 import TailwindIcon from '/public/svg/tailwind.svg'
 import TypescriptIcon from '/public/svg/typescript.svg'
@@ -22,13 +23,14 @@ type StackIconsMapType = {
 }
 
 const stackIconsMap: StackIconsMapType = {
+  algolia: AlgoliaIcon,
   cms: CmsIcon,
   docker: DockerIcon,
   gatsby: GatsbyIcon,
   javascript: JavascriptIcon,
-  materialUi: MaterialUiIcon,
   react: ReactIcon,
   shopify: ShopifyIcon,
+  sketch: SketchIcon,
   storybook: StorybookIcon,
   tailwind: TailwindIcon,
   typescript: TypescriptIcon,
