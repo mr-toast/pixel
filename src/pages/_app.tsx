@@ -1,5 +1,5 @@
 import { type AppType } from 'next/dist/shared/lib/utils'
-
+import { Analytics } from '@vercel/analytics/react'
 import { ThemeProvider } from 'next-themes'
 
 import '../styles/globals.css'
@@ -17,6 +17,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
     <ThemeProvider attribute="class">
       <div className={`${cutiveMono.className}`}>
         <Component {...pageProps} />
+        <Analytics />
       </div>
     </ThemeProvider>
   )
