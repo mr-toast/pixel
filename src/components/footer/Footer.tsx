@@ -1,7 +1,7 @@
 import { Link } from '~/components/link'
-import GithubIcon from '/public/svg/github.svg'
-import TwitterIcon from '/public/svg/twitter.svg'
-import UpworkIcon from '/public/svg/upwork.svg'
+import GithubIcon from '/public/svg/icon/github.svg'
+import TwitterIcon from '/public/svg/icon/twitter.svg'
+import UpworkIcon from '/public/svg/icon/upwork.svg'
 
 type FooterProps = {
   cms: SiteData

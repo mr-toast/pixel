@@ -8,11 +8,10 @@ import { ThemeSwitcher } from '~/components/themeSwitcher'
 import { Link } from '~/components/link'
 import { Button } from '~/components/button'
 import { Logo } from '~/components/logo'
-
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import GithubIcon from '/public/svg/github.svg'
-import TwitterIcon from '/public/svg/twitter.svg'
-import UpworkIcon from '/public/svg/upwork.svg'
+import GithubIcon from '/public/svg/icon/github.svg'
+import TwitterIcon from '/public/svg/icon/twitter.svg'
+import UpworkIcon from '/public/svg/icon/upwork.svg'
 
 type NavbarProps = {
   cms: SiteData
@@ -50,14 +49,6 @@ export function Navbar(props: NavbarProps) {
         <Link href="#" className="flex items-center gap-4">
           <span className="sr-only">{cms.site_title}</span>
           <Logo className="h-8 w-8" />
-
-          {/* <h1 className="flex items-center justify-center gap-2 bg-zinc-50  text-3xl text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
-            <span className="relative animate-flickerPX">P</span>
-            <span className="animate-flickerI">I</span>
-            <span className="relative animate-flickerPX">X</span>
-            <span className="animate-flickerE">E</span>
-            <span className="animate-flickerL">L</span>
-          </h1> */}
         </Link>
         <div className="flex gap-3 lg:hidden">
           <ThemeSwitcher />
