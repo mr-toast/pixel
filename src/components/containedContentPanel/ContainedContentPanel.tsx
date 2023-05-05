@@ -1,23 +1,23 @@
 import { Image } from '~/components/image'
-import { CommandLineIcon } from '@heroicons/react/20/solid'
+import { CommandLineIcon, BookmarkSquareIcon, CodeBracketIcon, ShoppingBagIcon } from '@heroicons/react/24/outline'
 
 type ContainedContentPanelProps = {
   cms: SiteData
+  id: string
 }
 
 // make sure you update the icons in types.d.ts as well
-const iconsMap = {
+const iconsMap: HeroIcons = {
+  bookmarkSquare: BookmarkSquareIcon,
+  codeBracket: CodeBracketIcon,
   commandLine: CommandLineIcon,
+  shoppingBag: ShoppingBagIcon,
 }
 
-// function getIconComponent(icon: string) {
-//   return iconsMap[icon as keyof typeof iconsMap]
-// }
-
 export function ContainedContentPanel(props: ContainedContentPanelProps) {
-  const { cms } = props
+  const { cms, id } = props
   return (
-    <div className=" py-24">
+    <div id={id} className=" py-24">
       <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="relative isolate overflow-hidden bg-zinc-950 px-6 py-20 dark:bg-zinc-50 sm:rounded-3xl sm:px-10 sm:py-24 lg:py-24 xl:px-24">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-0">
