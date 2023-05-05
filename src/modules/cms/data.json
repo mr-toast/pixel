@@ -10,6 +10,14 @@
       "href": "#about"
     },
     {
+      "label": "Featured Work",
+      "href": "#featured-work"
+    },
+    {
+      "label": "Experience",
+      "href": "#experience"
+    },
+    {
       "label": "Testimonials",
       "href": "#testimonials"
     },
@@ -24,6 +32,18 @@
       "href": "#about"
     },
     {
+      "label": "Featured Work",
+      "href": "#featured-work"
+    },
+    {
+      "label": "Previous Work",
+      "href": "#previous-work"
+    },
+    {
+      "label": "Experience",
+      "href": "#experience"
+    },
+    {
       "label": "Testimonials",
       "href": "#testimonials"
     },
@@ -36,6 +56,18 @@
     {
       "label": "About",
       "href": "#about"
+    },
+    {
+      "label": "Featured Work",
+      "href": "#featured-work"
+    },
+    {
+      "label": "Previous Work",
+      "href": "#previous-work"
+    },
+    {
+      "label": "Experience",
+      "href": "#experience"
     },
     {
       "label": "Testimonials",
@@ -68,7 +100,7 @@
   },
   "introduction": {
     "badge": "Hi there, I'm Brett",
-    "heading": "Frontend and React Native App Development",
+    "heading": "Frontend and React Native Development",
     "body": "I'm work on frontend with React, Nextjs, Storybook and am migrating into app development with React Native. I'm an Upwork rising talent with hundreds of billed hours.",
     "button": {
       "label": "Let's chat",
@@ -77,15 +109,16 @@
     "imageUrl": "/images/dark-intro-screen-1.png"
   },
   "featuredWorkHeader": {
-    "heading": "Success Stories",
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam massa mauris, ultricies eu nisl vel, ultricies aliquet sem."
+    "heading": "Featured Work",
+    "body": "A handpicked assortment of my latest work, these projects underscore my commitment to delivering outstanding frontend solutions, employing the most current skills and expertise in the field."
   },
   "featuredWork": [
     {
       "header": "Site development",
       "title": "Freshy's Baking Club",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-      "stack": ["react", "javascript", "cms", "storybook"],
+      "stack": ["sketch", "react", "typescript", "cms", "storybook"],
+      "imageUrl": "/images/featured/freshys-hero.png",
       "button": {
         "label": "View project",
         "href": "#"
@@ -94,76 +127,93 @@
         "name": "Nattakran Saisa-ard",
         "title": "Owner, Freshy's Baking Club",
         "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
-        "avatarUrl": "/images/freshy.jpg"
-      },
-      "imageUrl": "/images/dark-project-app-screenshot.png"
+        "avatarUrl": "/images/avatar/freshy.jpg"
+      }
     },
     {
       "header": "Component development",
       "title": "Tropic Labs",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-      "stack": ["shopify", "react", "typescript", "cms", "storybook"],
+      "stack": ["shopify", "react", "typescript", "tailwind", "cms", "storybook"],
+      "imageUrl": "/images/featured/tropic-hero.png",
       "button": {
         "label": "View project",
         "href": "#"
       },
       "testimonial": {
         "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
-        "avatarUrl": "/images/morgan-ioffe.jpg",
+        "avatarUrl": "/images/avatar/morgan-ioffe.jpg",
         "name": "Morgan Ioffe",
         "title": "Founder, Tropic Labs"
-      },
-      "imageUrl": "/images/dark-project-app-screenshot.png"
+      }
     },
     {
       "header": "Component development",
       "title": "Boss Personal Planner",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-      "stack": ["shopify", "react", "javascript", "cms", "gatsby", "materialUi", "storybook"],
+      "stack": ["shopify", "react", "javascript", "cms", "gatsby", "storybook"],
+      "imageUrl": "/images/featured/boss-hero.png",
       "button": {
         "label": "View project",
         "href": "#"
       },
       "testimonial": {
         "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
-        "avatarUrl": "/images/profile-0.jpg",
+        "avatarUrl": "/images/avatar/profile-0.jpg",
         "name": "7&8",
         "title": "Development Agency"
-      },
-      "imageUrl": "/images/dark-project-app-screenshot.png"
-    },
-    {
-      "header": "Site development",
-      "title": "Varee International School",
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-      "stack": ["wordpress", "cms"],
-      "button": {
-        "label": "View project",
-        "href": "#"
-      },
-      "testimonial": {
-        "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
-        "avatarUrl": "/images/profile-0.jpg",
-        "name": "Ajarn Blah Blah",
-        "title": "Principal VCIS"
-      },
-      "imageUrl": "/images/dark-project-app-screenshot.png"
+      }
     }
   ],
+  "previousWorkHeader": {
+    "heading": "Previous Work",
+    "body": "These projects highlight some of my earlier experience with Shopify 1.0 and WordPress development. Although the technology stack has since evolved and I no longer maintain these sites, they remain active and provide insight into my capabilities as a frontend developer."
+  },
   "previousWork": [
     {
-      "header": "Site development",
-      "title": "Our Jungle Camp",
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-      "stack": ["wordpress", "cms"],
-      "imageUrl": "/images/dark-project-app-screenshot.png"
+      "title": "Sunheist Eyewear",
+      "imageUrl": "/svg/client/sunheist-logo.svg",
+      "href": "https://sunheist.com/"
     },
     {
-      "header": "Site development",
+      "title": "Smudge Wellness",
+      "imageUrl": "/svg/client/smudge-logo.svg",
+      "href": "https://smudgewellness.com/"
+    },
+    {
+      "title": "JB Langley",
+      "imageUrl": "/svg/client/jblangley-logo.svg",
+      "href": "https://jblangley.com/"
+    },
+    {
       "title": "Our Jungle House",
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-      "stack": ["wordpress", "cms"],
-      "imageUrl": "/images/dark-project-app-screenshot.png"
+      "imageUrl": "/svg/client/ojh-logo.svg",
+      "href": "https://khaosokaccommodation.com/"
+    },
+    {
+      "title": "Varee International",
+      "imageUrl": "/svg/client/varee-logo.svg",
+      "href": "https://vcis.ac.th/vcis/"
+    },
+    {
+      "title": "All Points East",
+      "imageUrl": "/svg/client/ape-logo.svg",
+      "href": "https://allpointseast.com/"
+    },
+    {
+      "title": "Awake Chocolate",
+      "imageUrl": "/svg/client/awake-logo.svg",
+      "href": "https://awakechocolate.com/"
+    },
+    {
+      "title": "Our Jungle Camp",
+      "imageUrl": "/svg/client/ojc-logo.svg",
+      "href": "https://khaosokecoresort.com/"
+    },
+    {
+      "title": "Richie Graham Photography",
+      "imageUrl": "/svg/client/richie-graham-logo.svg",
+      "href": "https://richiegraham.com/"
     }
   ],
   "feedbackHeader": {
@@ -180,11 +230,11 @@
         "shortDate": "April 2017",
         "rating": 5,
         "hrs": 133,
-        "imageUrl": "/images/awake-chocolate.jpg"
+        "imageUrl": "/images/client/awake-chocolate.jpg"
       }
     },
     {
-      "title": "Page Speed and PDP Optimization",
+      "title": "Product Page Optimization",
       "body": "Another great project from Brett.",
       "meta": {
         "name": "Nature's Baby",
@@ -192,7 +242,7 @@
         "shortDate": "August 2017",
         "rating": 5,
         "hrs": 8,
-        "imageUrl": "/images/natures-baby.jpg"
+        "imageUrl": "/images/client/natures-baby.jpg"
       }
     },
     {
@@ -203,7 +253,7 @@
         "shortDate": "September 2017",
         "rating": 5,
         "hrs": 2,
-        "imageUrl": "/images/eboost.jpg"
+        "imageUrl": "/images/client/eboost.jpg"
       }
     },
     {
@@ -215,7 +265,7 @@
         "shortDate": "March 2019",
         "rating": 4.85,
         "hrs": 26,
-        "imageUrl": "/images/full-circle.jpg"
+        "imageUrl": "/images/client/full-circle.jpg"
       }
     },
     {
@@ -227,7 +277,7 @@
         "shortDate": "November 2017",
         "rating": 5,
         "hrs": 49,
-        "imageUrl": "/images/champainge-cbd.jpg"
+        "imageUrl": "/images/client/champainge-cbd.jpg"
       }
     },
     {
@@ -239,11 +289,11 @@
         "shortDate": "March 2019",
         "rating": 5,
         "hrs": "Fixed Price",
-        "imageUrl": "/images/canoe-club.jpg"
+        "imageUrl": "/images/client/canoe-club.jpg"
       }
     },
     {
-      "title": "Store and Frontend Development",
+      "title": "Frontend Development",
       "body": "Brett is great and we'll continue to use him as an ongoing resource. Thanks to Brett for providing a 'grandfathered' rate to us. Much appreciated.",
       "meta": {
         "name": "GoLive Probiotics",
@@ -251,7 +301,7 @@
         "shortDate": "September 2017",
         "rating": 5,
         "hrs": 139,
-        "imageUrl": "/images/golive-probiotics.jpg"
+        "imageUrl": "/images/client/golive-probiotics.jpg"
       }
     },
     {
@@ -263,60 +313,32 @@
         "shortDate": "August 2017",
         "rating": 5,
         "hrs": 22,
-        "imageUrl": "/images/awake-chocolate.jpg"
+        "imageUrl": "/images/client/awake-chocolate.jpg"
       }
     }
   ],
   "services": {
     "heading1": "Experience you can count on.",
-    "heading2": "Independent or colaborative work.",
-    "body": "Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla. Ac euismod vel sit maecenas.",
+    "heading2": "Independent or collaborative work.",
+    "body": "My adaptable workflow caters to both solo and collaborative settings, seamlessly accommodating clients in any time zone. Whether your project demands a Shopify specialist or a skilled React developer, you can trust in my expertise and dedication to deliver results.",
     "list": [
       {
-        "name": "Eos Eligendi Qui",
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.",
-        "icon": "commandLine"
+        "name": "Headless Frontend Mastery:",
+        "description": "Proficient in React/Next.js front-end development, ensuring cutting-edge and responsive solutions for your projects.",
+        "icon": "codeBracket"
       },
       {
-        "name": "Debitis Aut Et.",
-        "description": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
-        "icon": "commandLine"
+        "name": "Shopify 2.0 Expertise:",
+        "description": "Skilled in Shopify 2.0 theme conversion and development, providing seamless upgrades and enhanced functionality for your storefront.",
+        "icon": "shoppingBag"
       },
       {
-        "name": "Quis Autem Deleniti",
-        "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.",
-        "icon": "commandLine"
+        "name": "Storybook Excellence:",
+        "description": "Experienced in utilizing Storybook for component documentation, simplifying large project maintainability  across teams.",
+        "icon": "bookmarkSquare"
       }
     ],
-    "imageUrl": "/images/dark-project-app-screenshot.png"
-  },
-  "team": {
-    "heading": "Collective Minds",
-    "body": "Beatae nulla nemo ratione omnis repellendus aperiam fugiat doloremque alias aut fuga ut fuga corporis.",
-    "people": [
-      {
-        "name": "Brett Jones",
-        "role": "The Dude",
-        "imageUrl": "/images/profile-1.jpg",
-        "upwork": "https://www.upwork.com/freelancers/~0159247498107bb8bb",
-        "github": "https://github.com/mr-toast",
-        "twitter": "#"
-      },
-      {
-        "name": "Kevin Frilot",
-        "role": "The Other Dude",
-        "imageUrl": "/images/profile-2.jpg",
-        "upwork": "#",
-        "github": "#"
-      },
-      {
-        "name": "Jonny Cash",
-        "role": "The Man",
-        "imageUrl": "/images/profile-3.jpg",
-        "upwork": "#",
-        "github": "#"
-      }
-    ]
+    "imageUrl": "/images/dark-intro-screen-2.png"
   },
   "contact": {
     "heading": "Let's talk about your project",

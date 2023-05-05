@@ -1,5 +1,4 @@
 // types.d.ts
-
 type NavigationItem = {
   label: string
   href: string
@@ -26,7 +25,7 @@ type StackIcons =
   | 'typescript'
   | 'wordpress'
 
-type ServicesIcons = 'commandLine'
+type HeroIcons = 'bookmarkSquare' | 'codeBracket' | 'commandLine' |  'shoppingBag'
 
 type SocialItem = {
   name: string
@@ -65,11 +64,9 @@ type FeaturedWork = {
 }
 
 type PreviousWork = {
-  header: string
   title: string
-  description: string
-  stack: string[]
   imageUrl: string
+  href: string
 }
 
 type FeedbackMeta = {
@@ -124,6 +121,7 @@ type SiteData = {
   }
   featuredWorkHeader: LargeHeader
   featuredWork: FeaturedWork[]
+  previousWorkHeader: LargeHeader
   previousWork: PreviousWork[]
   feedbackHeader: LargeHeader
   feedback: Feedback[]
@@ -150,6 +148,7 @@ type SiteData = {
 
 type SvgComponent = React.FunctionComponent<React.SVGProps<SVGSVGElement>>
 
+// NOTE // BUG I think next/image and  global.d.ts is overriding this definition and causeing all the errors during build. Work out how to fix this
 declare module '*.svg' {
   const ReactComponent: SvgComponent
   export { ReactComponent }
