@@ -43,7 +43,6 @@ export function buttonStyles({ color = 'transparent', disabled, format }: Button
  * @module Button
  *
  * @remarks
- * The button will render the correct element <a> | <button> | <div> based on onClick and href
  * You can place and SVG igon inside the button on either side of the text
  * @example
  * ```jsx
