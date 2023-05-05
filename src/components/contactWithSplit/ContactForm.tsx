@@ -60,7 +60,7 @@ export function ContactForm() {
       setTimeout(() => {
         setSubmitStatus('idle')
         reset()
-      }, 3000)
+      }, 2000)
     } catch (error) {
       // console.error('Error sending email')
       setSubmitStatus('failed')
@@ -85,7 +85,7 @@ export function ContactForm() {
               type="text"
               autoComplete="name"
               error={errors.name?.message}
-              {...register('name', { required: 'Name is required', maxLength: 80 })}
+              {...register('name', { required: 'Name required', maxLength: 80 })}
             />
           </div>
 

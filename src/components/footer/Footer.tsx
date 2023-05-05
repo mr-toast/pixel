@@ -33,7 +33,11 @@ export function Footer(props: FooterProps) {
         {cms.social.map((item) => {
           const Icon = socialIconsMap[item.icon]
           return (
-            <Link key={item.name} href={item.href} className="text-zinc-400 hover:text-zinc-500">
+            <Link
+              key={item.name}
+              href={item.href}
+              className="text-zinc-500 hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-zinc-300"
+            >
               <span className="sr-only">{item.name}</span>
               <Icon className="h-6 w-6" aria-hidden="true" />
             </Link>

@@ -4,7 +4,6 @@ import { Link } from '~/components/link'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Typist } from '~/components/typist'
 import { twMerge } from 'tailwind-merge'
-// import backgroundTexture from '/public/images/background-texture-3.jpg'
 
 type HeroWithSplitProps = {
   id: string
@@ -22,14 +21,6 @@ export const HeroWithSplit = forwardRef<HTMLDivElement, HeroWithSplitProps>((pro
   return (
     <div id={id} className={classes} ref={ref}>
       {/* NOTE background artwork */}
-      {/* <Image
-        src={backgroundTexture.src}
-        alt=""
-        role="presentation"
-        className="dark: optacity-25 absolute inset-0 -z-10 h-full w-full -scale-100 object-cover object-center opacity-30 grayscale dark:invert"
-        height={864}
-        width={1376}
-      /> */}
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
@@ -78,7 +69,7 @@ export const HeroWithSplit = forwardRef<HTMLDivElement, HeroWithSplitProps>((pro
 
           <Link
             href={cms.introduction.button.href}
-            className="mt-6 inline-flex gap-3 rounded-full bg-zinc-300 px-3 py-1 text-sm font-semibold leading-6 text-zinc-700 ring-1 ring-inset ring-zinc-700 dark:bg-zinc-500/10 dark:text-zinc-400 dark:ring-zinc-500/20"
+            className="mt-6 inline-flex gap-3 rounded-full bg-zinc-300 px-3 py-1 text-sm font-semibold leading-6 text-zinc-700 ring-1 ring-inset ring-zinc-700 hover:bg-zinc-300/70 dark:bg-zinc-500/10 dark:text-zinc-400 dark:ring-zinc-500/20 dark:hover:bg-zinc-500/20"
           >
             {cms.introduction.button.label}
             <div className="-rotate-90">

@@ -1,7 +1,7 @@
 // TODO add scroll observer and effects as you scroll through section
 
 import { create } from 'zustand'
-import { useTheme } from 'next-themes'
+// import { useTheme } from 'next-themes'
 import { Dialog } from '@headlessui/react'
 
 import { ThemeSwitcher } from '~/components/themeSwitcher'
@@ -41,7 +41,7 @@ const socialIconsMap = {
 export function Navbar(props: NavbarProps) {
   const { cms } = props
   const setMobileMenuOpen = useMobileMenuStore((state) => state.setMobileMenuOpen)
-  const { theme } = useTheme()
+  // const { theme } = useTheme()
 
   return (
     <>
@@ -81,7 +81,7 @@ export function Navbar(props: NavbarProps) {
 const MobileMenuDialog = ({ cms }: NavbarProps) => {
   const mobileMenuOpen = useMobileMenuStore((state) => state.mobileMenuOpen)
   const setMobileMenuOpen = useMobileMenuStore((state) => state.setMobileMenuOpen)
-  const { theme } = useTheme()
+  // const { theme } = useTheme()
 
   return (
     <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -106,14 +106,14 @@ const MobileMenuDialog = ({ cms }: NavbarProps) => {
             </Button>
           </div>
         </div>
-        <nav className="mt-6 flow-root">
-          <ul className="-my-6 divide-y divide-zinc-500/10">
+        <nav className="mt-24 flow-root">
+          <ul className="-my-6 divide-y divide-zinc-500/10 text-center">
             <li className="space-y-2 py-6">
               {cms.burgerNavigation.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-zinc-50 hover:text-zinc-950"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7  hover:bg-zinc-50 hover:text-zinc-950"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
@@ -122,13 +122,19 @@ const MobileMenuDialog = ({ cms }: NavbarProps) => {
             </li>
           </ul>
         </nav>
-        <div className="mt-10 flex w-full justify-start gap-4">
+        <div className="mt-10 flex w-full justify-center gap-4">
           {cms.social.map((item) => {
             const Icon = socialIconsMap[item.icon]
             return (
-              <Link key={item.name} href={item.href} format="button" color="transparent" className="rounded-full p-2.5">
+              <Link
+                key={item.name}
+                href={item.href}
+                format="button"
+                color="transparent"
+                className="rounded-full p-2.5 [&>svg]:h-8 [&>svg]:w-8"
+              >
                 <span className="sr-only">{item.name}</span>
-                <Icon className="h-12 w-12" aria-hidden="true" />
+                <Icon className="h-24 w-24" aria-hidden="true" />
               </Link>
             )
           })}

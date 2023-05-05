@@ -1,5 +1,5 @@
 // TODO move form state into zustand ans add mailbox animation
-
+import { Link } from '~/components/link'
 import { ContactForm } from './ContactForm'
 import Mailbox from '/public/svg/mailbox.svg'
 import MailboxFlag from '/public/svg/mailbox-flag.svg'
@@ -85,9 +85,9 @@ export function ContactWithSplit(props: ContactWithSplitProps) {
                   <EnvelopeIcon className="h-7 w-6 text-gray-400 dark:text-gray-400" aria-hidden="true" />
                 </dt>
                 <dd>
-                  <a className="hover:text-gray-900 dark:hover:text-white" href="mailto:hello@pixelonpixel.com">
+                  <Link className="hover:text-gray-900 dark:hover:text-white" href="mailto:hello@pixelonpixel.com">
                     hello@pixelonpixel.com
-                  </a>
+                  </Link>
                 </dd>
               </div>
               <div className="flex gap-x-4">

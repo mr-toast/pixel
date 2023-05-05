@@ -2,7 +2,7 @@
 // TODO extend logo by adding site name to monogram
 
 import React, { forwardRef } from 'react'
-import { useTheme } from 'next-themes'
+// import { useTheme } from 'next-themes'
 import { twMerge } from 'tailwind-merge'
 
 type LogoProps = {
@@ -11,7 +11,7 @@ type LogoProps = {
 
 export const Logo = forwardRef<SVGSVGElement, LogoProps>((props, ref) => {
   const { className } = props
-  const theme = useTheme()
+  // const theme = useTheme()
 
   const classes = twMerge('shadow-[-35px 0px 60px 8px white]', className)
 
@@ -31,3 +31,4 @@ export const Logo = forwardRef<SVGSVGElement, LogoProps>((props, ref) => {
     </svg>
   )
 })
+Logo.displayName = 'Logo'
