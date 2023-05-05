@@ -15,19 +15,20 @@ export function Vimeo(props: VimeoVideo) {
   useEffect(() => {
     if (!playerRef.current) return
 
+    // eslint-disable-next-line @typescript-eslint/require-await
     const createPlayer = async () => {
       try {
         const newPlayer = new VimeoPlayer(playerRef.current as HTMLElement, {
           id: videoId,
           width,
           height,
-          muted: true,
-          loop: true,
-          autoplay: true,
+          muted: isBackground,
+          loop: isBackground,
+          autoplay: isBackground,
         })
 
         newPlayer.on('loaded', function () {
-          newPlayer.play()
+          isBackground ? newPlayer.play().catch(console.error) : newPlayer.pause().catch(console.error)
           // console.log('loaded')
         })
 
@@ -43,13 +44,13 @@ export function Vimeo(props: VimeoVideo) {
       }
     }
 
-    createPlayer()
+    createPlayer().catch(console.error)
 
     return () => {
-      player?.destroy()
+      player?.destroy().catch(console.error)
       // console.log('destroyed')
     }
-  }, [videoId, width, height])
+  }, [videoId, width, height, isBackground, player])
 
   useEffect(() => {
     if (!player || !isLoaded) return
@@ -57,9 +58,9 @@ export function Vimeo(props: VimeoVideo) {
     const onIntersection: IntersectionObserverCallback = (entries) => {
       const [entry] = entries
       if (entry?.isIntersecting) {
-        player.play()
+        player.play().catch(console.error)
       } else {
-        player.pause()
+        player.pause().catch(console.error)
       }
     }
 
