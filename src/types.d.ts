@@ -59,8 +59,12 @@ type FeaturedWork = {
   description: string
   stack: StackIcons[]
   button: Button
-  testimonial: Testimonial
+  testimonial?: Testimonial
   imageUrl: string
+  gitUrl?: string
+  siteUrl?: string
+  gallery?: string[]
+  galleryDesktop?: string[]
 }
 
 type PreviousWork = {

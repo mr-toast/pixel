@@ -114,55 +114,85 @@
   },
   "featuredWork": [
     {
-      "header": "Site development",
-      "title": "Freshy's Baking Club",
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-      "stack": ["sketch", "react", "typescript", "cms", "storybook"],
-      "imageUrl": "/images/featured/freshys-hero.png",
-      "button": {
-        "label": "View project",
-        "href": "#"
-      },
-      "testimonial": {
-        "name": "Nattakran Saisa-ard",
-        "title": "Owner, Freshy's Baking Club",
-        "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
-        "avatarUrl": "/images/avatar/freshy.jpg"
-      }
-    },
-    {
       "header": "Component development",
       "title": "Tropic Labs",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
       "stack": ["shopify", "react", "typescript", "tailwind", "cms", "storybook"],
-      "imageUrl": "/images/featured/tropic-hero.png",
+      "imageUrl": "/images/featured/gallery-tropic-desk-1.png",
+      "siteUrl": "https://tropic-labs.com",
       "button": {
-        "label": "View project",
-        "href": "#"
+        "label": "View project"
       },
       "testimonial": {
         "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
         "avatarUrl": "/images/avatar/morgan-ioffe.jpg",
         "name": "Morgan Ioffe",
         "title": "Founder, Tropic Labs"
-      }
+      },
+			"gallery": [
+        "/images/featured/gallery-tropic-mob-1.png",
+        "/images/featured/gallery-tropic-mob-2.png",
+        "/images/featured/gallery-tropic-mob-3.png",
+        "/images/featured/gallery-tropic-mob-4.png",
+        "/images/featured/gallery-tropic-mob-5.png"
+      ],
+			"galleryDesktop": [
+        "/images/featured/gallery-tropic-desk-1.png",
+        "/images/featured/gallery-tropic-desk-2.png",
+        "/images/featured/gallery-tropic-desk-3.png",
+        "/images/featured/gallery-tropic-desk-4.png",
+        "/images/featured/gallery-tropic-desk-5.png"
+      ]
+    },
+		{
+      "header": "Site development",
+      "title": "Freshy's Baking Club",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "stack": ["sketch", "react", "typescript", "cms", "storybook"],
+      "imageUrl": "/images/featured/gallery-freshys-desk-1.png",
+      "siteUrl": "https://freshysbakingclub.com",
+			"button": {
+        "label": "View project"
+      },
+      "testimonial": {
+        "name": "Nattakran Saisa-ard",
+        "title": "Owner, Freshy's Baking Club",
+        "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
+        "avatarUrl": "/images/avatar/freshy.jpg"
+      },
+      "gallery": [
+        "/images/featured/gallery-freshys-mob-1.png",
+        "/images/featured/gallery-freshys-mob-3.png",
+        "/images/featured/gallery-freshys-mob-2.png"
+      ],
+      "galleryDesktop": [
+        "/images/featured/gallery-freshys-desk-1.png",
+        "/images/featured/gallery-freshys-desk-2.png",
+        "/images/featured/gallery-freshys-desk-3.png"
+      ]
     },
     {
       "header": "Component development",
       "title": "Boss Personal Planner",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
       "stack": ["shopify", "react", "javascript", "cms", "gatsby", "storybook"],
-      "imageUrl": "/images/featured/boss-hero.png",
+      "imageUrl": "/images/featured/gallery-boss-desk-1.png",
+      "siteUrl": "https://bosspersonalplanner.com",
       "button": {
-        "label": "View project",
-        "href": "#"
+        "label": "View project"
       },
-      "testimonial": {
-        "quote": "Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.",
-        "avatarUrl": "/images/avatar/profile-0.jpg",
-        "name": "7&8",
-        "title": "Development Agency"
-      }
+			"gallery": [
+        "/images/featured/gallery-boss-mob-1.png",
+        "/images/featured/gallery-boss-mob-2.png",
+        "/images/featured/gallery-boss-mob-3.png",
+        "/images/featured/gallery-boss-mob-4.png"
+      ],
+      "galleryDesktop": [
+        "/images/featured/gallery-boss-desk-1.png",
+        "/images/featured/gallery-boss-desk-2.png",
+        "/images/featured/gallery-boss-desk-3.png",
+        "/images/featured/gallery-boss-desk-4.png"
+      ]
     }
   ],
   "previousWorkHeader": {
