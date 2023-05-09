@@ -17,7 +17,7 @@ const iconsMap: HeroIcons = {
 export function ContainedContentPanel(props: ContainedContentPanelProps) {
   const { cms, id } = props
   return (
-    <div id={id} className=" py-24">
+    <div id={id} className="py-24">
       <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="relative isolate overflow-hidden bg-zinc-950 px-6 py-20 dark:bg-zinc-50 sm:rounded-3xl sm:px-10 sm:py-24 lg:py-24 xl:px-24">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-0">
@@ -36,7 +36,7 @@ export function ContainedContentPanel(props: ContainedContentPanelProps) {
               width={2432}
               height={1442}
             />
-            <div className="max-w-xl lg:row-start-3 lg:mt-10 lg:max-w-md lg:border-t lg:border-zinc-50/10 lg:pt-10">
+            <div className="max-w-xl lg:row-start-3 lg:max-w-md lg:border-t lg:border-zinc-50/10 lg:pt-10">
               <dl className="max-w-xl space-y-8 text-base leading-7 text-zinc-300 dark:text-zinc-700 lg:max-w-none">
                 {cms.services.list.map((item) => {
                   const Icon = iconsMap[item.icon]

@@ -17,7 +17,7 @@ export function PreviousWork(props: PreviousWorkProps) {
             <WordpressIcon />
             <ShopifyIcon />
           </div>
-          <h2 className="text-5xl font-bold leading-8 tracking-tight">{cms.previousWorkHeader.heading}</h2>
+          <h2 className="text-5xl font-bold tracking-tight">{cms.previousWorkHeader.heading}</h2>
           <p className="mt-6 leading-6 text-zinc-950 dark:text-zinc-50">{cms.previousWorkHeader.body}</p>
         </div>
 

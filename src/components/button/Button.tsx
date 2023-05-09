@@ -14,7 +14,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const styleMap = {
   black: 'text-zinc-50 hover:text-zinc-50 bg-zinc-800 hover:bg-zinc-700 focus-visible:outline-zinc-800',
-  white: 'text-zinc-950 bg-zinc-200 hover:bg-zinc-800 focus-visible:outline-zinc-200',
+  white: 'text-zinc-950 bg-zinc-200 hover:bg-zinc-400 focus-visible:outline-zinc-200',
   transparent:
     'bg-transparent hover:bg-zinc-950/25 dark:hover:bg-zinc-50/25 shadow-none focus-visible:outline-zinc-950/25 dark:focus-visible:outline-zinc-50/25',
 }
