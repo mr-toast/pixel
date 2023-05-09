@@ -32,7 +32,7 @@ const constants = {
   CLOSE_TEXT: 'Close menu',
 }
 
-const socialIconsMap = {
+const socialIconsMap: SocialIcons = {
   github: GithubIcon,
   twitter: TwitterIcon,
   upwork: UpworkIcon,
@@ -84,7 +84,8 @@ const MobileMenuDialog = ({ cms }: NavbarProps) => {
   // const { theme } = useTheme()
 
   return (
-    <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+    // HACK using this className __className_f820ce becuase I don't know how to get the custom font to apply
+		<Dialog as="div" className="lg:hidden __className_f820ce" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
       <div className="fixed inset-0 z-20" />
       <Dialog.Panel className="fixed inset-y-0 right-0 z-30 w-full overflow-y-auto bg-zinc-50  px-6 py-4 dark:bg-zinc-950 sm:max-w-sm sm:ring-1 sm:ring-zinc-900/10">
         <div className="flex items-center justify-between">
