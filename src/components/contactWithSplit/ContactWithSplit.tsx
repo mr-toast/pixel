@@ -33,7 +33,44 @@ export function ContactWithSplit(props: ContactWithSplitProps) {
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className={innerClasses}>
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            {/* NOTE background artwork */}
+            
+
+            {/* TODO add state change to mailbox flag when mail sent */}
+            <div className="group relative mb-2 h-16 w-16">
+              <Mailbox className="icon absolute stroke-zinc-950 dark:stroke-zinc-50" />
+              <MailboxFlag className="icon absolute fill-transparent stroke-zinc-950  transition  group-hover:-scale-x-100 group-hover:fill-zinc-700 dark:stroke-zinc-50  dark:group-hover:fill-zinc-300" />
+            </div>
+
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">{cms.contact.heading}</h2>
+            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">{cms.contact.body}</p>
+            <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600 dark:text-gray-300">
+              <div className="flex gap-x-4">
+                <dt className="flex-none">
+                  <span className="sr-only">Email</span>
+                  <EnvelopeIcon className="h-6 w-6 text-zinc-950 dark:text-zinc-50" aria-hidden="true" />
+                </dt>
+                <dd>
+                  <Link className="hover:text-gray-900 dark:hover:text-white" href="mailto:hello@pixelonpixel.com">
+                    hello@pixelonpixel.com
+                  </Link>
+                </dd>
+              </div>
+              <div className="flex gap-x-4">
+                <dt className="flex-none">
+                  <span className="sr-only">Location</span>
+                  <MapPinIcon className="h-6 w-6 text-zinc-950 dark:text-zinc-50" aria-hidden="true" />
+                </dt>
+                <dd>Chaing Mai, Thailand</dd>
+              </div>
+              <div className="flex gap-x-4">
+                <dt className="flex-none">
+                  <span className="sr-only">Timezone</span>
+                  <ClockIcon className="h-6 w-6 text-zinc-950 dark:text-zinc-50" aria-hidden="true" />
+                </dt>
+                <dd>UTC +7</dd>
+              </div>
+            </dl>
+						{/* NOTE background artwork */}
             <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden lg:w-1/2">
               <svg
                 className="absolute inset-0 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] dark:stroke-gray-700"
@@ -69,42 +106,6 @@ export function ContactWithSplit(props: ContactWithSplitProps) {
                 />
               </div>
             </div>
-
-            {/* TODO add state change to mailbox flag when mail sent */}
-            <div className="group relative mb-2 h-16 w-16">
-              <Mailbox className="icon absolute stroke-zinc-950 dark:stroke-zinc-50" />
-              <MailboxFlag className="icon absolute fill-transparent stroke-zinc-950  transition  group-hover:-scale-x-100 group-hover:fill-zinc-700 dark:stroke-zinc-50  dark:group-hover:fill-zinc-300" />
-            </div>
-
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">{cms.contact.heading}</h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">{cms.contact.body}</p>
-            <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600 dark:text-gray-300">
-              <div className="flex gap-x-4">
-                <dt className="flex-none">
-                  <span className="sr-only">Email</span>
-                  <EnvelopeIcon className="h-7 w-6 text-gray-400 dark:text-gray-400" aria-hidden="true" />
-                </dt>
-                <dd>
-                  <Link className="hover:text-gray-900 dark:hover:text-white" href="mailto:hello@pixelonpixel.com">
-                    hello@pixelonpixel.com
-                  </Link>
-                </dd>
-              </div>
-              <div className="flex gap-x-4">
-                <dt className="flex-none">
-                  <span className="sr-only">Location</span>
-                  <MapPinIcon className="h-7 w-6 text-gray-400 dark:text-gray-400" aria-hidden="true" />
-                </dt>
-                <dd>Chaing Mai, Thailand</dd>
-              </div>
-              <div className="flex gap-x-4">
-                <dt className="flex-none">
-                  <span className="sr-only">Timezone</span>
-                  <ClockIcon className="h-7 w-6 text-gray-400 dark:text-gray-400" aria-hidden="true" />
-                </dt>
-                <dd>UTC +7</dd>
-              </div>
-            </dl>
           </div>
         </div>
         <ContactForm />
