@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Navbar, NavbarWrapper } from '~/components/navbar'
+import { Layout } from '~/layout'
 import { VideoHero } from '~/components/videoHero'
 import { HeroWithSplit } from '~/components/heroWithSplit'
 import { LargeHeader } from '~/components/largeHeader'
@@ -8,7 +8,6 @@ import { PreviousWork } from '~/components/previousWork'
 import { Testimonials } from '~/components/testimonials'
 import { ContainedContentPanel } from '~/components/containedContentPanel'
 import { ContactWithSplit } from '~/components/contactWithSplit'
-import { Footer } from '~/components/footer'
 
 import siteData from '~/modules/cms/data.json'
 
@@ -38,13 +37,7 @@ export default function Home({ cms }: HomeProps) {
         {/* <link rel="icon" href="/favicon.svg" type="image/svg+xml" /> */}
       </Head>
 
-      <header>
-        <NavbarWrapper>
-          <Navbar cms={cms} />
-        </NavbarWrapper>
-      </header>
-
-      <main>
+      <Layout cms={cms}>
         <VideoHero cms={cms} />
         <HeroWithSplit cms={cms} id="about" />
         <LargeHeader cms={cms.featuredWorkHeader} id="featured-work" />
@@ -54,17 +47,10 @@ export default function Home({ cms }: HomeProps) {
         })}
 
         <PreviousWork cms={cms} id="previous-work" />
-
         <ContainedContentPanel cms={cms} id="experience" />
-
         <Testimonials cms={cms} id="testimonials" />
-
         <ContactWithSplit cms={cms} id="contact" />
-      </main>
-
-      <footer>
-        <Footer cms={cms} />
-      </footer>
+			</Layout>
     </>
   )
 }
