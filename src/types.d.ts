@@ -27,7 +27,7 @@ type StackIcons =
   | 'typescript'
   | 'wordpress'
 
-type HeroIcons = 'bookmarkSquare' | 'codeBracket' | 'commandLine' |  'shoppingBag'
+type ServicesIcons = 'bookmarkSquare' | 'codeBracket' | 'commandLine' |  'shoppingBag'
 
 type SocialItem = {
   name: string
