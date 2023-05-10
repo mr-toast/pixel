@@ -6,8 +6,7 @@ type ContainedContentPanelProps = {
   id: string
 }
 
-// make sure you update the icons in types.d.ts as well
-const iconsMap: HeroIcons = {
+const iconsMap = {
   bookmarkSquare: BookmarkSquareIcon,
   codeBracket: CodeBracketIcon,
   commandLine: CommandLineIcon,
