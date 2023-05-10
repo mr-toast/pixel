@@ -1,6 +1,8 @@
+import { Image } from '~/components/image'
 import { Link } from '~/components/link'
 import ShopifyIcon from '/public/svg/stack/shopify.svg'
 import WordpressIcon from '/public/svg/stack/wordpress.svg'
+
 
 type PreviousWorkProps = {
   cms: SiteData
@@ -26,11 +28,11 @@ export function PreviousWork(props: PreviousWorkProps) {
             return (
               <Link
                 href={item.href}
-                className="bg-zinc-400/10 p-8 last-of-type:hidden dark:bg-zinc-50/5 sm:p-10 md:last-of-type:block hover:[&>img]:scale-110"
+                className="bg-zinc-400/10 p-8 last-of-type:hidden dark:bg-zinc-50/5 sm:p-10 md:last-of-type:block hover:[&>div]:scale-110"
                 key={item.title}
               >
-                <img
-                  className="max-h-12 w-full object-contain transition-transform dark:invert"
+                <Image
+                  className="w-full object-contain transition-transform dark:invert"
                   src={item.imageUrl}
                   alt={item.title}
                   width={158}
@@ -40,6 +42,8 @@ export function PreviousWork(props: PreviousWorkProps) {
             )
           })}
         </div>
+        
+				
       </div>
     </div>
   )
