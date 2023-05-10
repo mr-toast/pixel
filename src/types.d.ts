@@ -17,10 +17,12 @@ type StackIcons =
   | 'docker'
   | 'gatsby'
   | 'javascript'
-  | 'react'
+  | 'radix'
+	| 'react'
   | 'shopify'
   | 'sketch'
-  | 'storybook'
+  | 'stitches'
+	| 'storybook'
   | 'tailwind'
   | 'typescript'
   | 'wordpress'
@@ -45,21 +47,13 @@ type Button = {
   href: string
 }
 
-type Testimonial = {
-  name: string
-  title: string
-  quote: string
-  avatarUrl: string
-  imageUrl: string
-}
-
 type FeaturedWork = {
   header: string
   title: string
   description: string
+  descriptionExtended: string
   stack: StackIcons[]
   button: Button
-  testimonial?: Testimonial
   imageUrl: string
   gitUrl?: string
   siteUrl?: string
