@@ -142,7 +142,7 @@
 		{
       "header": "Site development",
       "title": "Freshy's Baking Club",
-      "description": "Freshy's Baking Club, a bespoke custom cake business, required a dynamic, mobile-first presence page that was meticulously crafted to showcase their distinctive brand. This project, built using Sketch, React, Javascript, Stiches and Storybook, delivered a seamless, user-friendly experience across all devices.",
+      "description": "Freshy's Baking Club, a bespoke custom cake business, required a dynamic, mobile-first presence page that was meticulously crafted to showcase their distinctive brand. This project, built using Sketch, React, Javascript, Stitches and Storybook, delivered a seamless, user-friendly experience across all devices.",
       "descriptionExtended": "<p>The design, which focused on perfect adaptation to smaller screens, was complemented by the integration of Vimeo, enriching the site with interactive video elements.</p><p>As part of the project's ongoing development, plans are in place for further CMS integration, conversion to TypeScript, and the incorporation of Tailwind CSS, all aimed at delivering even more refined user interfaces and interactions.</p>",
       "stack": ["sketch", "react", "javascript", "stitches", "storybook"],
       "imageUrl": "/images/featured/gallery-freshys-desk-1.png",
