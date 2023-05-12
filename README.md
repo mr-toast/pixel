@@ -1,18 +1,20 @@
-## Pixel on Pixel
-Most of my work is on private client repos. I've made this repo for `pixelonpixel.com publicly visible as a sample of my work.
+![Pixel on Pixel Logo](/public/svg/logo.svg)
 
-**Status:** Ongoing development
-**Stack:** Nextjs, Typescript, Tailwind 
+## Pixel on Pixel
+Most of my work is on private client repos. I've made this repo for [Pixel on Pixel](https://pixelonpixel.com/) publicly visible as a sample of my work.
+
++**Status:** Ongoing development\
+@@**Stack:** Nextjs, Typescript, Tailwind 
 
 ---
 #### Scripts
 --- 
 ```
 "scripts": {
-	"build": "next build",
-	"dev": "next dev",
-	"lint": "next lint",
-	"start": "next start"
+"build": "next build",
+"dev": "next dev",
+"lint": "next lint",
+"start": "next start"
 },
 ```
 
