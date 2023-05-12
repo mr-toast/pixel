@@ -1,5 +1,4 @@
-![Pixel on Pixel Logo](./public/images/monogram-dark.png)
-![Pixel on Pixel Logo](./public/svg/logo.svg)
+![Pixel on Pixel Logo](./public/images/git-logo.png)
 
 ## Pixel on Pixel
 Most of my work is on private client repos. I've made this repo for  [Pixel on Pixel](https://pixelonpixel.com/) publicly visible as a sample of my work.
