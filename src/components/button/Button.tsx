@@ -7,7 +7,7 @@ import type { ButtonHTMLAttributes } from 'react'
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   color?: 'black' | 'white' | 'transparent'
-  format?: 'small' | 'normal' | 'icon'
+  format?: 'small' | 'normal' | 'icon' | 'fancy'
   className?: string
   onClick?: () => void
 }
@@ -32,7 +32,8 @@ export function buttonStyles({ color = 'transparent', disabled, format }: Button
     // Formats
     format === 'icon' && 'px-2.5 rounded-full',
     format === 'small' && 'text-xs',
-    // Disabled state
+		format === 'fancy' && 'rounded-none -skew-x-12 [&>span]:skew-x-12',
+		// Disabled state
     disabled && 'bg-zinc-400 hover:bg-zinc-500 text-zinc-800 cursor-not-allowed'
   )
 }
