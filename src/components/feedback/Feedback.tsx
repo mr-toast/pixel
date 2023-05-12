@@ -1,11 +1,11 @@
 import { Image } from '~/components/image'
 
-type TestimonialsProps = {
+type FeedbackProps = {
   cms: SiteData
   id: string
 }
 
-export function Testimonials(props: TestimonialsProps) {
+export function Feedback(props: FeedbackProps) {
   const { cms, id } = props
   return (
     <div id={id} className="py-24 sm:py-32">
@@ -27,7 +27,7 @@ export function Testimonials(props: TestimonialsProps) {
                     <Image
                       className="h-16 w-16 bg-zinc-50 mix-blend-multiply"
                       src={testimonial.meta.imageUrl}
-                      alt=""
+                      alt={testimonial.meta.name}
                       width={64}
                       height={64}
                     />

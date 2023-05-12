@@ -25,9 +25,7 @@ import TailwindIcon from '/public/svg/stack/tailwind.svg'
 import TypescriptIcon from '/public/svg/stack/typescript.svg'
 import WordpressIcon from '/public/svg/stack/wordpress.svg'
 
-
-
-type FeatureWithTestimonialProps = {
+type FeaturedWorkProps = {
   featuredWork: FeaturedWork
 }
 
@@ -56,7 +54,7 @@ const constants = {
 	STACK_LABEL: 'Built with:'
 }
 
-export function FeatureWithTestimonial({ featuredWork }: FeatureWithTestimonialProps) {
+export function FeaturedWork({ featuredWork }: FeaturedWorkProps) {
 	const [isOpen, setIsOpen] = useState(false)
 
 	const responsive = useResponsive()
@@ -84,11 +82,11 @@ export function FeatureWithTestimonial({ featuredWork }: FeatureWithTestimonialP
               </div>
 
               <div className="mt-8">
-                <Button color="black" onClick={() =>  setIsOpen(true)}>
+                <Button color="black" format="fancy" onClick={() =>  setIsOpen(true)}>
                   {featuredWork.button.label}
                 </Button>
 
-								<FeatureGallery isOpen={isOpen} setIsOpen={setIsOpen} featuredWork={featuredWork} theme={theme} responsive={responsive} />
+								<FeaturedWorkGallery isOpen={isOpen} setIsOpen={setIsOpen} featuredWork={featuredWork} theme={theme} responsive={responsive} />
               
 							</div>
             </div>
@@ -106,8 +104,8 @@ export function FeatureWithTestimonial({ featuredWork }: FeatureWithTestimonialP
   )
 }
 
-function FeatureGallery({ isOpen, setIsOpen, featuredWork, theme, responsive }) {
-  const featuredWorkGallery = responsive?.md ? featuredWork.galleryDesktop : featuredWork.gallery
+function FeaturedWorkGallery({ isOpen, setIsOpen, featuredWork, theme, responsive }) {
+  const galleryItems = responsive?.md ? featuredWork.galleryDesktop : featuredWork.gallery
   return (
     <Transition appear show={isOpen} as={Fragment}>
       {/* HACK using this className __className_f820ce becuase I don't know how to get the custom font to apply. */}
@@ -194,7 +192,7 @@ function FeatureGallery({ isOpen, setIsOpen, featuredWork, theme, responsive }) 
 										</div>
 									</div>
 									<div className="flex flex-col gap-6">
-										{featuredWorkGallery && (featuredWorkGallery.map((item, index) => (
+										{galleryItems && (galleryItems.map((item, index) => (
 											<Image className="rounded-xl shadow-xl" src={item} alt="" width={640} height={376} key={index} />
 										)))}
 									</div>

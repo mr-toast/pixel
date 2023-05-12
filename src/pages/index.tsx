@@ -3,13 +3,13 @@ import { Layout } from '~/layout'
 import { VideoHero } from '~/components/videoHero'
 import { HeroWithSplit } from '~/components/heroWithSplit'
 import { LargeHeader } from '~/components/largeHeader'
-import { FeatureWithTestimonial } from '~/components/featureWithTestimonial'
+import { FeaturedWork } from '~/components/featuredWork'
 import { PreviousWork } from '~/components/previousWork'
-import { Testimonials } from '~/components/testimonials'
+import { Feedback } from '~/components/feedback'
 import { ContainedContentPanel } from '~/components/containedContentPanel'
 import { ContactWithSplit } from '~/components/contactWithSplit'
 
-import siteData from '~/modules/cms/data.json'
+import siteData from '~/data.json'
 
 type HomeProps = {
   cms: SiteData
@@ -30,11 +30,11 @@ export default function Home({ cms }: HomeProps) {
   return (
     <>
       <Head>
-        <title>{cms.seo.title}</title>
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta name="description" content={cms.seo.description} />
-        <link rel="icon" href="/favicon.ico" />
-        {/* <link rel="icon" href="/favicon.svg" type="image/svg+xml" /> */}
+				<title>{cms.seo.title}</title>
+      	<meta content="width=device-width, initial-scale=1" name="viewport" />
+      	<meta name="description" content={cms.seo.description} />
+      	<link rel="icon" href="/favicon.ico" />
+				{/* <link rel="icon" href="/favicon.svg" type="image/svg+xml" /> */}
       </Head>
 
       <Layout cms={cms}>
@@ -43,12 +43,12 @@ export default function Home({ cms }: HomeProps) {
         <LargeHeader cms={cms.featuredWorkHeader} id="featured-work" />
 
         {cms.featuredWork.map((item) => {
-          return <FeatureWithTestimonial featuredWork={item} key={item.title} />
+          return <FeaturedWork featuredWork={item} key={item.title} />
         })}
 
         <PreviousWork cms={cms} id="previous-work" />
         <ContainedContentPanel cms={cms} id="experience" />
-        <Testimonials cms={cms} id="testimonials" />
+        <Feedback cms={cms} id="feedback" />
         <ContactWithSplit cms={cms} id="contact" />
 			</Layout>
     </>
