@@ -1,13 +1,12 @@
 ## Pixel on Pixel
+Most of my work is on private client repos. I've made this repo for `pixelonpixel.com publicly visible as a sample of my work.
 
-Built with: Nextjs, Sanity, Typescript, Tailwind
+**Status:** Ongoing development
+**Stack:** Nextjs, Typescript, Tailwind 
 
-—————————————————————
-
-### Scripts
-
-—————————————————————
-
+---
+#### Scripts
+--- 
 ```
 "scripts": {
 	"build": "next build",
@@ -17,62 +16,51 @@ Built with: Nextjs, Sanity, Typescript, Tailwind
 },
 ```
 
-—————————————————————
+## Roadmap
+**Notes:** There's some Typescript erros to be cleaned up a few other notes listed in Todo Tree using these tags: BUG, HACK, NOTE, QUESTION and TODO
 
-### Phase 0
 
-—————————————————————
-
+---
+#### Stage 1
+---
 - [x] STAGE 0: Initial Commit
 - [x] - add old placeholder
 - [x] - add Tailwind
 - [x] STAGE 1: Deploy Placeholder
 
-—————————————————————
-
-### Phase 1
-
-—————————————————————
-
+---
+#### Stage 2
+---
 - [x] STAGE 2: Tailwind Conversion
 - [x] - refactor styles
 - [x] - add custom fonts
 
-—————————————————————
-
-### Phase 2
-
-—————————————————————
-
+---
+#### Stage 3
+---
 - [x] STAGE 3: Convert to T3 Stack
-- [ ] STAGE 4: Core Components
+- [x] STAGE 4: Core Components
 - [x] - video hero
 - [x] - about
-- [ ] - success stories
-- [ ] - older projects
-- [x] - testimonials
-- [ ] - services/stack
+- [x] - feartured work
+- [x] - previous work
+- [x] - feeback
+- [x] - services
 - [x] - contact form
-- [ ] - cleanup & performance
-- [ ] - git rebase and public
+- [x] - cleanup & performance
+- [x] - cleanup for public visibility
 
-—————————————————————
-
-### Phase 3
-
-—————————————————————
-
+---
+#### Stage 4
+---
 - [ ] STAGE 5: Flair 
 - [ ] - animation state 
 - [ ] - transitions and effects
 - [ ] - colour 
 
-—————————————————————
-
-### Future
-
-—————————————————————
-
-- [ ] STAGE X: Additional Pages
+---
+#### Future Tasks
+---
+- [ ] STAGE X: Storybook Presentation
 - [ ] STAGE X: Sanity CMS
-- [ ] STAGE X: Setup Storybook
+- [ ] STAGE X: Additional Pages
