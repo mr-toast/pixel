@@ -7,7 +7,7 @@ Most of my work is on private client repos. I've made this repo for  [Pixel on P
 **Stack:** Nextjs, Typescript, Tailwind 
 
 ![Lighthouse Score](./public/images/lighthouse.png)\
-__ * Lighthouse test done in browser tools on live url. Score for both mobile and desktop. Score may vary slightly bewtween tests.__
+*Lighthouse test done in browser tools on live url. Score for both mobile and desktop. Score may vary slightly bewtween tests.
 
 ---
 #### Scripts
