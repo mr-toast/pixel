@@ -4,10 +4,10 @@
 Most of my work is on private client repos. I've made this repo for  [Pixel on Pixel](https://pixelonpixel.com/) publicly visible as a sample of my work.
 
 **Status:** Ongoing development\
-**Stack:** Nextjs, Typescript, Tailwind\ 
+**Stack:** Nextjs, Typescript, Tailwind 
 
-![Lighthouse Score](./public/images/lighthouse.png)
-__*Lighthouse test done in browser tools on live url. Score for both mobile and desktop. Score may vary slightly bewtween tests__
+![Lighthouse Score](./public/images/lighthouse.png)\
+__ * Lighthouse test done in browser tools on live url. Score for both mobile and desktop. Score may vary slightly bewtween tests.__
 
 ---
 #### Scripts
