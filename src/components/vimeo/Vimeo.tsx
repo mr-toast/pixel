@@ -87,7 +87,7 @@ export function Vimeo(props: VimeoVideo) {
 
   return (
     <div className={classes} ref={playerRef}>
-      {!isLoaded && <Image src={imageUrl} alt="" width={width} height={height} priority />}
+      {!isLoaded && <Image src={imageUrl} alt="Video Poster" role="presentation" width={width} height={height} priority />}
     </div>
   )
 }

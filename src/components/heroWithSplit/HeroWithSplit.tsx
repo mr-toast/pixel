@@ -82,7 +82,8 @@ export const HeroWithSplit = forwardRef<HTMLDivElement, HeroWithSplitProps>((pro
             <Image
               src={cms.introduction.imageUrl}
               alt=""
-              width={2432}
+							role="presentation"
+							width={2432}
               height={1442}
               className="rounded-md bg-zinc-50/5 shadow-2xl ring-1 ring-zinc-50/10 [&>img]:w-[76rem]"
             />

@@ -93,7 +93,7 @@ export function FeaturedWork({ featuredWork }: FeaturedWorkProps) {
           </div>
           <Image
             src={featuredWork.imageUrl}
-            alt=""
+            alt={featuredWork.title}
             className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-zinc-400/10 sm:w-[57rem] md:-ml-4 lg:ml-0 cursor-pointer"
             width={2432}
             height={1442}
@@ -192,7 +192,7 @@ function FeaturedWorkGallery({ isOpen, setIsOpen, featuredWork, theme, responsiv
 									</div>
 									<div className="flex flex-col gap-6">
 										{galleryItems && (galleryItems.map((item, index) => (
-											<Image className="rounded-xl shadow-xl" src={item} alt="" width={640} height={376} key={index} />
+											<Image className="rounded-xl shadow-xl" src={item} alt={`${featuredWork.title} gallery image ${key}`} width={640} height={376} key={index} />
 										)))}
 									</div>
 								</div>
