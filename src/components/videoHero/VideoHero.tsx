@@ -1,4 +1,4 @@
-// TODO improve logo and add light flickering animations
+// TODO improve logo
 
 import { Vimeo } from '~/components/vimeo'
 import { twMerge } from 'tailwind-merge'
@@ -18,7 +18,7 @@ const classes = twMerge(
 
 const vimeoClasses = twMerge(
   // positioning
-  'absolute left-0 top-0 -z-10 h-full w-auto xl:h-auto xl:left-auto xl:w-full xl:max-w-7xl',
+  'absolute left-0 top-0 -z-10 h-full w-auto xl:h-auto xl:left-auto xl:w-full',
   // filters
   'bg-zinc-50 dark:bg-zinc-950 [&>*]:mix-blend-difference [&>*]:grayscale dark:[&>*]:mix-blend-lighten'
 )
