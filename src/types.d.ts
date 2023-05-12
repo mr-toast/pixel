@@ -44,7 +44,7 @@ type VimeoVideo = {
 
 type Button = {
   label: string
-  href: string
+  format?: string
 }
 
 type FeaturedWork = {
@@ -69,10 +69,7 @@ type PreviousWork = {
 
 type FeedbackMeta = {
   name: string
-  dates?: string
   shortDate: string
-  rating: number
-  hrs: string | number
   imageUrl: string
 }
 
@@ -86,15 +83,6 @@ type ServiceListItem = {
   name: string
   description: string
   icon: ServicesIcons
-}
-
-type TeamMember = {
-  name: string
-  role: string
-  imageUrl: string
-  upwork?: string
-  github?: string
-  twitter?: string
 }
 
 type SiteData = {
@@ -129,11 +117,6 @@ type SiteData = {
     body: string
     list: ServiceListItem[]
     imageUrl: string
-  }
-  team: {
-    heading: string
-    body: string
-    people: TeamMember[]
   }
   contact: {
     heading: string
