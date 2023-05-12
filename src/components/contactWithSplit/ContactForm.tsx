@@ -133,7 +133,7 @@ export function ContactForm() {
           </div>
         </div>
         <div className="mt-8 flex justify-end">
-          <Button type="submit" color="black" className={buttonClasses}>
+          <Button type="submit" className={buttonClasses}>
             {buttonText(submitStatus)}
           </Button>
         </div>

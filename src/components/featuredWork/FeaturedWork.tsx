@@ -1,5 +1,5 @@
 import { useResponsive } from 'ahooks'
-import { Fragment, SetStateAction, useState } from 'react'
+import { Fragment, useState } from 'react'
 import parse from 'html-react-parser'
 import { Dialog, Disclosure, Transition} from '@headlessui/react'
 import { useTheme } from 'next-themes'
@@ -82,7 +82,7 @@ export function FeaturedWork({ featuredWork }: FeaturedWorkProps) {
               </div>
 
               <div className="mt-8">
-                <Button color={theme === 'dark' ? 'white' : 'black' } onClick={() =>  setIsOpen(true)}>
+                <Button onClick={() =>  setIsOpen(true)}>
                   {featuredWork.button.label}
                 </Button>
 
@@ -137,7 +137,6 @@ function FeaturedWorkGallery({ isOpen, setIsOpen, featuredWork, theme, responsiv
 							<Dialog.Panel className="w-full transform overflow-hidden bg-zinc-50 dark:bg-zinc-950 p-6 text-left align-middle transition-all">
 								<div className="flex items-center justify-center">
 									<Button
-										color={theme === 'dark' ? 'white' : 'black' }
 										format="icon"	
 										onClick={() => setIsOpen(false)}
 									>

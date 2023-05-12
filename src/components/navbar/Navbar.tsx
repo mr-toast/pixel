@@ -55,6 +55,7 @@ export function Navbar(props: NavbarProps) {
           <Button
             type="button"
             format="icon"
+						color="transparent"
             className="border border-zinc-950 dark:border-zinc-50"
             onClick={() => setMobileMenuOpen(true)}
           >

@@ -13,7 +13,8 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 }
 
 const styleMap = {
-  black: 'text-zinc-50 bg-zinc-950 hover:bg-zinc-700 focus-visible:outline-zinc-900',
+  default: "text-zinc-50 bg-zinc-950 hover:bg-zinc-700 focus-visible:outline-zinc-900 dark:text-zinc-950 dark:bg-zinc-50 dark:hover:bg-zinc-300 dark:focus-visible:outline-zinc-200",
+	black: 'text-zinc-50 bg-zinc-950 hover:bg-zinc-700 focus-visible:outline-zinc-900',
   white: 'text-zinc-950 bg-zinc-50 hover:bg-zinc-300 focus-visible:outline-zinc-200',
   transparent:
     'bg-transparent hover:bg-zinc-950/25 dark:hover:bg-zinc-50/25 shadow-none focus-visible:outline-zinc-950/25 dark:focus-visible:outline-zinc-50/25',
@@ -53,7 +54,7 @@ export function buttonStyles({ color = 'transparent', disabled, format }: Button
  * ```
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function ButtonComponent(props, forwardedRef) {
-  const { color = 'transparent', children, className, format = 'normal', ...rest } = props
+  const { color = 'default', children, className, format = 'normal', ...rest } = props
 
   const classes = twMerge(buttonStyles({ color, disabled: props.disabled, format }), className)
 
