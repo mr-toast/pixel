@@ -192,7 +192,7 @@ function FeaturedWorkGallery({ isOpen, setIsOpen, featuredWork, theme, responsiv
 									</div>
 									<div className="flex flex-col gap-6">
 										{galleryItems && (galleryItems.map((item, index) => (
-											<Image className="rounded-xl shadow-xl" src={item} alt={`${featuredWork.title} gallery image ${key}`} width={640} height={376} key={index} />
+											<Image className="rounded-xl shadow-xl" src={item} alt={`${featuredWork.title} gallery image ${index}`} width={640} height={376} key={index} />
 										)))}
 									</div>
 								</div>
