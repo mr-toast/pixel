@@ -16,6 +16,7 @@ interface ImageProps {
   isVignette?: boolean
   sizes?: Sizes
   priority?: boolean
+	onClick?: () => void
 }
 
 const generateSizesQuery = (sizes: Sizes) => {

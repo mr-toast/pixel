@@ -82,7 +82,7 @@ export function FeaturedWork({ featuredWork }: FeaturedWorkProps) {
               </div>
 
               <div className="mt-8">
-                <Button color="black" format="fancy" onClick={() =>  setIsOpen(true)}>
+                <Button color={theme === 'dark' ? 'white' : 'black' } onClick={() =>  setIsOpen(true)}>
                   {featuredWork.button.label}
                 </Button>
 
@@ -94,9 +94,10 @@ export function FeaturedWork({ featuredWork }: FeaturedWorkProps) {
           <Image
             src={featuredWork.imageUrl}
             alt=""
-            className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-zinc-400/10 sm:w-[57rem] md:-ml-4 lg:ml-0"
+            className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-zinc-400/10 sm:w-[57rem] md:-ml-4 lg:ml-0 cursor-pointer"
             width={2432}
             height={1442}
+						onClick={() =>  setIsOpen(true)}
           />
         </div>
       </div>
@@ -137,8 +138,7 @@ function FeaturedWorkGallery({ isOpen, setIsOpen, featuredWork, theme, responsiv
 								<div className="flex items-center justify-center">
 									<Button
 										color={theme === 'dark' ? 'white' : 'black' }
-										format="icon"
-										className=""		
+										format="icon"	
 										onClick={() => setIsOpen(false)}
 									>
 										<span className="sr-only">{constants.CLOSE_TEXT}</span>
