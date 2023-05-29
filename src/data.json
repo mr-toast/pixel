@@ -233,9 +233,24 @@
       "href": "https://khaosokecoresort.com/"
     },
     {
+      "title": "Skin Nation",
+      "imageUrl": "/svg/client/skin-nation-logo.svg",
+      "href": "https://skinnation.com/"
+    },
+    {
+      "title": "Cloozz Eyewear Charms",
+      "imageUrl": "/svg/client/cloozz-logo.svg",
+      "href": "https://www.cloozz.com/"
+    },
+    {
       "title": "Richie Graham Photography",
       "imageUrl": "/svg/client/richie-graham-logo.svg",
       "href": "https://richiegraham.com/"
+    },
+    {
+      "title": "Blank",
+      "imageUrl": "/svg/client/blank-logo.svg",
+      "href": "#"
     }
   ],
   "feedbackHeader": {

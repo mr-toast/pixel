@@ -28,7 +28,7 @@ export function PreviousWork(props: PreviousWorkProps) {
             return (
               <Link
                 href={item.href}
-                className="bg-zinc-400/10 p-8 last-of-type:hidden dark:bg-zinc-50/5 sm:p-10 md:last-of-type:block hover:[&>div]:scale-110"
+                className="bg-zinc-400/10 p-8 dark:bg-zinc-50/5 sm:p-10 md:last-of-type:block hover:[&>div]:scale-110"
                 key={item.title}
               >
                 <Image
