@@ -10,7 +10,7 @@ module.exports = {
     },
     extend: {
       aspectRatio: {
-        portrait: '1 / 2',
+        portrait: '1.7 / 3',
       },
       colors: {
         primary: '#00ff99',

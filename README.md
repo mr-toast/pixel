@@ -42,6 +42,11 @@ start: "next start"
 #### Stage 3
 ---
 - [x] STAGE 3: Convert to T3 Stack
+
+---
+#### Stage 4
+---
+
 - [x] STAGE 4: Core Components
 - [x] - video hero
 - [x] - about
@@ -54,7 +59,7 @@ start: "next start"
 - [x] - cleanup for public visibility
 
 ---
-#### Stage 4
+#### Stage 5
 ---
 - [ ] STAGE 5: Flair 
 - [ ] - animation state 
