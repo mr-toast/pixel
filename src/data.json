@@ -218,6 +218,11 @@
       "href": "https://vcis.ac.th/vcis/"
     },
     {
+      "title": "Digest Life",
+      "imageUrl": "/svg/client/digestlife-logo.svg",
+      "href": "https://digestlife.com/"
+    },
+    {
       "title": "All Points East",
       "imageUrl": "/svg/client/ape-logo.svg",
       "href": "https://allpointseast.com/"
@@ -246,11 +251,6 @@
       "title": "Richie Graham Photography",
       "imageUrl": "/svg/client/richie-graham-logo.svg",
       "href": "https://richiegraham.com/"
-    },
-    {
-      "title": "Blank",
-      "imageUrl": "/svg/client/blank-logo.svg",
-      "href": "#"
     }
   ],
   "feedbackHeader": {
