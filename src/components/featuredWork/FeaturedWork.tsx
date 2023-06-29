@@ -110,98 +110,104 @@ function FeaturedWorkGallery({ isOpen, setIsOpen, featuredWork, theme, responsiv
   return (
     <Transition appear show={isOpen} as={Fragment}>
       {/* HACK using this className __className_f820ce becuase I don't know how to get the custom font to apply. */}
-			<Dialog as="div" className="relative z-50 __className_f820ce" onClose={() => setIsOpen(false)}>
-				<Transition.Child
-					as={Fragment}
-					enter="ease-out duration-300"
-					enterFrom="opacity-0"
-					enterTo="opacity-100"
-					leave="ease-in duration-200"
-					leaveFrom="opacity-100"
-					leaveTo="opacity-0"
-				>
-					<div className="fixed inset-0 bg-zinc-950 bg-opacity-25" />
-				</Transition.Child>
+      <Dialog as="div" className="__className_f820ce relative z-50" onClose={() => setIsOpen(false)}>
+        <Transition.Child
+          as={Fragment}
+          enter="ease-out duration-300"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="ease-in duration-200"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <div className="fixed inset-0 bg-zinc-950 bg-opacity-25" />
+        </Transition.Child>
 
-				<div className="fixed inset-0 overflow-y-auto bg-zinc-50 dark:bg-zinc-950">
-					<div className="flex min-h-full items-center justify-center text-center">
-						<Transition.Child
-							as={Fragment}
-							enter="ease-out duration-300"
-							enterFrom="opacity-0 scale-95"
-							enterTo="opacity-100 scale-100"
-							leave="ease-in duration-200"
-							leaveFrom="opacity-100 scale-100"
-							leaveTo="opacity-0 scale-95"
-						>
-							<Dialog.Panel className="w-full transform overflow-hidden bg-zinc-50 dark:bg-zinc-950 p-6 text-left align-middle transition-all">
-								<div className="flex items-center justify-center">
-									<Button
-										format="icon"	
-										onClick={() => setIsOpen(false)}
-									>
-										<span className="sr-only">{constants.CLOSE_TEXT}</span>
-										<XMarkIcon className="h-6 w-6" aria-hidden="true" />
-									</Button>
-								</div>
-								<div className="mt-8 flow-root">
-									<div className="mb-8 rounded-md bg-zinc-400/10 dark:bg-zinc50/5 p-6">
-										<div className="max-w-prose mx-auto">
-											<h4 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl text-center">{featuredWork.title}</h4>
-			
-											<div className="my-8 flex flex-wrap gap-2 justify-center text-center">
-												<p className="w-full">{constants.STACK_LABEL}</p>
-												{featuredWork.stack?.map((item: StackIcons) => {
-													const Icon = stackIconsMap[item]
-													return <Icon key={item} className="h-12 w-12" aria-hidden="true" />
-												})}
-											</div>
-											<p>{featuredWork.description}</p>
+        <div className="fixed inset-0 overflow-y-auto bg-zinc-50 dark:bg-zinc-950">
+          <div className="flex min-h-full items-center justify-center text-center">
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <Dialog.Panel className="w-full transform overflow-hidden bg-zinc-50 p-6 text-left align-middle transition-all dark:bg-zinc-950">
+                <div className="flex items-center justify-center">
+                  <Button format="icon" onClick={() => setIsOpen(false)}>
+                    <span className="sr-only">{constants.CLOSE_TEXT}</span>
+                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                  </Button>
+                </div>
+                <div className="mt-8 flow-root">
+                  <div className="dark:bg-zinc50/5 mb-8 rounded-md bg-zinc-400/10 p-6">
+                    <div className="mx-auto max-w-prose">
+                      <h4 className="mb-4 text-center text-3xl font-bold tracking-tight sm:text-4xl">
+                        {featuredWork.title}
+                      </h4>
 
-											<Disclosure {...(responsive?.md ? { defaultOpen: true } : { defaultOpen: false })}>
-												{({ open }) => (
-													<>
-														<Disclosure.Button as={Fragment}>
-															<Button className="my-6 md:hidden inline-flex gap-3 rounded-full bg-zinc-300 px-3 py-1 text-sm font-semibold leading-6 text-zinc-700 ring-1 ring-inset ring-zinc-700 hover:bg-zinc-300/70 dark:bg-zinc-500/10 dark:text-zinc-400 dark:ring-zinc-500/20 dark:hover:bg-zinc-500/20">
-																<div className={open ? '-rotate-180 transition-all' : 'transition-all'}>
-																	<ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
-																</div>
-																{open ? constants.SHOW_LESS : constants.SHOW_MORE}
-															</Button>
-														</Disclosure.Button>
-														<Disclosure.Panel className="md:mt-3 [&>p]:mb-3"> 
-															{parse(featuredWork.descriptionExtended)}
-														</Disclosure.Panel>
-													</>
-													)}
-											</Disclosure>
-											
-											<div className="flex gap-4 justify-center mt-6">
-												{featuredWork.gitUrl && (
-												<Link href={featuredWork.gitUrl}>
-													<GithubIcon className="h-6 w-6" />
-												</Link>
-												)}
-												{featuredWork.siteUrl && (
-												<Link href={featuredWork.siteUrl}>
-													<ArrowTopRightOnSquareIcon className="h-6 w-6" />
-												</Link>
-												)}	
-											</div>
-										</div>
-									</div>
-									<div className="flex flex-col gap-6">
-										{galleryItems && (galleryItems.map((item, index) => (
-											<Image className="rounded-xl shadow-xl" src={item} alt={`${featuredWork.title} gallery image ${index}`} width={640} height={376} key={index} />
-										)))}
-									</div>
-								</div>
-							
-							</Dialog.Panel>
-						</Transition.Child>
-					</div>
-				</div>
-			</Dialog>
+                      <div className="my-8 flex flex-wrap justify-center gap-2 text-center">
+                        <p className="w-full">{constants.STACK_LABEL}</p>
+                        {featuredWork.stack?.map((item: StackIcons) => {
+                          const Icon = stackIconsMap[item]
+                          return <Icon key={item} className="h-12 w-12" aria-hidden="true" />
+                        })}
+                      </div>
+                      <p>{featuredWork.description}</p>
+
+                      <Disclosure {...(responsive?.md ? { defaultOpen: true } : { defaultOpen: false })}>
+                        {({ open }) => (
+                          <>
+                            <Disclosure.Button as={Fragment}>
+                              <Button className="my-6 inline-flex gap-3 rounded-full bg-zinc-300 px-3 py-1 text-sm font-semibold leading-6 text-zinc-700 ring-1 ring-inset ring-zinc-700 hover:bg-zinc-300/70 dark:bg-zinc-500/10 dark:text-zinc-400 dark:ring-zinc-500/20 dark:hover:bg-zinc-500/20 md:hidden">
+                                <div className={open ? '-rotate-180 transition-all' : 'transition-all'}>
+                                  <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
+                                </div>
+                                {open ? constants.SHOW_LESS : constants.SHOW_MORE}
+                              </Button>
+                            </Disclosure.Button>
+                            <Disclosure.Panel className="md:mt-3 [&>p]:mb-3">
+                              {parse(featuredWork.descriptionExtended)}
+                            </Disclosure.Panel>
+                          </>
+                        )}
+                      </Disclosure>
+
+                      <div className="mt-6 flex justify-center gap-4">
+                        {featuredWork.gitUrl && (
+                          <Link href={featuredWork.gitUrl}>
+                            <GithubIcon className="h-6 w-6" />
+                          </Link>
+                        )}
+                        {featuredWork.siteUrl && (
+                          <Link href={featuredWork.siteUrl}>
+                            <ArrowTopRightOnSquareIcon className="h-6 w-6" />
+                          </Link>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-6">
+                    {galleryItems &&
+                      galleryItems.map((item, index) => (
+                        <Image
+                          className="rounded-xl shadow-xl"
+                          src={item}
+                          alt={`${featuredWork.title} gallery image ${index}`}
+                          width={640}
+                          height={376}
+                          key={index}
+                        />
+                      ))}
+                  </div>
+                </div>
+              </Dialog.Panel>
+            </Transition.Child>
+          </div>
+        </div>
+      </Dialog>
     </Transition>
   )
 }
