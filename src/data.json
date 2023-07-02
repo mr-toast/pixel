@@ -193,21 +193,6 @@
   },
   "previousWork": [
     {
-      "title": "Sunheist Eyewear",
-      "imageUrl": "/svg/client/sunheist-logo.svg",
-      "href": "https://sunheist.com/"
-    },
-    {
-      "title": "Smudge Wellness",
-      "imageUrl": "/svg/client/smudge-logo.svg",
-      "href": "https://smudgewellness.com/"
-    },
-    {
-      "title": "JB Langley",
-      "imageUrl": "/svg/client/jblangley-logo.svg",
-      "href": "https://jblangley.com/"
-    },
-    {
       "title": "Our Jungle House",
       "imageUrl": "/svg/client/ojh-logo.svg",
       "href": "https://khaosokaccommodation.com/"
@@ -218,9 +203,9 @@
       "href": "https://vcis.ac.th/vcis/"
     },
     {
-      "title": "Digest Life",
-      "imageUrl": "/svg/client/digestlife-logo.svg",
-      "href": "https://digestlife.com/"
+      "title": "Awake Chocolate",
+      "imageUrl": "/svg/client/awake-logo.svg",
+      "href": "https://awakechocolate.com/"
     },
     {
       "title": "All Points East",
@@ -228,19 +213,14 @@
       "href": "https://allpointseast.com/"
     },
     {
-      "title": "Awake Chocolate",
-      "imageUrl": "/svg/client/awake-logo.svg",
-      "href": "https://awakechocolate.com/"
-    },
-    {
       "title": "Our Jungle Camp",
       "imageUrl": "/svg/client/ojc-logo.svg",
       "href": "https://khaosokecoresort.com/"
     },
     {
-      "title": "Skin Nation",
-      "imageUrl": "/svg/client/skin-nation-logo.svg",
-      "href": "https://skinnation.com/"
+      "title": "Digest Life",
+      "imageUrl": "/svg/client/digestlife-logo.svg",
+      "href": "https://digestlife.com/"
     },
     {
       "title": "Cloozz Eyewear Charms",
@@ -251,6 +231,26 @@
       "title": "Richie Graham Photography",
       "imageUrl": "/svg/client/richie-graham-logo.svg",
       "href": "https://richiegraham.com/"
+    },
+    {
+      "title": "Sunheist Eyewear",
+      "imageUrl": "/svg/client/sunheist-logo.svg",
+      "href": "https://sunheist.com/"
+    },
+    {
+      "title": "Smudge Wellness",
+      "imageUrl": "/svg/client/smudge-logo.svg",
+      "href": "https://smudgewellness.com/"
+    },
+    {
+      "title": "Skin Nation",
+      "imageUrl": "/svg/client/skin-nation-logo.svg",
+      "href": "https://skinnation.com/"
+    },
+    {
+      "title": "",
+      "imageUrl": "/svg/client/blank-logo.svg",
+      "href": "#"
     }
   ],
   "feedbackHeader": {
