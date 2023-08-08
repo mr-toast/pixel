@@ -47,11 +47,17 @@ type Button = {
   format?: string
 }
 
+type PerformanceCta = {
+  body: string
+  href: string
+}
+
 type FeaturedWork = {
   header: string
   title: string
   description: string
   descriptionExtended: string
+  performanceCta: PerformanceCta
   stack: StackIcons[]
   button: Button
   imageUrl: string

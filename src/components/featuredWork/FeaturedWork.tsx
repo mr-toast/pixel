@@ -9,14 +9,18 @@ import { Link } from '~/components/link'
 import { Typist } from '~/components/typist'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid'
+import { Gauge as GaugeIcon } from 'lucide-react'
 import GithubIcon from '/public/svg/icon/github.svg'
 import AlgoliaIcon from '/public/svg/stack/algolia.svg'
 import CmsIcon from '/public/svg/stack/cms.svg'
 import DockerIcon from '/public/svg/stack/docker.svg'
 import GatsbyIcon from '/public/svg/stack/gatsby.svg'
 import JavascriptIcon from '/public/svg/stack/javascript.svg'
+import PlanetScaleIcon from '/public/svg/stack/planetscale.svg'
+import PrismaIcon from '/public/svg/stack/prisma.svg'
 import RadixIcon from '/public/svg/stack/radix.svg'
 import ReactIcon from '/public/svg/stack/react.svg'
+import ReactMailIcon from '/public/svg/stack/react-mail.svg'
 import ShopifyIcon from '/public/svg/stack/shopify.svg'
 import SketchIcon from '/public/svg/stack/sketch.svg'
 import StitchesIcon from '/public/svg/stack/stitches.svg'
@@ -35,31 +39,26 @@ const stackIconsMap = {
   docker: DockerIcon,
   gatsby: GatsbyIcon,
   javascript: JavascriptIcon,
+  planetscale: PlanetScaleIcon,
+  prisma: PrismaIcon,
   radix: RadixIcon,
-	react: ReactIcon,
+  react: ReactIcon,
+  reactMail: ReactMailIcon,
   shopify: ShopifyIcon,
   sketch: SketchIcon,
   stitches: StitchesIcon,
-	storybook: StorybookIcon,
+  storybook: StorybookIcon,
   tailwind: TailwindIcon,
   typescript: TypescriptIcon,
   wordpress: WordpressIcon,
 }
 
-const constants = {
-  OPEN_TEXT: 'Open Gallery',
-  CLOSE_TEXT: 'Close Gallery',
-	SHOW_MORE: 'More Details',
-	SHOW_LESS: 'Show Less',
-	STACK_LABEL: 'Built with:'
-}
-
 export function FeaturedWork({ featuredWork }: FeaturedWorkProps) {
-	const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
-	const responsive = useResponsive()
-	const { theme } = useTheme()
-	
+  const responsive = useResponsive()
+  const { theme } = useTheme()
+
   return (
     <div className="overflow-hidden py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -71,33 +70,38 @@ export function FeaturedWork({ featuredWork }: FeaturedWorkProps) {
               </h2>
 
               <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">{featuredWork.title}</p>
-              <p className="mt-6 text-lg leading-8 text-zinc-700 dark:text-zinc-300">{parse(featuredWork.description)}</p>
+              <p className="mt-6 text-lg leading-8 text-zinc-700 dark:text-zinc-300">
+                {parse(featuredWork.description)}
+              </p>
 
               <div className="mt-8 flex flex-wrap gap-2">
-                <p className="w-full">{constants.STACK_LABEL}</p>
-								{featuredWork.stack?.map((item: StackIcons) => {
+                <p className="w-full">Built with:</p>
+                {featuredWork.stack?.map((item: StackIcons) => {
                   const Icon = stackIconsMap[item]
                   return <Icon key={item} className="h-12 w-12" aria-hidden="true" />
                 })}
               </div>
 
               <div className="mt-8">
-                <Button onClick={() =>  setIsOpen(true)}>
-                  {featuredWork.button.label}
-                </Button>
+                <Button onClick={() => setIsOpen(true)}>{featuredWork.button.label}</Button>
 
-								<FeaturedWorkGallery isOpen={isOpen} setIsOpen={setIsOpen} featuredWork={featuredWork} theme={theme} responsive={responsive} />
-              
-							</div>
+                <FeaturedWorkGallery
+                  isOpen={isOpen}
+                  setIsOpen={setIsOpen}
+                  featuredWork={featuredWork}
+                  theme={theme}
+                  responsive={responsive}
+                />
+              </div>
             </div>
           </div>
           <Image
             src={featuredWork.imageUrl}
             alt={featuredWork.title}
-            className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-zinc-400/10 sm:w-[57rem] md:-ml-4 lg:ml-0 cursor-pointer"
+            className="w-[48rem] max-w-none cursor-pointer rounded-xl shadow-xl ring-1 ring-zinc-400/10 sm:w-[57rem] md:-ml-4 lg:ml-0"
             width={2432}
             height={1442}
-						onClick={() =>  setIsOpen(true)}
+            onClick={() => setIsOpen(true)}
           />
         </div>
       </div>
@@ -137,7 +141,7 @@ function FeaturedWorkGallery({ isOpen, setIsOpen, featuredWork, theme, responsiv
               <Dialog.Panel className="w-full transform overflow-hidden bg-zinc-50 p-6 text-left align-middle transition-all dark:bg-zinc-950">
                 <div className="flex items-center justify-center">
                   <Button format="icon" onClick={() => setIsOpen(false)}>
-                    <span className="sr-only">{constants.CLOSE_TEXT}</span>
+                    <span className="sr-only">Close Gallery</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Button>
                 </div>
@@ -147,9 +151,21 @@ function FeaturedWorkGallery({ isOpen, setIsOpen, featuredWork, theme, responsiv
                       <h4 className="mb-4 text-center text-3xl font-bold tracking-tight sm:text-4xl">
                         {featuredWork.title}
                       </h4>
-
+                      {featuredWork.performanceCta && (
+                        <div className="text-center">
+                          <Link
+                            href={featuredWork.performanceCta.href}
+                            format="button"
+                            color="black"
+                            className="inline-flex gap-4 px-6"
+                          >
+                            View live PageSpeed score
+                            <GaugeIcon className="h-5 w-5" aria-hidden="true" />
+                          </Link>
+                        </div>
+                      )}
                       <div className="my-8 flex flex-wrap justify-center gap-2 text-center">
-                        <p className="w-full">{constants.STACK_LABEL}</p>
+                        <p className="w-full">Built with:</p>
                         {featuredWork.stack?.map((item: StackIcons) => {
                           const Icon = stackIconsMap[item]
                           return <Icon key={item} className="h-12 w-12" aria-hidden="true" />
@@ -165,7 +181,7 @@ function FeaturedWorkGallery({ isOpen, setIsOpen, featuredWork, theme, responsiv
                                 <div className={open ? '-rotate-180 transition-all' : 'transition-all'}>
                                   <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
                                 </div>
-                                {open ? constants.SHOW_LESS : constants.SHOW_MORE}
+                                {open ? 'Show Less' : 'More Details'}
                               </Button>
                             </Disclosure.Button>
                             <Disclosure.Panel className="md:mt-3 [&>p]:mb-3">

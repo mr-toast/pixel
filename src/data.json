@@ -114,38 +114,18 @@
   },
   "featuredWork": [
     {
-      "header": "Component development",
-      "title": "Tropic Labs",
-      "description": "Tropic Labs, a luxury sunscreen company, needed their vibrant design meticulously implemented into a high-performance, headless Shopify platform. This approach successfully optimised PageSpeed scores without sacrificing any of Shopify's robust functionalities. The site was meticulously built using an advanced tech stack that included React, TypeScript, Tailwind, and Prismic Headless CMS.",
-      "descriptionExtended": "<p>To enrich the user experience, the site integrated Shopify's customer accounts, checkout, and authentication features. Additionally, integration with Stamped reviews was implemented, fostering trust and enhancing user engagement through direct customer feedback.</p><p>All project components were developed in Storybook, which facilitated efficient testing and collaboration with external design teams. This streamlined approach ensured seamless ongoing development, review, and maintainability across teams.</p>",
-      "stack": ["shopify", "react", "typescript", "tailwind", "storybook"],
-      "imageUrl": "/images/featured/gallery-tropic-desk-1.png",
-      "siteUrl": "https://tropic-labs.com",
-      "button": {
-        "label": "View project",
-				"format": "fancy"
-      },
-			"gallery": [
-        "/images/featured/gallery-tropic-mob-1.png",
-        "/images/featured/gallery-tropic-mob-2.png",
-        "/images/featured/gallery-tropic-mob-3.png",
-        "/images/featured/gallery-tropic-mob-4.png",
-        "/images/featured/gallery-tropic-mob-5.png"
-      ],
-			"galleryDesktop": [
-        "/images/featured/gallery-tropic-desk-1.png",
-        "/images/featured/gallery-tropic-desk-2.png",
-        "/images/featured/gallery-tropic-desk-3.png",
-        "/images/featured/gallery-tropic-desk-4.png",
-        "/images/featured/gallery-tropic-desk-5.png"
-      ]
-    },
-		{
       "header": "Site development",
       "title": "Freshy's Baking Club",
       "description": "Freshy's Baking Club, a bespoke custom cake business, required a dynamic, mobile-first presence page that was meticulously crafted to showcase their distinctive brand. This project, built using Sketch, React, Javascript, and Tailwind, delivered a seamless, user-friendly experience across all devices.",
       "descriptionExtended": "<p>The design, which focused on perfect adaptation to smaller screens, was complemented by the integration of Vimeo, enriching the site with interactive video elements.</p><p>As part of the project's ongoing development, plans are in place for further CMS integration, conversion to TypeScript, and the incorporation of Tailwind CSS, all aimed at delivering even more refined user interfaces and interactions.</p>",
-      "stack": ["sketch", "react", "javascript", "tailwind"],
+      "cta": {
+        "label": "View live speedtest"
+      },
+      "performanceCta": {
+        "body": "<P>*Performance results may vary slightly between tests.</p>",
+        "href": "https://pagespeed.web.dev/analysis/https-www-freshysbakingclub-com/hbsxcrlbwa?form_factor=mobile"
+      },
+      "stack": ["sketch", "react", "javascript", "tailwind", "reactMail", "prisma", "planetscale"],
       "imageUrl": "/images/featured/gallery-freshys-desk-1.png",
       "siteUrl": "https://freshysbakingclub.com",
       "button": {
@@ -154,12 +134,41 @@
       "gallery": [
         "/images/featured/gallery-freshys-mob-1.png",
         "/images/featured/gallery-freshys-mob-3.png",
-        "/images/featured/gallery-freshys-mob-2.png"
+        "/images/featured/gallery-freshys-mob-2.png",
+        "/images/featured/gallery-freshys-mob-4.png",
+        "/images/featured/gallery-freshys-mob-5.png"
       ],
       "galleryDesktop": [
         "/images/featured/gallery-freshys-desk-1.png",
         "/images/featured/gallery-freshys-desk-2.png",
+        "/images/featured/gallery-freshys-desk-4.png",
         "/images/featured/gallery-freshys-desk-3.png"
+      ]
+    },
+    {
+      "header": "Component development",
+      "title": "Tropic Labs",
+      "description": "Tropic Labs, a luxury sunscreen company, needed their vibrant design meticulously implemented into a high-performance, headless Shopify platform. This approach successfully optimised PageSpeed scores without sacrificing any of Shopify's robust functionalities. The site was meticulously built using an advanced tech stack that included React, TypeScript, Tailwind, and Prismic Headless CMS.",
+      "descriptionExtended": "<p>To enrich the user experience, the site integrated Shopify's customer accounts, checkout, and authentication features. Additionally, integration with Stamped reviews was implemented, fostering trust and enhancing user engagement through direct customer feedback.</p><p>All project components were developed in Storybook, which facilitated efficient testing and collaboration with external design teams. This streamlined approach ensured seamless ongoing development, review, and maintainability across teams.</p>",
+      "stack": ["shopify", "react", "typescript", "tailwind", "storybook", "cms"],
+      "imageUrl": "/images/featured/gallery-tropic-desk-1.png",
+      "siteUrl": "https://tropic-labs.com",
+      "button": {
+        "label": "View project",
+        "format": "fancy"
+      },
+      "gallery": [
+        "/images/featured/gallery-tropic-mob-1.png",
+        "/images/featured/gallery-tropic-mob-2.png",
+        "/images/featured/gallery-tropic-mob-4.png",
+        "/images/featured/gallery-tropic-mob-5.png",
+        "/images/featured/gallery-tropic-mob-3.png"
+      ],
+      "galleryDesktop": [
+        "/images/featured/gallery-tropic-desk-1.png",
+        "/images/featured/gallery-tropic-desk-2.png",
+        "/images/featured/gallery-tropic-desk-3.png",
+        "/images/featured/gallery-tropic-desk-4.png"
       ]
     },
     {
@@ -173,7 +182,7 @@
       "button": {
         "label": "View project"
       },
-			"gallery": [
+      "gallery": [
         "/images/featured/gallery-boss-mob-1.png",
         "/images/featured/gallery-boss-mob-2.png",
         "/images/featured/gallery-boss-mob-3.png",
