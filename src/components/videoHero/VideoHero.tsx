@@ -36,7 +36,7 @@ export function VideoHero(props: VideoHeroProps) {
         <Vimeo
           videoId={cms.hero.vimeo.videoId}
           imageUrl={cms.hero.vimeo.imageUrl}
-          isBackground={true}
+          // isBackground={true}
           className={vimeoClasses}
         />
       )}

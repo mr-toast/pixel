@@ -2,7 +2,7 @@
 
 import { create } from 'zustand'
 import { useEffect, useRef } from 'react'
-import { useResponsive } from 'ahooks'
+import { useResponsive } from '~/hooks'
 import { twMerge } from 'tailwind-merge'
 
 import type { ReactNode } from 'react'

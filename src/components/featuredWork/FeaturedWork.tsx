@@ -1,4 +1,4 @@
-import { useResponsive } from 'ahooks'
+import { useResponsive } from '~/hooks'
 import { Fragment, useState } from 'react'
 import parse from 'html-react-parser'
 import { Dialog, Disclosure, Transition} from '@headlessui/react'
